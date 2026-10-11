@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "gpu_execution_tested": false,
+  "synthetic_fixtures_only": true,
+  "checks": [
+    "full=86/102; pilot=21/36; all five historical smoke shapes included",
+    "rank0 primary and all-rank maxima diagnostics; altered aggregation and validation attempts rejected",
+    "partial prefill resumed by shape; same-attempt ranks; original failures retained; no speed-based selection",
+    "incomplete ranks/samples, differing inputs, actual layout mismatch and wrong dtype rejected",
+    "validation output and changed measurement signatures cannot be reused",
+    "measurement functions contain no TP barrier or numerical checks",
+    "partial collection keeps the full original manifest and explicit missing shape",
+    "driver skips completed historical-smoke shapes without GPU relaunch"
+  ],
+  "run_signature": "f5379c00bc8d833b0acba11708a0e4ed4bf55299c4e46f1dd08664e0b3433ae8",
+  "synthetic_collected": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/collected"
+}

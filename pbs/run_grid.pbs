@@ -1,0 +1,33 @@
+#!/bin/bash
+#PBS -N ash-h200-q38
+#PBS -q gpu_free
+#PBS -P ccds_dmitrii.ustiugov
+#PBS -l select=1:ngpus=1:ncpus=12:mem=200gb
+#PBS -l walltime=04:00:00
+#PBS -j oe
+# H200 Qwen3.8-27B BF16 calibration (user 2026-10-05: "在H200上标定qwen3.8-27B，并拟合模拟器模型").
+# Phase 1 (once): backend smoke fa3 vs flashinfer, choose by select_backend.py, copy that manifest to the run dir.
+# Phase 2: run the frozen manifest until 25 min before walltime; resubmit the same script to resume.
+set -uo pipefail
+E=/home/bzhou011/ASH/experiments/h200_qwen38_perf_r001
+J=${PBS_JOBID%%.*}
+STOP=$(( $(date +%s) + 4*3600 - 25*60 ))
+source $E/env_h200.sh
+RUN=$E/runs/qwen38bf16_h200
+mkdir -p $RUN
+{ date -u; hostname; nvidia-smi --query-gpu=name,uuid,driver_version,memory.total,clocks.max.sm --format=csv,noheader
+  nvidia-smi topo -m; $PYTHON -c "import sglang,torch,flashinfer,sys;print(sglang.__file__,torch.__version__,torch.version.cuda,flashinfer.__version__,sys.version)"
+  sha256sum $E/run_points_h200.py $E/select_backend.py $E/env_h200.sh $0 $E/manifests/*.json
+} > $RUN/env_$J.txt 2>&1
+SMOKE_POINTS="dec_train_bs4_ctx8192 dec_train_bs16_ctx16384 dec_train_bs4_ctx65536 dec_train_bs8_ctx98304 pre_train_g0"
+if [ ! -e $RUN/FROZEN_BACKEND ]; then
+  for b in fa3 flashinfer; do
+    echo "$(date -u +%FT%TZ) smoke $b"
+    $PYTHON $E/run_points_h200.py $E/manifests/qwen38bf16_h200_$b.json $RUN/smoke/$b --smoke --only $SMOKE_POINTS --stop-at $STOP
+  done
+  $PYTHON $E/select_backend.py $RUN/smoke $SMOKE_POINTS || { echo "smoke failed"; exit 1; }
+  cp $E/manifests/qwen38bf16_h200_$(cat $RUN/FROZEN_BACKEND).json $RUN/manifest.json
+fi
+echo "$(date -u +%FT%TZ) grid backend=$(cat $RUN/FROZEN_BACKEND)"
+$PYTHON $E/run_points_h200.py $RUN/manifest.json $RUN/grid --stop-at $STOP
+echo "$(date -u +%FT%TZ) exit; results $(ls $RUN/grid/*.json 2>/dev/null | wc -l) / $(python3 -c "import json;print(len(json.load(open('$RUN/manifest.json'))['points']))")"

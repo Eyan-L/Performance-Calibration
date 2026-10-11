@@ -1,0 +1,48 @@
+{
+  "rank": 0,
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 12,
+      "request_length": 98304,
+      "samples_ms": [
+        305.10292104806405,
+        305.40924928204805,
+        305.71557751603206,
+        306.02190575001606,
+        306.32823398400006,
+        306.634562217984,
+        306.9408904519681,
+        307.247218685952,
+        307.5535469199361
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-12-98304"
+      },
+      "layout": {
+        "batch_size": 12,
+        "actual_sequence_lengths": [
+          98305,
+          98305,
+          98305,
+          98305,
+          98305,
+          98305,
+          98305,
+          98305,
+          98305,
+          98305,
+          98305,
+          98305
+        ],
+        "actual_input_token_count": 12
+      }
+    }
+  ],
+  "metadata": {
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "purpose": "measurement",
+    "validation_fixture_only": true
+  }
+}

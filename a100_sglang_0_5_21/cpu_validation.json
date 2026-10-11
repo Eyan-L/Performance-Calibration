@@ -1,0 +1,18 @@
+{
+  "validated_on": "2026-10-11",
+  "scope": "CPU checks only; no GPU measurement",
+  "sglang_distribution_version": "0.5.21",
+  "sglang_source_version": "0.5.21",
+  "native_api": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+  "syntax": true,
+  "shell_syntax": true,
+  "input_coverage": {"decoder": 78, "prefill_groups": 8, "failures": 0},
+  "corpus_selection_matches_reference": true,
+  "rank_max_before_summary": true,
+  "reference_fit_readers_accept_output": true,
+  "resume_rejects_wrong_run": true,
+  "tp4_decode_and_prefill_arguments_parse": true,
+  "smoke_dry_run_points": ["dec_train_bs4_ctx8192", "pre_train_g0"],
+  "smoke_dry_run_signature": "ee2d6f912f248a1615bd148193923aa62bd02ca0cb1e9cd80e342ee7e4a2855d",
+  "gpu_execution_tested": false
+}

@@ -1,0 +1,5 @@
+{"id": "dec_train_bs4_ctx8192", "rc": 0, "seconds": 60.0, "result": true, "job": "78773.gaas"}
+{"id": "dec_train_bs4_ctx65536", "rc": 0, "seconds": 71.2, "result": true, "job": "78773.gaas"}
+{"id": "dec_train_bs8_ctx98304", "rc": 0, "seconds": 161.5, "result": true, "job": "78773.gaas"}
+{"id": "dec_train_bs16_ctx16384", "rc": 0, "seconds": 62.3, "result": true, "job": "78773.gaas"}
+{"id": "pre_train_g0", "rc": 0, "seconds": 53.1, "result": true, "job": "78773.gaas"}

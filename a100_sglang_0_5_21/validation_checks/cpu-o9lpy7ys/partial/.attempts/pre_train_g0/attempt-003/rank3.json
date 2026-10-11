@@ -1,0 +1,96 @@
+{
+  "rank": 3,
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 1,
+      "request_length": 4096,
+      "samples_ms": [
+        28.075755035033602,
+        28.101559956940804,
+        28.127364878848002,
+        28.1531698007552,
+        28.178974722662403
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-1-4096"
+      },
+      "layout": {
+        "batch_size": 1,
+        "actual_sequence_lengths": [
+          4096
+        ],
+        "actual_input_token_count": 4096
+      }
+    },
+    {
+      "batch_size": 1,
+      "request_length": 8192,
+      "samples_ms": [
+        55.6531440975872,
+        55.70429588444161,
+        55.755447671296004,
+        55.8065994581504,
+        55.857751245004806
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-1-8192"
+      },
+      "layout": {
+        "batch_size": 1,
+        "actual_sequence_lengths": [
+          8192
+        ],
+        "actual_input_token_count": 8192
+      }
+    },
+    {
+      "batch_size": 1,
+      "request_length": 16384,
+      "samples_ms": [
+        110.94482430525441,
+        111.04679565112322,
+        111.14876699699201,
+        111.2507383428608,
+        111.3527096887296
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-1-16384"
+      },
+      "layout": {
+        "batch_size": 1,
+        "actual_sequence_lengths": [
+          16384
+        ],
+        "actual_input_token_count": 16384
+      }
+    },
+    {
+      "batch_size": 1,
+      "request_length": 32768,
+      "samples_ms": [
+        222.07579305082882,
+        222.27990683120643,
+        222.48402061158401,
+        222.6881343919616,
+        222.8922481723392
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-1-32768"
+      },
+      "layout": {
+        "batch_size": 1,
+        "actual_sequence_lengths": [
+          32768
+        ],
+        "actual_input_token_count": 32768
+      }
+    }
+  ],
+  "metadata": {
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "purpose": "measurement",
+    "validation_fixture_only": true
+  }
+}

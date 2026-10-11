@@ -1,0 +1,146 @@
+CMD $PYTHON /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/ash_bench_shim.py /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/benchmark/kernels/fused_moe_triton/bench_decode_lane_moe_cta.py --model-path /home/bzhou011/ash_models/Qwen3.8-27B@1d4bf0f2ff60 --random-seed 0 --tp-size 1 --kv-cache-dtype bfloat16 --disable-radix-cache --attention-backend fa3 --token-corpus-dir /home/bzhou011/Highway_kernel/results/qwen36_section_writer_token_corpus --token-corpus-split train --mem-fraction-static 0.90 --max-running-requests 4 --max-mamba-cache-size 4 --max-total-tokens 65536 --short-bs 4 --short-input-len 8192 --bench-warmups 1 --bench-iters 3 --decode-steps 10 --run-modes baseline_short_only --prefill-chunk-size 1 --prefill-token-chunk-size 8192 --no-png --result-prefix /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/runs/qwen38bf16_h200/smoke/fa3/dec_train_bs4_ctx8192
+ASH shim: running /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/benchmark/kernels/fused_moe_triton/bench_decode_lane_moe_cta.py
+Fail to set RLIMIT_NOFILE: current limit exceeds maximum limit
+[2026-10-05 12:45:03 TP0] Init torch distributed begin.
+[2026-10-05 12:45:03 TP0] Init torch distributed ends. elapsed=0.22 s, mem usage=0.09 GB
+[2026-10-05 12:45:06 TP0] Load weight begin. avail mem=139.13 GB
+[2026-10-05 12:45:06 TP0] Multimodal attention backend not set. Use fa3.
+[2026-10-05 12:45:06 TP0] Using fa3 as multimodal attention backend.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-05 12:45:06 TP0] using attn output gate!
+Multi-thread loading shards:   0% Completed | 0/18 [00:00<?, ?it/s]Multi-thread loading shards:   6% Completed | 1/18 [00:01<00:27,  1.63s/it]Multi-thread loading shards:  11% Completed | 2/18 [00:02<00:17,  1.10s/it]Multi-thread loading shards:  17% Completed | 3/18 [00:03<00:13,  1.10it/s]Multi-thread loading shards:  22% Completed | 4/18 [00:03<00:12,  1.08it/s]Multi-thread loading shards:  28% Completed | 5/18 [00:04<00:10,  1.27it/s]Multi-thread loading shards:  33% Completed | 6/18 [00:05<00:10,  1.18it/s]Multi-thread loading shards:  39% Completed | 7/18 [00:06<00:08,  1.31it/s]Multi-thread loading shards:  44% Completed | 8/18 [00:07<00:08,  1.18it/s]Multi-thread loading shards:  50% Completed | 9/18 [00:07<00:06,  1.31it/s]Multi-thread loading shards:  56% Completed | 10/18 [00:08<00:06,  1.22it/s]Multi-thread loading shards:  61% Completed | 11/18 [00:09<00:05,  1.36it/s]Multi-thread loading shards:  67% Completed | 12/18 [00:10<00:04,  1.23it/s]Multi-thread loading shards:  72% Completed | 13/18 [00:10<00:03,  1.33it/s]Multi-thread loading shards:  78% Completed | 14/18 [00:11<00:03,  1.19it/s]Multi-thread loading shards:  83% Completed | 15/18 [00:12<00:02,  1.33it/s]Multi-thread loading shards:  89% Completed | 16/18 [00:13<00:01,  1.22it/s]Multi-thread loading shards:  94% Completed | 17/18 [00:13<00:00,  1.36it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:14<00:00,  1.39it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:14<00:00,  1.23it/s]
+[2026-10-05 12:45:21 TP0] Load weight end. elapsed=14.99 s, type=Qwen3_5ForConditionalGeneration, avail mem=88.08 GB, mem usage=51.05 GB.
+[2026-10-05 12:45:21 TP0] Max concurrent requests (per dp worker) from the finalized token capacity: max_num_reqs=4.
+[2026-10-05 12:45:21 TP0] Mamba Cache is allocated. max_mamba_cache_size: 4, conv_state size: 0.01GB, ssm_state size: 0.70GB 
+[2026-10-05 12:45:21 TP0] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 65536, K size: 2.00 GB, V size: 2.00 GB
+[2026-10-05 12:45:21 TP0] Memory pool end. avail mem=83.25 GB
+[2026-10-05 12:45:21 TP0] Linear attention kernel backend: decode=triton, prefill=triton
+[2026-10-05 12:45:21 TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-05 12:45:21 TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-05 12:45:21 TP0] Linear attention kernel backend: decode=triton, prefill=triton
+[2026-10-05 12:45:21 TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-05 12:45:21 TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-05 12:45:21 TP0] Linear attention kernel backend: decode=triton, prefill=triton
+[2026-10-05 12:45:21 TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-05 12:45:21 TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-05 12:45:21 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=83.16 GB
+[2026-10-05 12:45:21 TP0] Capture cuda graph bs [1, 4]
+  0%|          | 0/2 [00:00<?, ?it/s]Capturing batches (bs=4 avail_mem=83.14 GB):   0%|          | 0/2 [00:00<?, ?it/s]Capturing batches (bs=4 avail_mem=83.14 GB):   0%|          | 0/2 [00:00<?, ?it/s]
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/ash_bench_shim.py", line 76, in <module>
+[rank0]:     runpy.run_path(script, run_name="__main__")
+[rank0]:   File "<frozen runpy>", line 287, in run_path
+[rank0]:   File "<frozen runpy>", line 98, in _run_module_code
+[rank0]:   File "<frozen runpy>", line 88, in _run_code
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/benchmark/kernels/fused_moe_triton/bench_decode_lane_moe_cta.py", line 1950, in <module>
+[rank0]:     main()
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/benchmark/kernels/fused_moe_triton/bench_decode_lane_moe_cta.py", line 1943, in main
+[rank0]:     run(server_args, bench_args)
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/benchmark/kernels/fused_moe_triton/bench_decode_lane_moe_cta.py", line 1906, in run
+[rank0]:     run_worker(server_args, port_args, bench_args, server_args.base_gpu_id, 0)
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/benchmark/kernels/fused_moe_triton/bench_decode_lane_moe_cta.py", line 1306, in run_worker
+[rank0]:     wrapped_runner, tokenizer = load_model(server_args, port_args, gpu_id, tp_rank)
+[rank0]:                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/bench_one_batch.py", line 319, in load_model
+[rank0]:     model_runner = ModelRunner(**runner_kwargs)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/model_runner.py", line 630, in __init__
+[rank0]:     self.initialize(pre_model_load_memory)
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/model_runner.py", line 893, in initialize
+[rank0]:     self.init_device_graphs()
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/model_runner.py", line 3079, in init_device_graphs
+[rank0]:     self.graph_runner = graph_runners[self.device](self)
+[rank0]:                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/ash_bench_shim.py", line 68, in _cgr_init
+[rank0]:     _orig_cgr_init(self, *args, **kwargs)
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/cuda_graph_runner.py", line 685, in __init__
+[rank0]:     self.capture()
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/cuda_graph_runner.py", line 850, in capture
+[rank0]:     _capture_one_stream()
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/cuda_graph_runner.py", line 832, in _capture_one_stream
+[rank0]:     ) = self.capture_one_batch_size(bs, forward, stream_idx)
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/cuda_graph_runner.py", line 1126, in capture_one_batch_size
+[rank0]:     run_once()
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/cuda_graph_runner.py", line 1107, in run_once
+[rank0]:     logits_output_or_pp_proxy_tensors = forward(
+[rank0]:                                         ^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/models/qwen3_vl.py", line 1277, in forward
+[rank0]:     hidden_states = general_mm_embed_routine(
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/managers/mm_utils.py", line 1138, in general_mm_embed_routine
+[rank0]:     hidden_states = language_model(
+[rank0]:                     ^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/models/qwen3_5.py", line 1227, in forward
+[rank0]:     hidden_states, residual = layer(
+[rank0]:                               ^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/models/qwen3_5.py", line 682, in forward
+[rank0]:     self.layer_communicator.prepare_attn_and_capture_last_layer_outputs(
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/communicator.py", line 492, in prepare_attn_and_capture_last_layer_outputs
+[rank0]:     hidden_states, residual = self.prepare_attn(
+[rank0]:                               ^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/communicator.py", line 593, in prepare_attn
+[rank0]:     hidden_states = self.input_layernorm(hidden_states)
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/utils/multi_platform.py", line 83, in forward
+[rank0]:     return self._forward_method(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/layernorm.py", line 713, in forward_cuda
+[rank0]:     return self._forward_impl(x, residual, post_residual_addition)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/layernorm.py", line 682, in _forward_impl
+[rank0]:     out = gemma_rmsnorm(x, self.weight.data, self.variance_epsilon)
+[rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/Highway_kernel/.venv-sglang/lib/python3.12/site-packages/sgl_kernel/elementwise.py", line 201, in gemma_rmsnorm
+[rank0]:     return _flashinfer_norm.gemma_rmsnorm(input, weight, eps, out, enable_pdl)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/Highway_kernel/.venv-sglang/lib/python3.12/site-packages/flashinfer/api_logging.py", line 2333, in _auto_dump_wrapper
+[rank0]:     return _inner(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/Highway_kernel/.venv-sglang/lib/python3.12/site-packages/flashinfer/norm/__init__.py", line 395, in gemma_rmsnorm
+[rank0]:     _gemma_rmsnorm_impl(out, input, weight, eps, enable_pdl)
+[rank0]:   File "/home/bzhou011/Highway_kernel/.venv-sglang/lib/python3.12/site-packages/flashinfer/norm/__init__.py", line 410, in _gemma_rmsnorm_impl
+[rank0]:     get_norm_module().gemma_rmsnorm(out, input, weight, eps, enable_pdl)
+[rank0]:     ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/Highway_kernel/.venv-sglang/lib/python3.12/site-packages/flashinfer/norm/__init__.py", line 83, in get_norm_module
+[rank0]:     return gen_norm_module().build_and_load()
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/Highway_kernel/.venv-sglang/lib/python3.12/site-packages/flashinfer/jit/core.py", line 316, in build_and_load
+[rank0]:     self.build(verbose, need_lock=False)
+[rank0]:   File "/home/bzhou011/Highway_kernel/.venv-sglang/lib/python3.12/site-packages/flashinfer/jit/core.py", line 302, in build
+[rank0]:     run_ninja(self.build_dir, self.ninja_path, verbose)
+[rank0]:   File "/home/bzhou011/Highway_kernel/.venv-sglang/lib/python3.12/site-packages/flashinfer/jit/cpp_ext.py", line 368, in run_ninja
+[rank0]:     subprocess.run(
+[rank0]:   File "/usr/local/python/3.12.13/lib/python3.12/subprocess.py", line 548, in run
+[rank0]:     with Popen(*popenargs, **kwargs) as process:
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/python/3.12.13/lib/python3.12/subprocess.py", line 1026, in __init__
+[rank0]:     self._execute_child(args, executable, preexec_fn, close_fds,
+[rank0]:   File "/usr/local/python/3.12.13/lib/python3.12/subprocess.py", line 1955, in _execute_child
+[rank0]:     raise child_exception_type(errno_num, err_msg, err_filename)
+[rank0]: FileNotFoundError: [Errno 2] No such file or directory: 'ninja'
+[rank0]:[W1005 12:45:23.354125213 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

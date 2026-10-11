@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "gpu_execution_tested": false,
+  "synthetic_fixtures_only": true,
+  "runtime": {
+    "sglang_distribution_version": "0.5.21",
+    "sglang_source_version": "0.5.21",
+    "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+    "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+    "torch": "2.13.0+cu130",
+    "torch_cuda": "13.0",
+    "transformers": "5.12.1",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+    "cache_paths": {
+      "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+      "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+      "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+      "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+      "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+      "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+    },
+    "reference_source_on_import_path": false,
+    "gpu_execution_tested": false
+  },
+  "native_api_and_tp_parser": true,
+  "independent_validation_api": true,
+  "fitting_known_coefficients": true,
+  "missing_prefill_json_null": true,
+  "csv_and_figures": true,
+  "numerical_guard_cpu_check": true
+}

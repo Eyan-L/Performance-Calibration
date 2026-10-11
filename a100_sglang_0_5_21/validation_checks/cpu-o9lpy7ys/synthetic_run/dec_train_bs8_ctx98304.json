@@ -1,0 +1,289 @@
+{
+  "metadata": {
+    "run_signature": "f5379c00bc8d833b0acba11708a0e4ed4bf55299c4e46f1dd08664e0b3433ae8",
+    "tp": 4,
+    "smoke": false,
+    "point": {
+      "id": "dec_train_bs8_ctx98304",
+      "kind": "decoder",
+      "bs": 8,
+      "ctx": 98304,
+      "split": "train",
+      "corpus": "long",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 51.57
+    },
+    "purpose": "measurement",
+    "measurement_policy": {
+      "primary_rank": 0,
+      "rank_aggregation": "rank 0 per iteration, then summarize",
+      "auxiliary_aggregation": "max across ranks for each iteration, then summarize",
+      "per_sample_tp_barrier": false,
+      "numerical_checks": "separate validation process; not in measurement loops",
+      "prefill_tp4": "extension of the reference TP=1 prefill benchmark"
+    },
+    "gpu_execution_tested": true,
+    "job": "SYNTHETIC-CPU-FIXTURE",
+    "validation_fixture_only": true,
+    "warmups": 3,
+    "iterations": 9,
+    "decode_steps": 30,
+    "rank_aggregation": "rank 0 per iteration, then summarize",
+    "rank_metadata": [
+      {
+        "weight_dtype": "torch.bfloat16",
+        "kv_cache_dtype": "torch.bfloat16",
+        "purpose": "measurement",
+        "validation_fixture_only": true
+      },
+      {
+        "weight_dtype": "torch.bfloat16",
+        "kv_cache_dtype": "torch.bfloat16",
+        "purpose": "measurement",
+        "validation_fixture_only": true
+      },
+      {
+        "weight_dtype": "torch.bfloat16",
+        "kv_cache_dtype": "torch.bfloat16",
+        "purpose": "measurement",
+        "validation_fixture_only": true
+      },
+      {
+        "weight_dtype": "torch.bfloat16",
+        "kv_cache_dtype": "torch.bfloat16",
+        "purpose": "measurement",
+        "validation_fixture_only": true
+      }
+    ]
+  },
+  "completed": true,
+  "summaries": [
+    {
+      "mode": "baseline_short_only",
+      "decode_steps": 30,
+      "total_ms_per_step_median": 7.4739607552,
+      "total_ms_per_step_mean": 7.4739607552,
+      "total_ms_per_step_min": 7.444064912179201,
+      "total_ms_per_step_p90": 7.4963826374656
+    }
+  ],
+  "rows": [
+    {
+      "iter": 0,
+      "total_ms": 223.32194736537602,
+      "total_ms_per_step": 7.444064912179201,
+      "rank_total_ms": [
+        223.32194736537602,
+        230.04851204505601,
+        236.77507672473604,
+        243.50164140441603
+      ]
+    },
+    {
+      "iter": 1,
+      "total_ms": 223.546166188032,
+      "total_ms_per_step": 7.4515388729344005,
+      "rank_total_ms": [
+        223.546166188032,
+        230.27273086771206,
+        236.99929554739205,
+        243.72586022707205
+      ]
+    },
+    {
+      "iter": 2,
+      "total_ms": 223.77038501068802,
+      "total_ms_per_step": 7.4590128336896,
+      "rank_total_ms": [
+        223.77038501068802,
+        230.496949690368,
+        237.22351437004804,
+        243.95007904972803
+      ]
+    },
+    {
+      "iter": 3,
+      "total_ms": 223.994603833344,
+      "total_ms_per_step": 7.4664867944448,
+      "rank_total_ms": [
+        223.994603833344,
+        230.72116851302405,
+        237.44773319270405,
+        244.17429787238405
+      ]
+    },
+    {
+      "iter": 4,
+      "total_ms": 224.21882265600001,
+      "total_ms_per_step": 7.4739607552,
+      "rank_total_ms": [
+        224.21882265600001,
+        230.94538733568,
+        237.67195201536003,
+        244.39851669504003
+      ]
+    },
+    {
+      "iter": 5,
+      "total_ms": 224.443041478656,
+      "total_ms_per_step": 7.4814347159552,
+      "rank_total_ms": [
+        224.443041478656,
+        231.169606158336,
+        237.896170838016,
+        244.62273551769601
+      ]
+    },
+    {
+      "iter": 6,
+      "total_ms": 224.667260301312,
+      "total_ms_per_step": 7.4889086767104,
+      "rank_total_ms": [
+        224.667260301312,
+        231.393824980992,
+        238.12038966067203,
+        244.84695434035203
+      ]
+    },
+    {
+      "iter": 7,
+      "total_ms": 224.891479123968,
+      "total_ms_per_step": 7.4963826374656,
+      "rank_total_ms": [
+        224.891479123968,
+        231.618043803648,
+        238.34460848332802,
+        245.071173163008
+      ]
+    },
+    {
+      "iter": 8,
+      "total_ms": 225.115697946624,
+      "total_ms_per_step": 7.503856598220801,
+      "rank_total_ms": [
+        225.115697946624,
+        231.84226262630403,
+        238.56882730598403,
+        245.29539198566403
+      ]
+    }
+  ],
+  "input": {
+    "token_sha256": "SYNTHETIC-8-98304"
+  },
+  "rank_layouts": [
+    {
+      "batch_size": 8,
+      "actual_sequence_lengths": [
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305
+      ],
+      "actual_input_token_count": 8
+    },
+    {
+      "batch_size": 8,
+      "actual_sequence_lengths": [
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305
+      ],
+      "actual_input_token_count": 8
+    },
+    {
+      "batch_size": 8,
+      "actual_sequence_lengths": [
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305
+      ],
+      "actual_input_token_count": 8
+    },
+    {
+      "batch_size": 8,
+      "actual_sequence_lengths": [
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305,
+        98305
+      ],
+      "actual_input_token_count": 8
+    }
+  ],
+  "rank_diagnostics": {
+    "max_total_ms": [
+      243.50164140441603,
+      243.72586022707205,
+      243.95007904972803,
+      244.17429787238405,
+      244.39851669504003,
+      244.62273551769601,
+      244.84695434035203,
+      245.071173163008,
+      245.29539198566403
+    ],
+    "max_summary": {
+      "mode": "baseline_short_only",
+      "decode_steps": 30,
+      "total_ms_per_step_median": 8.146617223168,
+      "total_ms_per_step_mean": 8.146617223168,
+      "total_ms_per_step_min": 8.116721380147201,
+      "total_ms_per_step_p90": 8.169039105433601
+    },
+    "per_rank_summaries": [
+      {
+        "mode": "baseline_short_only",
+        "decode_steps": 30,
+        "total_ms_per_step_median": 7.4739607552,
+        "total_ms_per_step_mean": 7.4739607552,
+        "total_ms_per_step_min": 7.444064912179201,
+        "total_ms_per_step_p90": 7.4963826374656
+      },
+      {
+        "mode": "baseline_short_only",
+        "decode_steps": 30,
+        "total_ms_per_step_median": 7.698179577856,
+        "total_ms_per_step_mean": 7.698179577856,
+        "total_ms_per_step_min": 7.6682837348352,
+        "total_ms_per_step_p90": 7.7206014601216
+      },
+      {
+        "mode": "baseline_short_only",
+        "decode_steps": 30,
+        "total_ms_per_step_median": 7.922398400512001,
+        "total_ms_per_step_mean": 7.922398400512001,
+        "total_ms_per_step_min": 7.892502557491201,
+        "total_ms_per_step_p90": 7.9448202827776
+      },
+      {
+        "mode": "baseline_short_only",
+        "decode_steps": 30,
+        "total_ms_per_step_median": 8.146617223168,
+        "total_ms_per_step_mean": 8.146617223168,
+        "total_ms_per_step_min": 8.116721380147201,
+        "total_ms_per_step_p90": 8.169039105433601
+      }
+    ]
+  }
+}

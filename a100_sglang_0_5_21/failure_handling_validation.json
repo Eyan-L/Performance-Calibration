@@ -1,0 +1,10 @@
+{
+  "syntax": true,
+  "partial_prefill_recovered": true,
+  "mixed_inputs_rejected": true,
+  "invalid_timings_and_provenance_rejected": true,
+  "deadline_not_success": true,
+  "smoke_dry_run_points": 2,
+  "gpu_execution_tested": false,
+  "fixtures": "/tmp/qwen38-calibration-cpu-a8a9uvla"
+}

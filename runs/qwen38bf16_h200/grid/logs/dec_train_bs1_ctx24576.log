@@ -1,0 +1,66 @@
+CMD $PYTHON /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/ash_bench_shim.py /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/benchmark/kernels/fused_moe_triton/bench_decode_lane_moe_cta.py --model-path /home/bzhou011/ash_models/Qwen3.8-27B@1d4bf0f2ff60 --random-seed 0 --tp-size 1 --kv-cache-dtype bfloat16 --disable-radix-cache --attention-backend fa3 --token-corpus-dir /home/bzhou011/Highway_kernel/results/qwen36_section_writer_token_corpus --token-corpus-split train --mem-fraction-static 0.90 --max-running-requests 1 --max-mamba-cache-size 1 --max-total-tokens 57344 --short-bs 1 --short-input-len 24576 --bench-warmups 3 --bench-iters 9 --decode-steps 30 --run-modes baseline_short_only --prefill-chunk-size 1 --prefill-token-chunk-size 8192 --no-png --result-prefix /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/runs/qwen38bf16_h200/grid/dec_train_bs1_ctx24576
+ASH shim: running /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/benchmark/kernels/fused_moe_triton/bench_decode_lane_moe_cta.py
+Fail to set RLIMIT_NOFILE: current limit exceeds maximum limit
+[2026-10-05 13:03:20 TP0] Init torch distributed begin.
+[2026-10-05 13:03:20 TP0] Init torch distributed ends. elapsed=0.20 s, mem usage=0.09 GB
+[2026-10-05 13:03:23 TP0] Load weight begin. avail mem=139.13 GB
+[2026-10-05 13:03:23 TP0] Multimodal attention backend not set. Use fa3.
+[2026-10-05 13:03:23 TP0] Using fa3 as multimodal attention backend.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-05 13:03:23 TP0] using attn output gate!
+Multi-thread loading shards:   0% Completed | 0/18 [00:00<?, ?it/s]Multi-thread loading shards:   6% Completed | 1/18 [00:00<00:10,  1.70it/s]Multi-thread loading shards:  11% Completed | 2/18 [00:01<00:08,  1.92it/s]Multi-thread loading shards:  17% Completed | 3/18 [00:01<00:06,  2.17it/s]Multi-thread loading shards:  22% Completed | 4/18 [00:02<00:07,  1.97it/s]Multi-thread loading shards:  28% Completed | 5/18 [00:02<00:05,  2.24it/s]Multi-thread loading shards:  33% Completed | 6/18 [00:02<00:05,  2.05it/s]Multi-thread loading shards:  39% Completed | 7/18 [00:03<00:04,  2.22it/s]Multi-thread loading shards:  44% Completed | 8/18 [00:03<00:05,  1.94it/s]Multi-thread loading shards:  50% Completed | 9/18 [00:04<00:04,  2.09it/s]Multi-thread loading shards:  56% Completed | 10/18 [00:05<00:04,  1.87it/s]Multi-thread loading shards:  61% Completed | 11/18 [00:05<00:03,  2.06it/s]Multi-thread loading shards:  67% Completed | 12/18 [00:06<00:03,  1.87it/s]Multi-thread loading shards:  72% Completed | 13/18 [00:06<00:02,  2.03it/s]Multi-thread loading shards:  78% Completed | 14/18 [00:07<00:02,  1.88it/s]Multi-thread loading shards:  83% Completed | 15/18 [00:07<00:01,  2.08it/s]Multi-thread loading shards:  89% Completed | 16/18 [00:08<00:01,  1.85it/s]Multi-thread loading shards:  94% Completed | 17/18 [00:08<00:00,  2.02it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:08<00:00,  2.09it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:08<00:00,  2.01it/s]
+[2026-10-05 13:03:32 TP0] Load weight end. elapsed=9.21 s, type=Qwen3_5ForConditionalGeneration, avail mem=88.08 GB, mem usage=51.05 GB.
+[2026-10-05 13:03:32 TP0] Max concurrent requests (per dp worker) from the finalized token capacity: max_num_reqs=1.
+[2026-10-05 13:03:32 TP0] Mamba Cache is allocated. max_mamba_cache_size: 1, conv_state size: 0.01GB, ssm_state size: 0.28GB 
+[2026-10-05 13:03:32 TP0] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 57344, K size: 1.75 GB, V size: 1.75 GB
+[2026-10-05 13:03:32 TP0] Memory pool end. avail mem=84.17 GB
+[2026-10-05 13:03:32 TP0] Linear attention kernel backend: decode=triton, prefill=triton
+[2026-10-05 13:03:32 TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-05 13:03:32 TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-05 13:03:32 TP0] Linear attention kernel backend: decode=triton, prefill=triton
+[2026-10-05 13:03:32 TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-05 13:03:32 TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-05 13:03:32 TP0] Linear attention kernel backend: decode=triton, prefill=triton
+[2026-10-05 13:03:32 TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-05 13:03:32 TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-05 13:03:32 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=84.08 GB
+[2026-10-05 13:03:32 TP0] Capture cuda graph bs [1]
+  0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=84.08 GB):   0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=84.08 GB): 100%|██████████| 1/1 [00:00<00:00,  1.04it/s]Capturing batches (bs=1 avail_mem=84.08 GB): 100%|██████████| 1/1 [00:00<00:00,  1.04it/s]
+[2026-10-05 13:03:34 TP0] Capture cuda graph end. Time elapsed: 1.59 s. mem usage=0.01 GB. avail mem=84.07 GB.
+[2026-10-05 13:03:34 TP0] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+max_total_num_tokens=57344
+Preparing short-only baseline ...
+ASH shim: layer_timer_name='baseline_short_only' -> None (ROCm)
+[2026-10-05 13:03:35 TP0] Capture cuda graph bs [1]
+  0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=84.07 GB):   0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=1 avail_mem=84.07 GB): 100%|██████████| 1/1 [00:00<00:00,  7.89it/s]Capturing batches (bs=1 avail_mem=84.07 GB): 100%|██████████| 1/1 [00:00<00:00,  7.88it/s]
+[2026-10-05 13:03:36 TP0] Reset HybridReqToTokenPool
+DeepResearch inputs: split=train requests=1 length=24576 first=dr_012/20260729_055931_187f25
+Warmup baseline_short_only ...
+Benchmark baseline_short_only ...
+{
+  "mode": "baseline_short_only",
+  "decode_steps": 30,
+  "short_ms_median": 471.0868835449219,
+  "short_ms_mean": 471.0988193088108,
+  "short_ms_p90": 471.1565246582031,
+  "long_ms_median": 0.0,
+  "long_ms_mean": 0.0,
+  "long_ms_p90": 0.0,
+  "total_ms_median": 471.0868835449219,
+  "total_ms_mean": 471.0988193088108,
+  "total_ms_p90": 471.1565246582031,
+  "wall_ms_median": 471.1481179110706,
+  "wall_ms_mean": 471.16163838654757,
+  "wall_ms_p90": 471.2192299775779,
+  "short_replay_ms_median": 471.0868835449219,
+  "short_replay_ms_mean": 471.0988193088108,
+  "short_replay_ms_p90": 471.1565246582031,
+  "long_replay_ms_median": 0.0,
+  "long_replay_ms_mean": 0.0,
+  "long_replay_ms_p90": 0.0,
+  "total_ms_per_step_median": 15.702896118164062,
+  "total_ms_per_step_mean": 15.703293976960358,
+  "total_ms_per_step_p90": 15.70521748860677
+}
+Wrote /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/runs/qwen38bf16_h200/grid/dec_train_bs1_ctx24576.csv
+Wrote /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/runs/qwen38bf16_h200/grid/dec_train_bs1_ctx24576.json

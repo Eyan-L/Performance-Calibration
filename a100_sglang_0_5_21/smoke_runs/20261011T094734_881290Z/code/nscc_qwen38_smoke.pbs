@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+#PBS -N qwen38-calib-smoke
+#PBS -P personal-n2602695
+#PBS -l select=1:ngpus=4:ncpus=32:mem=128gb
+#PBS -l walltime=02:00:00
+#PBS -q normal
+#PBS -j oe
+
+set -euo pipefail
+module load python/3.10.9
+module load singularity/4.3.1
+unset PYTHONPATH PYTHONHOME CUDA_LAUNCH_BLOCKING
+
+: "${CALIB_LAUNCH_DIR:?Submit with the immutable calibration launch directory}"
+runtime_dir=$CALIB_LAUNCH_DIR/code
+results_dir=$CALIB_LAUNCH_DIR/results
+reference_kit=/scratch/users/ntu/n2602695/Performance/qwen38_calib_kit_r001
+model_path=/scratch/users/ntu/n2602695/hf/hub/models--Qwen--Qwen3.8-27B/snapshots/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0
+manifest=$reference_kit/manifests/qwen38bf16_a100x4_flashinfer.json
+stage=environment
+trap 'status=$?; printf "{\"stage\":\"%s\",\"exit_code\":%d,\"job\":\"%s\"}\n" "$stage" "$status" "${PBS_JOBID:-}" > "$CALIB_LAUNCH_DIR/job_status.json"' EXIT
+cd "$runtime_dir"
+date -u
+hostname
+nvidia-smi --query-gpu=index,name,uuid,driver_version,memory.total --format=csv > "$CALIB_LAUNCH_DIR/hardware.csv"
+nvidia-smi topo -m > "$CALIB_LAUNCH_DIR/topology.txt"
+stage=gpu_preflight
+bash run_in_sif.sh --gpu gpu_preflight.py --out "$CALIB_LAUNCH_DIR/gpu_preflight.json" --tp 4
+stage=measurement
+deadline=$(( $(date +%s) + 6800 ))
+set +e
+python3 run_points.py "$manifest" "$results_dir" --model-path "$model_path" \
+    --smoke --only dec_train_bs4_ctx8192 pre_train_g0 --point-timeout 2700 --stop-at "$deadline"
+measurement_status=$?
+set -e
+stage=collect_results
+python3 collect_results.py "$results_dir" "$CALIB_LAUNCH_DIR/collected" \
+    --only dec_train_bs4_ctx8192 pre_train_g0 --require-complete
+if [[ $measurement_status -ne 0 ]]; then
+    exit "$measurement_status"
+fi
+stage=complete
+date -u

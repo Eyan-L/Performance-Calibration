@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "model_path": "/home/bzhou011/ash_models/Qwen3.8-27B@1d4bf0f2ff60",
+    "gpu_name": "NVIDIA H200",
+    "physical_sm_count": 132,
+    "requested_prefill_sm_count": 0,
+    "actual_prefill_sm_count": 132,
+    "green_context_total_sm_count": 132,
+    "stream_kind": "full",
+    "batch_sizes": [
+      1,
+      2
+    ],
+    "request_lengths": [
+      98304
+    ],
+    "warmups": 2,
+    "iterations": 5,
+    "random_seed": 0,
+    "token_corpus_dir": "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/inputs/section_writer_long_corpus_r001",
+    "token_corpus_split": "train",
+    "bandwidth_definition": "estimated useful model read/write bytes divided by CUDA Event model-forward time; not a physical DRAM counter"
+  },
+  "points": [
+    {
+      "batch_size": 1,
+      "request_length": 98304,
+      "prompt_tokens": 98304,
+      "forward_ms_median": 11264.48828125,
+      "forward_ms_mean": 11263.1625,
+      "forward_ms_p90": 11270.294921875,
+      "active_prompt_tokens_per_second": 8726.894426587427,
+      "estimated_flops": 1.188799957172224e+16,
+      "active_tflops": 1055.3519409763237,
+      "estimated_read_bytes": 72941381632.0,
+      "estimated_write_bytes": 25769803776.0,
+      "active_read_gb_s": 6.47533911979052,
+      "active_write_gb_s": 2.2877030125633344,
+      "active_total_gb_s": 8.763042132353855,
+      "estimated_kv_cache_read_bytes": 25769803776.0,
+      "estimated_kv_cache_write_bytes": 25769803776.0,
+      "estimated_moe_read_bytes": 0.0,
+      "iterations": 5,
+      "requested_prefill_sm_count": 0,
+      "actual_prefill_sm_count": 132,
+      "status": "ok",
+      "samples": [
+        {
+          "forward_seconds": 11.2487880859375,
+          "num_tokens": 98304,
+          "flops": 1.188799957172224e+16,
+          "read_bytes": 72941381632.0,
+          "write_bytes": 25769803776.0,
+          "kv_cache_read_bytes": 25769803776.0,
+          "kv_cache_write_bytes": 25769803776.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 11.2658857421875,
+          "num_tokens": 98304,
+          "flops": 1.188799957172224e+16,
+          "read_bytes": 72941381632.0,
+          "write_bytes": 25769803776.0,
+          "kv_cache_read_bytes": 25769803776.0,
+          "kv_cache_write_bytes": 25769803776.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 11.26448828125,
+          "num_tokens": 98304,
+          "flops": 1.188799957172224e+16,
+          "read_bytes": 72941381632.0,
+          "write_bytes": 25769803776.0,
+          "kv_cache_read_bytes": 25769803776.0,
+          "kv_cache_write_bytes": 25769803776.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 11.273234375,
+          "num_tokens": 98304,
+          "flops": 1.188799957172224e+16,
+          "read_bytes": 72941381632.0,
+          "write_bytes": 25769803776.0,
+          "kv_cache_read_bytes": 25769803776.0,
+          "kv_cache_write_bytes": 25769803776.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 11.263416015625,
+          "num_tokens": 98304,
+          "flops": 1.188799957172224e+16,
+          "read_bytes": 72941381632.0,
+          "write_bytes": 25769803776.0,
+          "kv_cache_read_bytes": 25769803776.0,
+          "kv_cache_write_bytes": 25769803776.0,
+          "moe_read_bytes": 0.0
+        }
+      ]
+    },
+    {
+      "batch_size": 2,
+      "request_length": 98304,
+      "prompt_tokens": 196608,
+      "forward_ms_median": 22451.6953125,
+      "forward_ms_mean": 22454.91015625,
+      "forward_ms_p90": 22488.110546875,
+      "active_prompt_tokens_per_second": 8756.933374672082,
+      "estimated_flops": 2.377599914344448e+16,
+      "active_tflops": 1058.9845805633738,
+      "estimated_read_bytes": 99717818368.0,
+      "estimated_write_bytes": 51539607552.0,
+      "active_read_gb_s": 4.441438251323588,
+      "active_write_gb_s": 2.2955775425700384,
+      "active_total_gb_s": 6.737015793893626,
+      "estimated_kv_cache_read_bytes": 51539607552.0,
+      "estimated_kv_cache_write_bytes": 51539607552.0,
+      "estimated_moe_read_bytes": 0.0,
+      "iterations": 5,
+      "requested_prefill_sm_count": 0,
+      "actual_prefill_sm_count": 132,
+      "status": "ok",
+      "samples": [
+        {
+          "forward_seconds": 22.411673828125,
+          "num_tokens": 196608,
+          "flops": 2.377599914344448e+16,
+          "read_bytes": 99717818368.0,
+          "write_bytes": 51539607552.0,
+          "kv_cache_read_bytes": 51539607552.0,
+          "kv_cache_write_bytes": 51539607552.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 22.440470703125,
+          "num_tokens": 196608,
+          "flops": 2.377599914344448e+16,
+          "read_bytes": 99717818368.0,
+          "write_bytes": 51539607552.0,
+          "kv_cache_read_bytes": 51539607552.0,
+          "kv_cache_write_bytes": 51539607552.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 22.471580078125,
+          "num_tokens": 196608,
+          "flops": 2.377599914344448e+16,
+          "read_bytes": 99717818368.0,
+          "write_bytes": 51539607552.0,
+          "kv_cache_read_bytes": 51539607552.0,
+          "kv_cache_write_bytes": 51539607552.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 22.4516953125,
+          "num_tokens": 196608,
+          "flops": 2.377599914344448e+16,
+          "read_bytes": 99717818368.0,
+          "write_bytes": 51539607552.0,
+          "kv_cache_read_bytes": 51539607552.0,
+          "kv_cache_write_bytes": 51539607552.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 22.499130859375,
+          "num_tokens": 196608,
+          "flops": 2.377599914344448e+16,
+          "read_bytes": 99717818368.0,
+          "write_bytes": 51539607552.0,
+          "kv_cache_read_bytes": 51539607552.0,
+          "kv_cache_write_bytes": 51539607552.0,
+          "moe_read_bytes": 0.0
+        }
+      ]
+    }
+  ]
+}

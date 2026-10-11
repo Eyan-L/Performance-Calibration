@@ -1,0 +1,320 @@
+{
+  "run_signature": "f5379c00bc8d833b0acba11708a0e4ed4bf55299c4e46f1dd08664e0b3433ae8",
+  "selected": [
+    "dec_train_bs1_ctx4096",
+    "dec_train_bs1_ctx16384",
+    "dec_train_bs4_ctx4096",
+    "dec_train_bs4_ctx8192",
+    "dec_train_bs4_ctx16384",
+    "dec_train_bs4_ctx65536",
+    "dec_train_bs8_ctx98304",
+    "dec_train_bs12_ctx98304",
+    "dec_train_bs16_ctx4096",
+    "dec_train_bs16_ctx16384",
+    "dec_train_bs28_ctx32768",
+    "dec_holdout_bs4_ctx16384",
+    "dec_holdout_bs8_ctx65536",
+    "pre_train_g0",
+    "pre_train_g1",
+    "pre_train_g2",
+    "pre_train_g3",
+    "pre_train_g4",
+    "pre_holdout_g0",
+    "pre_holdout_g2",
+    "dec_repeat_bs16_ctx16384"
+  ],
+  "completed_groups": [
+    "dec_train_bs1_ctx4096",
+    "dec_train_bs1_ctx16384",
+    "dec_train_bs4_ctx4096",
+    "dec_train_bs4_ctx8192",
+    "dec_train_bs4_ctx16384",
+    "dec_train_bs4_ctx65536",
+    "dec_train_bs8_ctx98304",
+    "dec_train_bs12_ctx98304",
+    "dec_train_bs16_ctx4096",
+    "dec_train_bs16_ctx16384",
+    "dec_train_bs28_ctx32768",
+    "dec_holdout_bs4_ctx16384",
+    "dec_holdout_bs8_ctx65536",
+    "pre_train_g0",
+    "pre_train_g1",
+    "pre_train_g2",
+    "pre_train_g3",
+    "pre_holdout_g0",
+    "pre_holdout_g2",
+    "dec_repeat_bs16_ctx16384"
+  ],
+  "partial_groups": [
+    "pre_train_g4"
+  ],
+  "missing_shapes": [
+    {
+      "id": "pre_train_g4",
+      "batch": 2,
+      "length": 98304
+    }
+  ],
+  "invalid_artifacts": [],
+  "recovered_shapes": [
+    {
+      "id": "pre_train_g4",
+      "batch": 1,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g4/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    }
+  ],
+  "shape_sources": [
+    {
+      "id": "dec_train_bs1_ctx4096",
+      "batch": 1,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs1_ctx4096/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs1_ctx16384",
+      "batch": 1,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs1_ctx16384/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs4_ctx4096",
+      "batch": 4,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs4_ctx4096/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs4_ctx8192",
+      "batch": 4,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs4_ctx8192/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs4_ctx16384",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs4_ctx16384/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs4_ctx65536",
+      "batch": 4,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs4_ctx65536/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs8_ctx98304",
+      "batch": 8,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs8_ctx98304/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs12_ctx98304",
+      "batch": 12,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs12_ctx98304/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs16_ctx4096",
+      "batch": 16,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs16_ctx4096/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs16_ctx16384",
+      "batch": 16,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs16_ctx16384/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs28_ctx32768",
+      "batch": 28,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs28_ctx32768/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_holdout_bs4_ctx16384",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_holdout_bs4_ctx16384/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_holdout_bs8_ctx65536",
+      "batch": 8,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_holdout_bs8_ctx65536/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g1/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g1/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g1/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g1/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g3",
+      "batch": 1,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g3/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g3",
+      "batch": 4,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g3/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g4",
+      "batch": 1,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g4/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 1,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 1,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 8,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 8,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g2",
+      "batch": 1,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g2",
+      "batch": 2,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_repeat_bs16_ctx16384",
+      "batch": 16,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_repeat_bs16_ctx16384/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    }
+  ],
+  "smoke": false,
+  "full_grid_coverage_complete": false,
+  "selected_shape_count": 36,
+  "measurement_coverage_complete": false,
+  "fit_design_verified": false
+}

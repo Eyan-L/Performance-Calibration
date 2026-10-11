@@ -1,0 +1,11 @@
+{
+  "job": "SYNTHETIC-CPU-GATE",
+  "phase": "pilot",
+  "stage": "measurement",
+  "completed": false,
+  "started_at": 1791719625.7373319,
+  "run_signature": "d1630e7487a510a23cb15be269c73b594a0b2e4f0b34530a3deb9c9d362a3cb8",
+  "error": "RuntimeError: Formal-count bootstrap failed; expanded measurement stopped immediately",
+  "exit_code": 1,
+  "ended_at": 1791719626.7588272
+}

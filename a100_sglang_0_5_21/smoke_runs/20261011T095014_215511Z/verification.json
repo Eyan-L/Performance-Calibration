@@ -1,0 +1,53 @@
+{
+  "completed": true,
+  "job": "25758069.pbs101",
+  "gpu_execution_tested": true,
+  "sglang_version": "0.5.21",
+  "model": "Qwen3.8-27B",
+  "tp": 4,
+  "devices": 4,
+  "weight_and_kv_dtype": "bfloat16",
+  "frozen_code_hashes_verified": true,
+  "rank_records_verified": 8,
+  "rank_samples_reproduce_summaries": true,
+  "collected_matches_raw_results": true,
+  "measurement_shapes": [
+    {
+      "kind": "decode",
+      "batch": 4,
+      "context": 8192,
+      "median_ms_per_step": 17.113600158691405,
+      "iterations": 3,
+      "steps_per_iteration": 10
+    },
+    {
+      "kind": "prefill",
+      "batch": 1,
+      "context": 4096,
+      "median_forward_ms": 293.9647979736328,
+      "iterations": 2
+    },
+    {
+      "kind": "prefill",
+      "batch": 1,
+      "context": 8192,
+      "median_forward_ms": 582.6421508789062,
+      "iterations": 2
+    },
+    {
+      "kind": "prefill",
+      "batch": 1,
+      "context": 16384,
+      "median_forward_ms": 1180.7518310546875,
+      "iterations": 2
+    },
+    {
+      "kind": "prefill",
+      "batch": 1,
+      "context": 32768,
+      "median_forward_ms": 2515.0284423828125,
+      "iterations": 2
+    }
+  ],
+  "scope": "Small calibration smoke; full-grid fit not measured"
+}

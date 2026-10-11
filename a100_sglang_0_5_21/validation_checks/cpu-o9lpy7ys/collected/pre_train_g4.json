@@ -1,0 +1,111 @@
+{
+  "completed": false,
+  "points": [
+    {
+      "batch_size": 1,
+      "request_length": 98304,
+      "status": "ok",
+      "prompt_tokens": 98304,
+      "forward_ms_median": 1238.7888096256,
+      "forward_ms_mean": 1238.7888096256,
+      "forward_ms_p90": 1240.7708717210007,
+      "iterations": 5,
+      "samples_ms": [
+        1236.3112320063487,
+        1237.5500208159742,
+        1238.7888096256,
+        1240.0275984352254,
+        1241.266387244851
+      ],
+      "rank_samples_ms": [
+        [
+          1236.3112320063487,
+          1237.5500208159742,
+          1238.7888096256,
+          1240.0275984352254,
+          1241.266387244851
+        ],
+        [
+          1273.4748962951167,
+          1274.7136851047426,
+          1275.952473914368,
+          1277.1912627239935,
+          1278.4300515336192
+        ],
+        [
+          1310.6385605838848,
+          1311.8773493935105,
+          1313.116138203136,
+          1314.3549270127614,
+          1315.5937158223871
+        ],
+        [
+          1347.802224872653,
+          1349.0410136822786,
+          1350.279802491904,
+          1351.5185913015296,
+          1352.7573801111553
+        ]
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-1-98304"
+      },
+      "rank_layouts": [
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            98304
+          ],
+          "actual_input_token_count": 98304
+        },
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            98304
+          ],
+          "actual_input_token_count": 98304
+        },
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            98304
+          ],
+          "actual_input_token_count": 98304
+        },
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            98304
+          ],
+          "actual_input_token_count": 98304
+        }
+      ],
+      "rank_diagnostics": {
+        "max_samples_ms": [
+          1347.802224872653,
+          1349.0410136822786,
+          1350.279802491904,
+          1351.5185913015296,
+          1352.7573801111553
+        ],
+        "max_median_ms": 1350.279802491904,
+        "per_rank_medians_ms": [
+          1238.7888096256,
+          1275.952473914368,
+          1313.116138203136,
+          1350.279802491904
+        ]
+      }
+    },
+    {
+      "batch_size": 2,
+      "request_length": 98304,
+      "status": "missing",
+      "error": "No complete matching samples across all TP ranks"
+    }
+  ],
+  "metadata": {
+    "run_signature": "f5379c00bc8d833b0acba11708a0e4ed4bf55299c4e46f1dd08664e0b3433ae8",
+    "partial_recovery": true
+  }
+}

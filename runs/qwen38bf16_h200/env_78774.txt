@@ -1,0 +1,44 @@
+Mon Oct  5 06:45:08 AM UTC 2026
+hpc-gaas-g25
+NVIDIA H200, GPU-c64b7ca7-671e-5026-bd66-ae723996e365, 580.126.20, 143771 MiB, 1980 MHz
+	[4mGPU0	NIC0	NIC1	NIC2	NIC3	NIC4	NIC5	NIC6	NIC7	NIC8	CPU Affinity	NUMA Affinity	GPU NUMA ID[0m
+GPU0	 X 	NODE	NODE	NODE	NODE	NODE	PIX	NODE	NODE	PIX		1		N/A
+NIC0	NODE	 X 	NODE	NODE	NODE	NODE	NODE	NODE	NODE	NODE				
+NIC1	NODE	NODE	 X 	NODE	NODE	NODE	NODE	NODE	NODE	NODE				
+NIC2	NODE	NODE	NODE	 X 	NODE	NODE	NODE	NODE	NODE	NODE				
+NIC3	NODE	NODE	NODE	NODE	 X 	NODE	NODE	NODE	NODE	NODE				
+NIC4	NODE	NODE	NODE	NODE	NODE	 X 	NODE	NODE	NODE	NODE				
+NIC5	PIX	NODE	NODE	NODE	NODE	NODE	 X 	NODE	NODE	PIX				
+NIC6	NODE	NODE	NODE	NODE	NODE	NODE	NODE	 X 	NODE	NODE				
+NIC7	NODE	NODE	NODE	NODE	NODE	NODE	NODE	NODE	 X 	NODE				
+NIC8	PIX	NODE	NODE	NODE	NODE	NODE	PIX	NODE	NODE	 X 				
+
+Legend:
+
+  X    = Self
+  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)
+  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node
+  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)
+  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)
+  PIX  = Connection traversing at most a single PCIe bridge
+  NV#  = Connection traversing a bonded set of # NVLinks
+
+NIC Legend:
+
+  NIC0: mlx5_0
+  NIC1: mlx5_1
+  NIC2: mlx5_2
+  NIC3: mlx5_3
+  NIC4: mlx5_4
+  NIC5: mlx5_5
+  NIC6: mlx5_8
+  NIC7: mlx5_9
+  NIC8: mlx5_bond_0
+
+/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/__init__.py 2.11.0+cu130 13.0 0.6.12 3.12.13 (main, Apr  9 2026, 13:49:46) [GCC 12.3.0]
+ace86ebd088efec13700a3f02e9e278630f595ae80a68fefff5b8728e566dd70  /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/run_points_h200.py
+d5a06ed0f65a5e4430c0d67fb56b6ba70903272aa2603bc102ef4c21e5abf981  /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/select_backend.py
+b3194dc437979f799ec507dc12a9b36a99ed2b438811319557b746d874e114b4  /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/env_h200.sh
+51803cf8b8e01553207354616571669c2bf33d7271544d85adda1cee01bca853  /var/spool/pbs/mom_priv/jobs/78774.gaas.SC
+b1cbb9e78eef354c7bf6fd5c3b7fab2b3295132bd2dd77f2bbe776bb7fdf9e36  /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/manifests/qwen38bf16_h200_fa3.json
+05513c34714a5974fac622a9d3b20d3145e2363b571732c6c3cf841a1032144c  /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/manifests/qwen38bf16_h200_flashinfer.json

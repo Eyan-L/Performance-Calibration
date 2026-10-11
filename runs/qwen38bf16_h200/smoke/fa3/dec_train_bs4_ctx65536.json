@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "mode": "baseline_short_only",
+      "iter": 0,
+      "decode_steps": 10,
+      "short_ms": 199.0412139892578,
+      "long_ms": 0.0,
+      "total_ms": 199.0412139892578,
+      "wall_ms": 199.1014771629125,
+      "short_replay_ms": 199.0412139892578,
+      "long_replay_ms": 0.0,
+      "short_ms_per_step": 19.90412139892578,
+      "long_ms_per_step": 0.0,
+      "total_ms_per_step": 19.90412139892578,
+      "short_replay_ms_per_step": 19.90412139892578,
+      "long_replay_ms_per_step": 0.0
+    },
+    {
+      "mode": "baseline_short_only",
+      "iter": 1,
+      "decode_steps": 10,
+      "short_ms": 198.83795166015625,
+      "long_ms": 0.0,
+      "total_ms": 198.83795166015625,
+      "wall_ms": 198.89703183434904,
+      "short_replay_ms": 198.83795166015625,
+      "long_replay_ms": 0.0,
+      "short_ms_per_step": 19.883795166015624,
+      "long_ms_per_step": 0.0,
+      "total_ms_per_step": 19.883795166015624,
+      "short_replay_ms_per_step": 19.883795166015624,
+      "long_replay_ms_per_step": 0.0
+    },
+    {
+      "mode": "baseline_short_only",
+      "iter": 2,
+      "decode_steps": 10,
+      "short_ms": 198.8829803466797,
+      "long_ms": 0.0,
+      "total_ms": 198.8829803466797,
+      "wall_ms": 198.9370828960091,
+      "short_replay_ms": 198.8829803466797,
+      "long_replay_ms": 0.0,
+      "short_ms_per_step": 19.88829803466797,
+      "long_ms_per_step": 0.0,
+      "total_ms_per_step": 19.88829803466797,
+      "short_replay_ms_per_step": 19.88829803466797,
+      "long_replay_ms_per_step": 0.0
+    }
+  ],
+  "summaries": [
+    {
+      "mode": "baseline_short_only",
+      "decode_steps": 10,
+      "short_ms_median": 198.8829803466797,
+      "short_ms_mean": 198.92071533203125,
+      "short_ms_p90": 198.8829803466797,
+      "long_ms_median": 0.0,
+      "long_ms_mean": 0.0,
+      "long_ms_p90": 0.0,
+      "total_ms_median": 198.8829803466797,
+      "total_ms_mean": 198.92071533203125,
+      "total_ms_p90": 198.8829803466797,
+      "wall_ms_median": 198.9370828960091,
+      "wall_ms_mean": 198.9785306310902,
+      "wall_ms_p90": 198.9370828960091,
+      "short_replay_ms_median": 198.8829803466797,
+      "short_replay_ms_mean": 198.92071533203125,
+      "short_replay_ms_p90": 198.8829803466797,
+      "long_replay_ms_median": 0.0,
+      "long_replay_ms_mean": 0.0,
+      "long_replay_ms_p90": 0.0,
+      "total_ms_per_step_median": 19.88829803466797,
+      "total_ms_per_step_mean": 19.892071533203126,
+      "total_ms_per_step_p90": 19.88829803466797
+    }
+  ]
+}

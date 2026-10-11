@@ -1,0 +1,194 @@
+CMD $PYTHON /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/ash_bench_shim.py /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/test/bench_prefill_sm_sweep.py --model-path /home/bzhou011/ash_models/Qwen3.8-27B@1d4bf0f2ff60 --random-seed 0 --tp-size 1 --kv-cache-dtype bfloat16 --disable-radix-cache --attention-backend fa3 --token-corpus-dir /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/inputs/section_writer_long_corpus_r001 --token-corpus-split holdout --mem-fraction-static 0.70 --batch-sizes 1 4 --request-lengths 65536 --bench-warmups 2 --bench-iters 5 --prefill-sm-count 0 --result-file /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/runs/qwen38bf16_h200/grid/pre_holdout_g1.json
+ASH shim: running /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/test/bench_prefill_sm_sweep.py
+Fail to set RLIMIT_NOFILE: current limit exceeds maximum limit
+[2026-10-05 14:35:21 PREFILL-SM-SWEEP] Init torch distributed begin.
+[2026-10-05 14:35:21 PREFILL-SM-SWEEP] Init torch distributed ends. elapsed=0.23 s, mem usage=0.09 GB
+[2026-10-05 14:35:24 PREFILL-SM-SWEEP] Load weight begin. avail mem=139.13 GB
+[2026-10-05 14:35:24 PREFILL-SM-SWEEP] Multimodal attention backend not set. Use fa3.
+[2026-10-05 14:35:24 PREFILL-SM-SWEEP] Using fa3 as multimodal attention backend.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-05 14:35:24 PREFILL-SM-SWEEP] using attn output gate!
+Multi-thread loading shards:   0% Completed | 0/18 [00:00<?, ?it/s]Multi-thread loading shards:   6% Completed | 1/18 [00:00<00:10,  1.67it/s]Multi-thread loading shards:  11% Completed | 2/18 [00:01<00:08,  1.81it/s]Multi-thread loading shards:  17% Completed | 3/18 [00:01<00:07,  2.03it/s]Multi-thread loading shards:  22% Completed | 4/18 [00:02<00:07,  1.86it/s]Multi-thread loading shards:  28% Completed | 5/18 [00:02<00:06,  2.10it/s]Multi-thread loading shards:  33% Completed | 6/18 [00:03<00:06,  1.93it/s]Multi-thread loading shards:  39% Completed | 7/18 [00:03<00:05,  2.11it/s]Multi-thread loading shards:  44% Completed | 8/18 [00:04<00:05,  1.86it/s]Multi-thread loading shards:  50% Completed | 9/18 [00:04<00:04,  2.00it/s]Multi-thread loading shards:  56% Completed | 10/18 [00:05<00:04,  1.82it/s]Multi-thread loading shards:  61% Completed | 11/18 [00:05<00:03,  1.99it/s]Multi-thread loading shards:  67% Completed | 12/18 [00:06<00:03,  1.83it/s]Multi-thread loading shards:  72% Completed | 13/18 [00:06<00:02,  2.00it/s]Multi-thread loading shards:  78% Completed | 14/18 [00:07<00:02,  1.86it/s]Multi-thread loading shards:  83% Completed | 15/18 [00:07<00:01,  2.04it/s]Multi-thread loading shards:  89% Completed | 16/18 [00:08<00:01,  1.84it/s]Multi-thread loading shards:  94% Completed | 17/18 [00:08<00:00,  2.00it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:09<00:00,  2.07it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:09<00:00,  1.96it/s]
+[2026-10-05 14:35:33 PREFILL-SM-SWEEP] Load weight end. elapsed=9.45 s, type=Qwen3_5ForConditionalGeneration, avail mem=88.08 GB, mem usage=51.05 GB.
+[2026-10-05 14:35:33 PREFILL-SM-SWEEP] Max concurrent requests (per dp worker) from the finalized token capacity: max_num_reqs=4.
+[2026-10-05 14:35:33 PREFILL-SM-SWEEP] Mamba Cache is allocated. max_mamba_cache_size: 4, conv_state size: 0.01GB, ssm_state size: 0.70GB 
+[2026-10-05 14:35:33 PREFILL-SM-SWEEP] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 748820, K size: 22.85 GB, V size: 22.85 GB
+[2026-10-05 14:35:33 PREFILL-SM-SWEEP] Memory pool end. avail mem=41.54 GB
+[2026-10-05 14:35:33 PREFILL-SM-SWEEP] Linear attention kernel backend: decode=triton, prefill=triton
+[2026-10-05 14:35:33 PREFILL-SM-SWEEP] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-05 14:35:33 PREFILL-SM-SWEEP] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-05 14:35:33 PREFILL-SM-SWEEP] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+max_total_num_tokens=748820
+ASH shim: dense qwen3_5_text -> DenseQwen3PerfEstimator (timing only)
+Benchmarking sm=132 bs=1 request_length=65536
+[2026-10-05 14:35:34 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+DeepResearch inputs: split=holdout requests=1 length=65536 first=dr_014/concat0045
+[2026-10-05 14:35:42 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:35:49 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:35:56 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:36:03 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:36:10 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:36:16 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+Benchmarking sm=132 bs=4 request_length=65536
+[2026-10-05 14:36:23 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+DeepResearch inputs: split=holdout requests=4 length=65536 first=dr_014/concat0042
+Point failed: AcceleratorError: CUDA error: an illegal memory access was encountered
+Search for `cudaErrorIllegalAddress' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/utils/device_timer.py", line 26, in wrap
+[rank0]:     yield
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/model_runner.py", line 4185, in forward_extend
+[rank0]:     ret = self.model.forward(
+[rank0]:           ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/models/qwen3_vl.py", line 1277, in forward
+[rank0]:     hidden_states = general_mm_embed_routine(
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/managers/mm_utils.py", line 1138, in general_mm_embed_routine
+[rank0]:     hidden_states = language_model(
+[rank0]:                     ^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/models/qwen3_5.py", line 1227, in forward
+[rank0]:     hidden_states, residual = layer(
+[rank0]:                               ^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/models/qwen3_5.py", line 694, in forward
+[rank0]:     hidden_states = self.linear_attn(
+[rank0]:                     ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/models/qwen3_5.py", line 573, in forward
+[rank0]:     core_attn_out = self.attn(
+[rank0]:                     ^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/radix_linear_attention.py", line 111, in forward
+[rank0]:     return get_attn_backend().forward(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/attention/hybrid_linear_attn_backend.py", line 995, in forward
+[rank0]:     return self.forward_extend(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/attention/hybrid_linear_attn_backend.py", line 947, in forward_extend
+[rank0]:     return self.linear_attn_backend.forward_extend(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/attention/linear/gdn_backend.py", line 493, in forward_extend
+[rank0]:     core_attn_out, last_recurrent_state, h = self.kernel_dispatcher.extend(
+[rank0]:                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/attention/linear/gdn_backend.py", line 227, in extend
+[rank0]:     return self.extend_kernel.extend(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/attention/linear/kernels/gdn_triton.py", line 182, in extend
+[rank0]:     return chunk_gated_delta_rule(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1263, in _fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/attention/fla/chunk.py", line 248, in chunk_gated_delta_rule
+[rank0]:     o, h = ChunkGatedDeltaRuleFunction.apply(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/autograd/function.py", line 596, in apply
+[rank0]:     return super().apply(*args, **kwargs)  # type: ignore[misc]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/attention/fla/utils.py", line 177, in wrapper
+[rank0]:     return fn(*contiguous_args, **contiguous_kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/layers/attention/fla/utils.py", line 153, in <genexpr>
+[rank0]:     i if not isinstance(i, torch.Tensor) else i.contiguous() for i in args
+[rank0]:                                               ^^^^^^^^^^^^^^
+[rank0]: torch.AcceleratorError: CUDA error: an illegal memory access was encountered
+[rank0]: Search for `cudaErrorIllegalAddress' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+[rank0]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank0]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank0]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/test/bench_prefill_sm_sweep.py", line 317, in main
+[rank0]:     samples, summary = run_point(
+[rank0]:                        ^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/test/bench_prefill_sm_sweep.py", line 194, in run_point
+[rank0]:     run_once()
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/test/bench_prefill_sm_sweep.py", line 183, in run_once
+[rank0]:     extend(reqs, model_runner)
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/bench_one_batch.py", line 477, in extend
+[rank0]:     logits_output = model_runner.forward(forward_batch).logits_output
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/model_runner.py", line 4319, in forward
+[rank0]:     output = self._forward_raw(
+[rank0]:              ^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/model_runner.py", line 4458, in _forward_raw
+[rank0]:     ret, can_run_graph = self.forward_extend(
+[rank0]:                          ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/model_executor/model_runner.py", line 4145, in forward_extend
+[rank0]:     with ctx:
+[rank0]:          ^^^
+[rank0]:   File "/usr/local/python/3.12.13/lib/python3.12/contextlib.py", line 158, in __exit__
+[rank0]:     self.gen.throw(value)
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/utils/device_timer.py", line 28, in wrap
+[rank0]:     interval.end(metadata=metadata, after_end=after_end)
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/python/sglang/srt/utils/device_timer.py", line 102, in end
+[rank0]:     end_event.record()
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/cuda/streams.py", line 209, in record
+[rank0]:     super().record(stream)
+[rank0]: torch.AcceleratorError: CUDA error: an illegal memory access was encountered
+[rank0]: Search for `cudaErrorIllegalAddress' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+[rank0]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank0]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank0]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/ash_bench_shim.py", line 76, in <module>
+[rank0]:     runpy.run_path(script, run_name="__main__")
+[rank0]:   File "<frozen runpy>", line 287, in run_path
+[rank0]:   File "<frozen runpy>", line 98, in _run_module_code
+[rank0]:   File "<frozen runpy>", line 88, in _run_code
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/test/bench_prefill_sm_sweep.py", line 366, in <module>
+[rank0]:     main()
+[rank0]:   File "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/test/bench_prefill_sm_sweep.py", line 351, in main
+[rank0]:     torch.cuda.synchronize()
+[rank0]:   File "/usr/local/pytorch/2.11.0/lib/python3.12/site-packages/torch/cuda/__init__.py", line 1162, in synchronize
+[rank0]:     return torch._C._cuda_synchronize()
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: torch.AcceleratorError: CUDA error: an illegal memory access was encountered
+[rank0]: Search for `cudaErrorIllegalAddress' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+[rank0]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank0]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank0]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[rank0]:[W1005 14:36:24.329398428 CUDAEvent.h:57] Warning: CUDA warning: an illegal memory access was encountered (function ~CUDAEvent)
+[rank0]:[W1005 14:36:24.370194374 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

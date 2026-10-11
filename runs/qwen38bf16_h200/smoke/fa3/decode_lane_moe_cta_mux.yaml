@@ -1,0 +1,16 @@
+lane_num: 2
+policy: short_long_by_seq_len
+short_context_threshold: 4096
+sm_group_num: 8
+manual_divisions: []
+long_attention_active_cta_ratio: 0.0
+long_attention_active_cta_limit: 0
+long_attention_active_cta_per_sm: 2
+long_moe_active_cta_ratio: 0.8
+long_moe_active_cta_limit: 0
+long_linear_attn_active_cta_limit: 0
+short_low_resource_linear: False
+long_low_resource_linear: False
+enable_green_ctx: False
+short_green_ctx_sm_count: 0
+long_green_ctx_sm_count: 0

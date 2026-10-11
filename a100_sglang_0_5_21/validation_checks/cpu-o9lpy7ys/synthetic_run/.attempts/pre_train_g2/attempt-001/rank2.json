@@ -1,0 +1,124 @@
+{
+  "rank": 2,
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 8,
+      "request_length": 4096,
+      "samples_ms": [
+        429.41971804508165,
+        429.8255967955969,
+        430.23147554611205,
+        430.63735429662717,
+        431.04323304714245
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-8-4096"
+      },
+      "layout": {
+        "batch_size": 8,
+        "actual_sequence_lengths": [
+          4096,
+          4096,
+          4096,
+          4096,
+          4096,
+          4096,
+          4096,
+          4096
+        ],
+        "actual_input_token_count": 32768
+      }
+    },
+    {
+      "batch_size": 8,
+      "request_length": 8192,
+      "samples_ms": [
+        858.4914478712833,
+        859.3028764609537,
+        860.114305050624,
+        860.9257336402944,
+        861.7371622299648
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-8-8192"
+      },
+      "layout": {
+        "batch_size": 8,
+        "actual_sequence_lengths": [
+          8192,
+          8192,
+          8192,
+          8192,
+          8192,
+          8192,
+          8192,
+          8192
+        ],
+        "actual_input_token_count": 65536
+      }
+    },
+    {
+      "batch_size": 8,
+      "request_length": 16384,
+      "samples_ms": [
+        1718.7649428670466,
+        1720.3894844009474,
+        1722.0140259348482,
+        1723.6385674687488,
+        1725.2631090026498
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-8-16384"
+      },
+      "layout": {
+        "batch_size": 8,
+        "actual_sequence_lengths": [
+          16384,
+          16384,
+          16384,
+          16384,
+          16384,
+          16384,
+          16384,
+          16384
+        ],
+        "actual_input_token_count": 131072
+      }
+    },
+    {
+      "batch_size": 8,
+      "request_length": 32768,
+      "samples_ms": [
+        3447.832074232013,
+        3451.0908947180546,
+        3454.349715204096,
+        3457.608535690137,
+        3460.8673561761793
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-8-32768"
+      },
+      "layout": {
+        "batch_size": 8,
+        "actual_sequence_lengths": [
+          32768,
+          32768,
+          32768,
+          32768,
+          32768,
+          32768,
+          32768,
+          32768
+        ],
+        "actual_input_token_count": 262144
+      }
+    }
+  ],
+  "metadata": {
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "purpose": "measurement",
+    "validation_fixture_only": true
+  }
+}

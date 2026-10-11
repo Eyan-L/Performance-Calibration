@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "model_path": "/home/bzhou011/ash_models/Qwen3.8-27B@1d4bf0f2ff60",
+    "gpu_name": "NVIDIA H200",
+    "physical_sm_count": 132,
+    "requested_prefill_sm_count": 0,
+    "actual_prefill_sm_count": 132,
+    "green_context_total_sm_count": 132,
+    "stream_kind": "full",
+    "batch_sizes": [
+      1,
+      4
+    ],
+    "request_lengths": [
+      65536
+    ],
+    "warmups": 2,
+    "iterations": 5,
+    "random_seed": 0,
+    "token_corpus_dir": "/home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/inputs/section_writer_long_corpus_r001",
+    "token_corpus_split": "holdout",
+    "bandwidth_definition": "estimated useful model read/write bytes divided by CUDA Event model-forward time; not a physical DRAM counter"
+  },
+  "points": [
+    {
+      "batch_size": 1,
+      "request_length": 65536,
+      "prompt_tokens": 65536,
+      "forward_ms_median": 6872.548828125,
+      "forward_ms_mean": 6871.233203125,
+      "forward_ms_p90": 6875.760351562501,
+      "active_prompt_tokens_per_second": 9535.908967543826,
+      "estimated_flops": 6236484035149824.0,
+      "active_tflops": 907.4484868885668,
+      "estimated_read_bytes": 64015902720.0,
+      "estimated_write_bytes": 17179869184.0,
+      "active_read_gb_s": 9.314725049027423,
+      "active_write_gb_s": 2.4997813203878088,
+      "active_total_gb_s": 11.814506369415232,
+      "estimated_kv_cache_read_bytes": 17179869184.0,
+      "estimated_kv_cache_write_bytes": 17179869184.0,
+      "estimated_moe_read_bytes": 0.0,
+      "iterations": 5,
+      "requested_prefill_sm_count": 0,
+      "actual_prefill_sm_count": 132,
+      "status": "ok",
+      "samples": [
+        {
+          "forward_seconds": 6.87541552734375,
+          "num_tokens": 65536,
+          "flops": 6236484035149824.0,
+          "read_bytes": 64015902720.0,
+          "write_bytes": 17179869184.0,
+          "kv_cache_read_bytes": 17179869184.0,
+          "kv_cache_write_bytes": 17179869184.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 6.875990234375,
+          "num_tokens": 65536,
+          "flops": 6236484035149824.0,
+          "read_bytes": 64015902720.0,
+          "write_bytes": 17179869184.0,
+          "kv_cache_read_bytes": 17179869184.0,
+          "kv_cache_write_bytes": 17179869184.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 6.8675830078125,
+          "num_tokens": 65536,
+          "flops": 6236484035149824.0,
+          "read_bytes": 64015902720.0,
+          "write_bytes": 17179869184.0,
+          "kv_cache_read_bytes": 17179869184.0,
+          "kv_cache_write_bytes": 17179869184.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 6.872548828125,
+          "num_tokens": 65536,
+          "flops": 6236484035149824.0,
+          "read_bytes": 64015902720.0,
+          "write_bytes": 17179869184.0,
+          "kv_cache_read_bytes": 17179869184.0,
+          "kv_cache_write_bytes": 17179869184.0,
+          "moe_read_bytes": 0.0
+        },
+        {
+          "forward_seconds": 6.86462841796875,
+          "num_tokens": 65536,
+          "flops": 6236484035149824.0,
+          "read_bytes": 64015902720.0,
+          "write_bytes": 17179869184.0,
+          "kv_cache_read_bytes": 17179869184.0,
+          "kv_cache_write_bytes": 17179869184.0,
+          "moe_read_bytes": 0.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "native-sglang-calibration.v1",
+  "runtime": {
+    "sglang_version": "0.5.21",
+    "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+    "image_source": "docker://lmsysorg/sglang:v0.5.21",
+    "image_source_digest": "sha256:2dbe4c7f53230b09aaa8fa41891c13c51d9d2e253f486a70822aaf08783fff75",
+    "image_sha256": "3fc0f0ee71a83c230dd9c412ef7e5b1d0249300a0f8b00ca6d48fdab8d60871e",
+    "sglang_source_root": "/sgl-workspace/sglang/python/sglang",
+    "native_benchmark_module": "sglang.benchmark.one_batch",
+    "reference_kit": "/scratch/users/ntu/n2602695/Performance/qwen38_calib_kit_r001"
+  },
+  "manifest_sha256": "e1965cd0121ca21e4842fc8b571bb8378fee4f25ea2ab114f6b014b228524922",
+  "model_path": "/scratch/users/ntu/n2602695/hf/hub/models--Qwen--Qwen3.8-27B/snapshots/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "model_config_sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab",
+  "corpus_index_sha256": {
+    "short": "b813c0a4d69aa33522e0261cf2b42855a47665cacc16c6f4e7812b3e2beb4a3d",
+    "long": "e3507c78208a3ca68903827cc5b2581814a6a73e3197c5f125a9033781dc9032"
+  },
+  "smoke": true,
+  "tp": 4,
+  "attention_backend": "flashinfer",
+  "implementation_sha256": {
+    "runtime_guard.py": "8d78dc6d2aed1d1f6c9fdafa1a13ad21fe84da39c0376e492a6b6647760ee9f2",
+    "run_in_sif.sh": "8ee3eacb3b9badf0bf5de658fa0db1527404df70230c6597b4359e712a56264f",
+    "calibration_common.py": "7f232a3a717208161cfb8ae457543e8ce1ce52174707795b8de04bb14c0a885c",
+    "calibrate_point.py": "ab9dea7e4d201eb3b35834330cbda3d7c8f3c0061e6900ca5dc5920070792b44",
+    "run_points.py": "66ea187ca889ec5303415333911d3499dfc02f9057bc963047654e6bc2fc8b33",
+    "collect_results.py": "d73d506d5d0d4d4abb5ae4684044e42d0152941389a5b47f9a74f8a3c459b039",
+    "gpu_preflight.py": "5287bdef77d4141e2a408b12b0634d0b8e3b04b0a7845f38a8199546c5223cdb",
+    "fit_results.py": "2115ec1e475696df3a52bad9777254c1e4ad28bb637648918685afa143ba8438"
+  }
+}

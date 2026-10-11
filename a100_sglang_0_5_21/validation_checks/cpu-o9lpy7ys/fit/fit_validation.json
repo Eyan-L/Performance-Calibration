@@ -1,0 +1,9 @@
+{
+  "training_design_verified": true,
+  "decoder_training_rows": 11,
+  "prefill_training_rows": 15,
+  "decoder_cv_training_folds_rank3": true,
+  "prefill_loo_training_folds_rank3": true,
+  "scope": "pilot_or_incomplete",
+  "run_signature": "f5379c00bc8d833b0acba11708a0e4ed4bf55299c4e46f1dd08664e0b3433ae8"
+}

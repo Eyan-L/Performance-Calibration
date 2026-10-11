@@ -1,0 +1,11 @@
+CMD $PYTHON /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/ash_bench_shim.py /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/benchmark/kernels/fused_moe_triton/bench_decode_lane_moe_cta.py --model-path /home/bzhou011/ash_models/Qwen3.8-27B@1d4bf0f2ff60 --random-seed 0 --tp-size 1 --kv-cache-dtype bfloat16 --disable-radix-cache --attention-backend fa3 --token-corpus-dir /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/inputs/section_writer_long_corpus_r001 --token-corpus-split train --mem-fraction-static 0.90 --max-running-requests 4 --max-mamba-cache-size 4 --max-total-tokens 294912 --short-bs 4 --short-input-len 65536 --bench-warmups 1 --bench-iters 3 --decode-steps 10 --run-modes baseline_short_only --prefill-chunk-size 1 --prefill-token-chunk-size 8192 --no-png --result-prefix /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/runs/qwen38bf16_h200/smoke/fa3/dec_train_bs4_ctx65536
+ASH shim: running /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/sglang/benchmark/kernels/fused_moe_triton/bench_decode_lane_moe_cta.py
+Fail to set RLIMIT_NOFILE: current limit exceeds maximum limit
+[2026-10-05 12:45:43 TP0] Init torch distributed begin.
+[2026-10-05 12:45:43 TP0] Init torch distributed ends. elapsed=0.22 s, mem usage=0.09 GB
+[2026-10-05 12:45:46 TP0] Load weight begin. avail mem=139.13 GB
+[2026-10-05 12:45:46 TP0] Multimodal attention backend not set. Use fa3.
+[2026-10-05 12:45:46 TP0] Using fa3 as multimodal attention backend.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-05 12:45:46 TP0] using attn output gate!
+Multi-thread loading shards:   0% Completed | 0/18 [00:00<?, ?it/s]Multi-thread loading shards:   6% Completed | 1/18 [00:00<00:10,  1.67it/s]Multi-thread loading shards:  11% Completed | 2/18 [00:01<00:08,  1.87it/s]Multi-thread loading shards:  17% Completed | 3/18 [00:01<00:07,  2.10it/s]Multi-thread loading shards:  22% Completed | 4/18 [00:02<00:07,  1.89it/s]Multi-thread loading shards:  28% Completed | 5/18 [00:02<00:06,  2.15it/s]Multi-thread loading shards:  33% Completed | 6/18 [00:03<00:06,  1.93it/s]Multi-thread loading shards:  39% Completed | 7/18 [00:03<00:05,  2.15it/s]

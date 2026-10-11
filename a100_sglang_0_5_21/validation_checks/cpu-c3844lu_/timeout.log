@@ -1,0 +1,1 @@
+CMD /app/apps/python/3.10.9/bin/python3 -c 'import time; time.sleep(5)'

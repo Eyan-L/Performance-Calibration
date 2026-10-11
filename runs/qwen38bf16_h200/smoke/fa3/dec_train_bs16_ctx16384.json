@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "mode": "baseline_short_only",
+      "iter": 0,
+      "decode_steps": 10,
+      "short_ms": 213.72671508789062,
+      "long_ms": 0.0,
+      "total_ms": 213.72671508789062,
+      "wall_ms": 213.7840350624174,
+      "short_replay_ms": 213.72671508789062,
+      "long_replay_ms": 0.0,
+      "short_ms_per_step": 21.37267150878906,
+      "long_ms_per_step": 0.0,
+      "total_ms_per_step": 21.37267150878906,
+      "short_replay_ms_per_step": 21.37267150878906,
+      "long_replay_ms_per_step": 0.0
+    },
+    {
+      "mode": "baseline_short_only",
+      "iter": 1,
+      "decode_steps": 10,
+      "short_ms": 213.48704528808594,
+      "long_ms": 0.0,
+      "total_ms": 213.48704528808594,
+      "wall_ms": 213.5456430260092,
+      "short_replay_ms": 213.48704528808594,
+      "long_replay_ms": 0.0,
+      "short_ms_per_step": 21.348704528808593,
+      "long_ms_per_step": 0.0,
+      "total_ms_per_step": 21.348704528808593,
+      "short_replay_ms_per_step": 21.348704528808593,
+      "long_replay_ms_per_step": 0.0
+    },
+    {
+      "mode": "baseline_short_only",
+      "iter": 2,
+      "decode_steps": 10,
+      "short_ms": 213.50445556640625,
+      "long_ms": 0.0,
+      "total_ms": 213.50445556640625,
+      "wall_ms": 213.55560095980763,
+      "short_replay_ms": 213.50445556640625,
+      "long_replay_ms": 0.0,
+      "short_ms_per_step": 21.350445556640626,
+      "long_ms_per_step": 0.0,
+      "total_ms_per_step": 21.350445556640626,
+      "short_replay_ms_per_step": 21.350445556640626,
+      "long_replay_ms_per_step": 0.0
+    }
+  ],
+  "summaries": [
+    {
+      "mode": "baseline_short_only",
+      "decode_steps": 10,
+      "short_ms_median": 213.50445556640625,
+      "short_ms_mean": 213.57273864746094,
+      "short_ms_p90": 213.50445556640625,
+      "long_ms_median": 0.0,
+      "long_ms_mean": 0.0,
+      "long_ms_p90": 0.0,
+      "total_ms_median": 213.50445556640625,
+      "total_ms_mean": 213.57273864746094,
+      "total_ms_p90": 213.50445556640625,
+      "wall_ms_median": 213.55560095980763,
+      "wall_ms_mean": 213.6284263494114,
+      "wall_ms_p90": 213.55560095980763,
+      "short_replay_ms_median": 213.50445556640625,
+      "short_replay_ms_mean": 213.57273864746094,
+      "short_replay_ms_p90": 213.50445556640625,
+      "long_replay_ms_median": 0.0,
+      "long_replay_ms_mean": 0.0,
+      "long_replay_ms_p90": 0.0,
+      "total_ms_per_step_median": 21.350445556640626,
+      "total_ms_per_step_mean": 21.357273864746094,
+      "total_ms_per_step_p90": 21.350445556640626
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "status": "ready_not_submitted",
+  "pbs_submitted": false,
+  "gpu_acceptance_passed": false,
+  "campaign_dir": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z",
+  "run_signature": "d1630e7487a510a23cb15be269c73b594a0b2e4f0b34530a3deb9c9d362a3cb8",
+  "cpu_checks": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-c3844lu_/cpu_checks.json",
+  "sif_cpu_checks": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/sif_cpu_checks.json",
+  "pilot": {
+    "walltime": "04:00:00",
+    "groups": 21,
+    "shapes": 36,
+    "bootstrap_groups": [
+      "dec_train_bs4_ctx8192",
+      "pre_train_g0"
+    ],
+    "bootstrap_shapes": 5,
+    "remaining_after_bootstrap_shapes": 31,
+    "sampling": "formal counts; no --smoke"
+  },
+  "full": {
+    "walltime": "24:00:00",
+    "groups": 86,
+    "shapes": 102,
+    "remaining_if_all_pilot_shapes_pass": 66,
+    "remaining_groups_if_all_pilot_groups_pass": 65,
+    "requires_pilot_acceptance": true
+  },
+  "submission_commands_not_executed": {
+    "pilot": "qsub -v CALIB_CAMPAIGN_DIR=/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z -o /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/pilot.pbs.log /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/nscc_qwen38_pilot.pbs",
+    "full": "qsub -v CALIB_CAMPAIGN_DIR=/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z -o /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/full.pbs.log /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/nscc_qwen38_full.pbs"
+  }
+}

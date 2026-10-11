@@ -1,0 +1,369 @@
+{
+  "metadata": {
+    "run_signature": "f5379c00bc8d833b0acba11708a0e4ed4bf55299c4e46f1dd08664e0b3433ae8",
+    "tp": 4,
+    "smoke": false,
+    "point": {
+      "id": "dec_train_bs28_ctx32768",
+      "kind": "decoder",
+      "bs": 28,
+      "ctx": 32768,
+      "split": "train",
+      "corpus": "long",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 60.25
+    },
+    "purpose": "measurement",
+    "measurement_policy": {
+      "primary_rank": 0,
+      "rank_aggregation": "rank 0 per iteration, then summarize",
+      "auxiliary_aggregation": "max across ranks for each iteration, then summarize",
+      "per_sample_tp_barrier": false,
+      "numerical_checks": "separate validation process; not in measurement loops",
+      "prefill_tp4": "extension of the reference TP=1 prefill benchmark"
+    },
+    "gpu_execution_tested": true,
+    "job": "SYNTHETIC-CPU-FIXTURE",
+    "validation_fixture_only": true,
+    "warmups": 3,
+    "iterations": 9,
+    "decode_steps": 30,
+    "rank_aggregation": "rank 0 per iteration, then summarize",
+    "rank_metadata": [
+      {
+        "weight_dtype": "torch.bfloat16",
+        "kv_cache_dtype": "torch.bfloat16",
+        "purpose": "measurement",
+        "validation_fixture_only": true
+      },
+      {
+        "weight_dtype": "torch.bfloat16",
+        "kv_cache_dtype": "torch.bfloat16",
+        "purpose": "measurement",
+        "validation_fixture_only": true
+      },
+      {
+        "weight_dtype": "torch.bfloat16",
+        "kv_cache_dtype": "torch.bfloat16",
+        "purpose": "measurement",
+        "validation_fixture_only": true
+      },
+      {
+        "weight_dtype": "torch.bfloat16",
+        "kv_cache_dtype": "torch.bfloat16",
+        "purpose": "measurement",
+        "validation_fixture_only": true
+      }
+    ]
+  },
+  "completed": true,
+  "summaries": [
+    {
+      "mode": "baseline_short_only",
+      "decode_steps": 30,
+      "total_ms_per_step_median": 9.132954214400002,
+      "total_ms_per_step_mean": 9.132954214400002,
+      "total_ms_per_step_min": 9.096422397542401,
+      "total_ms_per_step_p90": 9.160353077043201
+    }
+  ],
+  "rows": [
+    {
+      "iter": 0,
+      "total_ms": 272.89267192627204,
+      "total_ms_per_step": 9.096422397542401,
+      "rank_total_ms": [
+        272.89267192627204,
+        281.11233071923203,
+        289.3319895121921,
+        297.55164830515207
+      ]
+    },
+    {
+      "iter": 1,
+      "total_ms": 273.16666055270406,
+      "total_ms_per_step": 9.105555351756802,
+      "rank_total_ms": [
+        273.16666055270406,
+        281.3863193456641,
+        289.6059781386241,
+        297.8256369315841
+      ]
+    },
+    {
+      "iter": 2,
+      "total_ms": 273.4406491791361,
+      "total_ms_per_step": 9.114688305971203,
+      "rank_total_ms": [
+        273.4406491791361,
+        281.66030797209606,
+        289.87996676505605,
+        298.09962555801604
+      ]
+    },
+    {
+      "iter": 3,
+      "total_ms": 273.71463780556803,
+      "total_ms_per_step": 9.1238212601856,
+      "rank_total_ms": [
+        273.71463780556803,
+        281.9342965985281,
+        290.15395539148807,
+        298.3736141844481
+      ]
+    },
+    {
+      "iter": 4,
+      "total_ms": 273.98862643200005,
+      "total_ms_per_step": 9.132954214400002,
+      "rank_total_ms": [
+        273.98862643200005,
+        282.20828522496004,
+        290.4279440179201,
+        298.6476028108801
+      ]
+    },
+    {
+      "iter": 5,
+      "total_ms": 274.262615058432,
+      "total_ms_per_step": 9.1420871686144,
+      "rank_total_ms": [
+        274.262615058432,
+        282.48227385139205,
+        290.70193264435204,
+        298.92159143731203
+      ]
+    },
+    {
+      "iter": 6,
+      "total_ms": 274.536603684864,
+      "total_ms_per_step": 9.1512201228288,
+      "rank_total_ms": [
+        274.536603684864,
+        282.75626247782407,
+        290.97592127078406,
+        299.19558006374405
+      ]
+    },
+    {
+      "iter": 7,
+      "total_ms": 274.81059231129603,
+      "total_ms_per_step": 9.160353077043201,
+      "rank_total_ms": [
+        274.81059231129603,
+        283.030251104256,
+        291.249909897216,
+        299.46956869017606
+      ]
+    },
+    {
+      "iter": 8,
+      "total_ms": 275.08458093772805,
+      "total_ms_per_step": 9.169486031257602,
+      "rank_total_ms": [
+        275.08458093772805,
+        283.30423973068804,
+        291.5238985236481,
+        299.7435573166081
+      ]
+    }
+  ],
+  "input": {
+    "token_sha256": "SYNTHETIC-28-32768"
+  },
+  "rank_layouts": [
+    {
+      "batch_size": 28,
+      "actual_sequence_lengths": [
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769
+      ],
+      "actual_input_token_count": 28
+    },
+    {
+      "batch_size": 28,
+      "actual_sequence_lengths": [
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769
+      ],
+      "actual_input_token_count": 28
+    },
+    {
+      "batch_size": 28,
+      "actual_sequence_lengths": [
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769
+      ],
+      "actual_input_token_count": 28
+    },
+    {
+      "batch_size": 28,
+      "actual_sequence_lengths": [
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769,
+        32769
+      ],
+      "actual_input_token_count": 28
+    }
+  ],
+  "rank_diagnostics": {
+    "max_total_ms": [
+      297.55164830515207,
+      297.8256369315841,
+      298.09962555801604,
+      298.3736141844481,
+      298.6476028108801,
+      298.92159143731203,
+      299.19558006374405,
+      299.46956869017606,
+      299.7435573166081
+    ],
+    "max_summary": {
+      "mode": "baseline_short_only",
+      "decode_steps": 30,
+      "total_ms_per_step_median": 9.954920093696002,
+      "total_ms_per_step_mean": 9.954920093696002,
+      "total_ms_per_step_min": 9.918388276838403,
+      "total_ms_per_step_p90": 9.982318956339203
+    },
+    "per_rank_summaries": [
+      {
+        "mode": "baseline_short_only",
+        "decode_steps": 30,
+        "total_ms_per_step_median": 9.132954214400002,
+        "total_ms_per_step_mean": 9.132954214400002,
+        "total_ms_per_step_min": 9.096422397542401,
+        "total_ms_per_step_p90": 9.160353077043201
+      },
+      {
+        "mode": "baseline_short_only",
+        "decode_steps": 30,
+        "total_ms_per_step_median": 9.406942840832,
+        "total_ms_per_step_mean": 9.406942840832002,
+        "total_ms_per_step_min": 9.370411023974402,
+        "total_ms_per_step_p90": 9.434341703475202
+      },
+      {
+        "mode": "baseline_short_only",
+        "decode_steps": 30,
+        "total_ms_per_step_median": 9.680931467264003,
+        "total_ms_per_step_mean": 9.680931467264003,
+        "total_ms_per_step_min": 9.644399650406402,
+        "total_ms_per_step_p90": 9.7083303299072
+      },
+      {
+        "mode": "baseline_short_only",
+        "decode_steps": 30,
+        "total_ms_per_step_median": 9.954920093696002,
+        "total_ms_per_step_mean": 9.954920093696002,
+        "total_ms_per_step_min": 9.918388276838403,
+        "total_ms_per_step_p90": 9.982318956339203
+      }
+    ]
+  }
+}

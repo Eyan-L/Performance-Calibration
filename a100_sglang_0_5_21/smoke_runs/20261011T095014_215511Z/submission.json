@@ -1,0 +1,9 @@
+{
+  "job_id": "25758069.pbs101",
+  "walltime": "04:00:00",
+  "gpu_count": 4,
+  "points": ["dec_train_bs4_ctx8192", "pre_train_g0"],
+  "previous_job_id": "25758046.pbs101",
+  "previous_job_state": "F",
+  "previous_job_gpu_execution": false
+}

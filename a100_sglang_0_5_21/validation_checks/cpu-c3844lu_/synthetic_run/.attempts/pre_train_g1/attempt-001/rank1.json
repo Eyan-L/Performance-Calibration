@@ -1,0 +1,108 @@
+{
+  "rank": 1,
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 4,
+      "request_length": 4096,
+      "samples_ms": [
+        209.1356777648128,
+        209.33911714007044,
+        209.54255651532802,
+        209.7459958905856,
+        209.94943526584322
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-4-4096"
+      },
+      "layout": {
+        "batch_size": 4,
+        "actual_sequence_lengths": [
+          4096,
+          4096,
+          4096,
+          4096
+        ],
+        "actual_input_token_count": 16384
+      }
+    },
+    {
+      "batch_size": 4,
+      "request_length": 8192,
+      "samples_ms": [
+        417.58829509058563,
+        417.9945093854209,
+        418.400723680256,
+        418.80693797509116,
+        419.2131522699264
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-4-8192"
+      },
+      "layout": {
+        "batch_size": 4,
+        "actual_sequence_lengths": [
+          8192,
+          8192,
+          8192,
+          8192
+        ],
+        "actual_input_token_count": 32768
+      }
+    },
+    {
+      "batch_size": 4,
+      "request_length": 16384,
+      "samples_ms": [
+        835.5283484250112,
+        836.3411191919618,
+        837.153889958912,
+        837.9666607258623,
+        838.7794314928128
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-4-16384"
+      },
+      "layout": {
+        "batch_size": 4,
+        "actual_sequence_lengths": [
+          16384,
+          16384,
+          16384,
+          16384
+        ],
+        "actual_input_token_count": 65536
+      }
+    },
+    {
+      "batch_size": 4,
+      "request_length": 32768,
+      "samples_ms": [
+        1675.5477298253825,
+        1677.1776400684034,
+        1678.807550311424,
+        1680.4374605544447,
+        1682.0673707974656
+      ],
+      "input": {
+        "token_sha256": "SYNTHETIC-4-32768"
+      },
+      "layout": {
+        "batch_size": 4,
+        "actual_sequence_lengths": [
+          32768,
+          32768,
+          32768,
+          32768
+        ],
+        "actual_input_token_count": 131072
+      }
+    }
+  ],
+  "metadata": {
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "purpose": "measurement",
+    "validation_fixture_only": true
+  }
+}

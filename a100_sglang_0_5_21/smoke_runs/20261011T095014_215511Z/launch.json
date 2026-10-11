@@ -1,0 +1,21 @@
+{
+  "launch_dir": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/smoke_runs/20261011T095014_215511Z",
+  "files_sha256": {
+    "runtime_config.json": "96c8cb4982a3df1d8a68dfcc6cba79d603f11683f58fb84ca4e4b31a587fcd07",
+    "runtime_guard.py": "8d78dc6d2aed1d1f6c9fdafa1a13ad21fe84da39c0376e492a6b6647760ee9f2",
+    "run_in_sif.sh": "8ee3eacb3b9badf0bf5de658fa0db1527404df70230c6597b4359e712a56264f",
+    "calibration_common.py": "7f232a3a717208161cfb8ae457543e8ce1ce52174707795b8de04bb14c0a885c",
+    "calibrate_point.py": "ab9dea7e4d201eb3b35834330cbda3d7c8f3c0061e6900ca5dc5920070792b44",
+    "run_points.py": "66ea187ca889ec5303415333911d3499dfc02f9057bc963047654e6bc2fc8b33",
+    "collect_results.py": "d73d506d5d0d4d4abb5ae4684044e42d0152941389a5b47f9a74f8a3c459b039",
+    "fit_results.py": "2115ec1e475696df3a52bad9777254c1e4ad28bb637648918685afa143ba8438",
+    "gpu_preflight.py": "5287bdef77d4141e2a408b12b0634d0b8e3b04b0a7845f38a8199546c5223cdb",
+    "nscc_qwen38_smoke.pbs": "e8aa612f6e1a1ef571c1eb3b85309fe807ab0806bf3b08152ebe88e5e93e5fb3",
+    "README.md": "d46ce8094c0fb2c26acba1475e1aef723e5e6228eb1c9adbfe5f58ec26cbe710"
+  },
+  "pbs_script": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/smoke_runs/20261011T095014_215511Z/code/nscc_qwen38_smoke.pbs",
+  "points": [
+    "dec_train_bs4_ctx8192",
+    "pre_train_g0"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "completed": true,
+  "selected": [
+    "dec_train_bs4_ctx8192",
+    "pre_train_g0"
+  ],
+  "remaining": [],
+  "failed_attempts": 0,
+  "run_signature": "91f125b2cd7870e60b67400be3cd994f8605c37ce6fc30e85959a07c5cccdcb8"
+}

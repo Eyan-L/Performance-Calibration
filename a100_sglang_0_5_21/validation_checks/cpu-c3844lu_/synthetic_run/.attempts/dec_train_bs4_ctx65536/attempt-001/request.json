@@ -1,0 +1,45 @@
+{
+  "point": {
+    "id": "dec_train_bs4_ctx65536",
+    "kind": "decoder",
+    "bs": 4,
+    "ctx": 65536,
+    "split": "train",
+    "corpus": "long",
+    "warmups": 3,
+    "iters": 9,
+    "steps": 30,
+    "kv_gb": 17.2
+  },
+  "smoke": false,
+  "started_at": 1,
+  "metadata": {
+    "run_signature": "d1630e7487a510a23cb15be269c73b594a0b2e4f0b34530a3deb9c9d362a3cb8",
+    "tp": 4,
+    "smoke": false,
+    "point": {
+      "id": "dec_train_bs4_ctx65536",
+      "kind": "decoder",
+      "bs": 4,
+      "ctx": 65536,
+      "split": "train",
+      "corpus": "long",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 17.2
+    },
+    "purpose": "measurement",
+    "measurement_policy": {
+      "primary_rank": 0,
+      "rank_aggregation": "rank 0 per iteration, then summarize",
+      "auxiliary_aggregation": "max across ranks for each iteration, then summarize",
+      "per_sample_tp_barrier": false,
+      "numerical_checks": "separate validation process; not in measurement loops",
+      "prefill_tp4": "extension of the reference TP=1 prefill benchmark"
+    },
+    "gpu_execution_tested": true,
+    "job": "SYNTHETIC-CPU-FIXTURE",
+    "validation_fixture_only": true
+  }
+}

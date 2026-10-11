@@ -1,0 +1,19 @@
+{
+ "name": "h200q38",
+ "source": "experiments/h200_qwen38_perf_r001/results/fit_qwen38bf16_h200_r001/model.json",
+ "model": "Qwen3.8-27B BF16 (dense, hybrid GDN), H200, SGLang r008 tree, fa3, TP1, BF16 KV",
+ "kv_bytes_per_token": 65536,
+ "mapping": "DEC_CTX=tK*kv_GB_per_Mtoken (65.536); PRE0=pN; PRE_CTX=pA/10 (sim uses /1e5, fit /1e6); PRE_FIX=p0; same as mi300x preset",
+ "caveats": [
+  "sim CAP/STATE_TOK/traces are Qwen3.6-specific: KV is 3.2x per token, GDN state differs; set CAP for this model",
+  "decode residual depends on B mod 8 (B=12,20 up to 12% slower than fit at >=32K ctx); domain B<=28, ctx<=96K"
+ ],
+ "preset": {
+  "DEC0": 15.3811,
+  "DEC_B": 0.11902,
+  "DEC_CTX": 17.7084,
+  "PRE0": 0.0842,
+  "PRE_CTX": 0.06186,
+  "PRE_FIX": 4.49
+ }
+}

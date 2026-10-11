@@ -1,0 +1,41 @@
+CMD $PYTHON /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/ash_bench_shim.py /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/test/bench_prefill_sm_sweep.py --model-path /home/bzhou011/ash_models/Qwen3.8-27B@1d4bf0f2ff60 --random-seed 0 --tp-size 1 --kv-cache-dtype bfloat16 --disable-radix-cache --attention-backend fa3 --token-corpus-dir /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/inputs/section_writer_long_corpus_r001 --token-corpus-split train --mem-fraction-static 0.70 --batch-sizes 1 2 --request-lengths 98304 --bench-warmups 2 --bench-iters 5 --prefill-sm-count 0 --result-file /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/runs/qwen38bf16_h200/grid/pre_train_g4.json
+ASH shim: running /home/bzhou011/ASH/experiments/amd_prefill_decode_perf_r001/src/test/bench_prefill_sm_sweep.py
+Fail to set RLIMIT_NOFILE: current limit exceeds maximum limit
+[2026-10-05 14:29:08 PREFILL-SM-SWEEP] Init torch distributed begin.
+[2026-10-05 14:29:08 PREFILL-SM-SWEEP] Init torch distributed ends. elapsed=0.23 s, mem usage=0.09 GB
+[2026-10-05 14:29:11 PREFILL-SM-SWEEP] Load weight begin. avail mem=139.13 GB
+[2026-10-05 14:29:11 PREFILL-SM-SWEEP] Multimodal attention backend not set. Use fa3.
+[2026-10-05 14:29:11 PREFILL-SM-SWEEP] Using fa3 as multimodal attention backend.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-05 14:29:11 PREFILL-SM-SWEEP] using attn output gate!
+Multi-thread loading shards:   0% Completed | 0/18 [00:00<?, ?it/s]Multi-thread loading shards:   6% Completed | 1/18 [00:00<00:10,  1.63it/s]Multi-thread loading shards:  11% Completed | 2/18 [00:01<00:09,  1.78it/s]Multi-thread loading shards:  17% Completed | 3/18 [00:01<00:07,  2.03it/s]Multi-thread loading shards:  22% Completed | 4/18 [00:02<00:07,  1.87it/s]Multi-thread loading shards:  28% Completed | 5/18 [00:02<00:06,  2.08it/s]Multi-thread loading shards:  33% Completed | 6/18 [00:03<00:06,  1.92it/s]Multi-thread loading shards:  39% Completed | 7/18 [00:03<00:05,  2.10it/s]Multi-thread loading shards:  44% Completed | 8/18 [00:04<00:05,  1.85it/s]Multi-thread loading shards:  50% Completed | 9/18 [00:04<00:04,  1.99it/s]Multi-thread loading shards:  56% Completed | 10/18 [00:05<00:04,  1.81it/s]Multi-thread loading shards:  61% Completed | 11/18 [00:05<00:03,  1.99it/s]Multi-thread loading shards:  67% Completed | 12/18 [00:06<00:03,  1.83it/s]Multi-thread loading shards:  72% Completed | 13/18 [00:06<00:02,  1.97it/s]Multi-thread loading shards:  78% Completed | 14/18 [00:07<00:02,  1.84it/s]Multi-thread loading shards:  83% Completed | 15/18 [00:07<00:01,  2.02it/s]Multi-thread loading shards:  89% Completed | 16/18 [00:08<00:01,  1.82it/s]Multi-thread loading shards:  94% Completed | 17/18 [00:08<00:00,  1.98it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:09<00:00,  2.06it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:09<00:00,  1.94it/s]
+[2026-10-05 14:29:20 PREFILL-SM-SWEEP] Load weight end. elapsed=9.63 s, type=Qwen3_5ForConditionalGeneration, avail mem=88.08 GB, mem usage=51.05 GB.
+[2026-10-05 14:29:20 PREFILL-SM-SWEEP] Max concurrent requests (per dp worker) from the finalized token capacity: max_num_reqs=2.
+[2026-10-05 14:29:20 PREFILL-SM-SWEEP] Mamba Cache is allocated. max_mamba_cache_size: 2, conv_state size: 0.01GB, ssm_state size: 0.42GB 
+[2026-10-05 14:29:20 PREFILL-SM-SWEEP] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 753518, K size: 23.00 GB, V size: 23.00 GB
+[2026-10-05 14:29:20 PREFILL-SM-SWEEP] Memory pool end. avail mem=41.59 GB
+[2026-10-05 14:29:21 PREFILL-SM-SWEEP] Linear attention kernel backend: decode=triton, prefill=triton
+[2026-10-05 14:29:21 PREFILL-SM-SWEEP] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-05 14:29:21 PREFILL-SM-SWEEP] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-05 14:29:21 PREFILL-SM-SWEEP] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+max_total_num_tokens=753518
+ASH shim: dense qwen3_5_text -> DenseQwen3PerfEstimator (timing only)
+Benchmarking sm=132 bs=1 request_length=98304
+[2026-10-05 14:29:21 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+DeepResearch inputs: split=train requests=1 length=98304 first=dr_019/concat0075
+[2026-10-05 14:29:33 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:29:45 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:29:56 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:30:07 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:30:19 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:30:30 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+Benchmarking sm=132 bs=2 request_length=98304
+[2026-10-05 14:30:41 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:31:04 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:31:27 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:31:49 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:32:12 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:32:34 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+[2026-10-05 14:32:57 PREFILL-SM-SWEEP] Reset HybridReqToTokenPool
+DeepResearch inputs: split=train requests=2 length=98304 first=dr_012/concat0036
+Wrote /home/bzhou011/ASH/experiments/h200_qwen38_perf_r001/runs/qwen38bf16_h200/grid/pre_train_g4.json

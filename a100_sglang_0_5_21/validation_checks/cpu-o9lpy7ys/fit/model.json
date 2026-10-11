@@ -1,0 +1,590 @@
+{
+  "model": "qwen38bf16",
+  "gpu": "a100_40g",
+  "attention_backend": "flashinfer",
+  "run": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/collected",
+  "kv_gb_per_token": 6.5536e-05,
+  "missing_preregistered_points": [
+    "dec_train_bs1_ctx8192",
+    "dec_train_bs1_ctx12288",
+    "dec_train_bs1_ctx24576",
+    "dec_train_bs1_ctx32768",
+    "dec_train_bs1_ctx65536",
+    "dec_train_bs1_ctx98304",
+    "dec_train_bs2_ctx4096",
+    "dec_train_bs2_ctx8192",
+    "dec_train_bs2_ctx12288",
+    "dec_train_bs2_ctx16384",
+    "dec_train_bs2_ctx24576",
+    "dec_train_bs2_ctx32768",
+    "dec_train_bs2_ctx65536",
+    "dec_train_bs2_ctx98304",
+    "dec_train_bs4_ctx12288",
+    "dec_train_bs4_ctx24576",
+    "dec_train_bs4_ctx32768",
+    "dec_train_bs4_ctx98304",
+    "dec_train_bs8_ctx4096",
+    "dec_train_bs8_ctx8192",
+    "dec_train_bs8_ctx12288",
+    "dec_train_bs8_ctx16384",
+    "dec_train_bs8_ctx24576",
+    "dec_train_bs8_ctx32768",
+    "dec_train_bs8_ctx65536",
+    "dec_train_bs12_ctx4096",
+    "dec_train_bs12_ctx8192",
+    "dec_train_bs12_ctx12288",
+    "dec_train_bs12_ctx16384",
+    "dec_train_bs12_ctx24576",
+    "dec_train_bs12_ctx32768",
+    "dec_train_bs12_ctx65536",
+    "dec_train_bs16_ctx8192",
+    "dec_train_bs16_ctx12288",
+    "dec_train_bs16_ctx24576",
+    "dec_train_bs16_ctx32768",
+    "dec_train_bs16_ctx65536",
+    "dec_train_bs20_ctx4096",
+    "dec_train_bs20_ctx8192",
+    "dec_train_bs20_ctx12288",
+    "dec_train_bs20_ctx16384",
+    "dec_train_bs20_ctx24576",
+    "dec_train_bs20_ctx32768",
+    "dec_train_bs24_ctx4096",
+    "dec_train_bs24_ctx8192",
+    "dec_train_bs24_ctx12288",
+    "dec_train_bs24_ctx16384",
+    "dec_train_bs24_ctx24576",
+    "dec_train_bs24_ctx32768",
+    "dec_train_bs28_ctx4096",
+    "dec_train_bs28_ctx8192",
+    "dec_train_bs28_ctx12288",
+    "dec_train_bs28_ctx16384",
+    "dec_train_bs28_ctx24576",
+    "dec_holdout_bs1_ctx8192",
+    "dec_holdout_bs8_ctx24576",
+    "dec_holdout_bs12_ctx8192",
+    "dec_holdout_bs16_ctx16384",
+    "dec_holdout_bs20_ctx24576",
+    "dec_holdout_bs24_ctx12288",
+    "dec_holdout_bs28_ctx8192",
+    "dec_holdout_bs2_ctx32768",
+    "pre_holdout_g1",
+    "dec_repeat_bs4_ctx8192",
+    "dec_repeat_bs24_ctx24576"
+  ],
+  "skipped_by_rule": [
+    {
+      "id": "dec_train_bs16_ctx98304",
+      "kind": "decoder",
+      "bs": 16,
+      "ctx": 98304,
+      "split": "train",
+      "corpus": "long",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 103.15
+    },
+    {
+      "id": "dec_train_bs20_ctx65536",
+      "kind": "decoder",
+      "bs": 20,
+      "ctx": 65536,
+      "split": "train",
+      "corpus": "long",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 85.98
+    },
+    {
+      "id": "dec_train_bs20_ctx98304",
+      "kind": "decoder",
+      "bs": 20,
+      "ctx": 98304,
+      "split": "train",
+      "corpus": "long",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 128.93
+    },
+    {
+      "id": "dec_train_bs24_ctx65536",
+      "kind": "decoder",
+      "bs": 24,
+      "ctx": 65536,
+      "split": "train",
+      "corpus": "long",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 103.18
+    },
+    {
+      "id": "dec_train_bs24_ctx98304",
+      "kind": "decoder",
+      "bs": 24,
+      "ctx": 98304,
+      "split": "train",
+      "corpus": "long",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 154.72
+    },
+    {
+      "id": "dec_train_bs28_ctx65536",
+      "kind": "decoder",
+      "bs": 28,
+      "ctx": 65536,
+      "split": "train",
+      "corpus": "long",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 120.38
+    },
+    {
+      "id": "dec_train_bs28_ctx98304",
+      "kind": "decoder",
+      "bs": 28,
+      "ctx": 98304,
+      "split": "train",
+      "corpus": "long",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 180.51
+    },
+    {
+      "id": "dec_holdout_bs16_ctx98304",
+      "kind": "decoder",
+      "bs": 16,
+      "ctx": 98304,
+      "split": "holdout",
+      "corpus": "long",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 103.15
+    }
+  ],
+  "decoder": {
+    "formula": "step_ms = t0 + tB*B + tK*K (K = attention KV GB, BF16)",
+    "coefficients": {
+      "t0_ms": 1.9999999999999987,
+      "tB_ms_per_request": 0.03999999999999983,
+      "tK_ms_per_kv_gb": 0.10000000000000005
+    },
+    "train": {
+      "n": 11,
+      "mape_percent": 6.20607504033967e-14,
+      "p95_ape_percent": 1.0683641684904118e-13,
+      "max_ape_percent": 1.157425464748246e-13
+    },
+    "cv_checkerboard5": {
+      "n": 11,
+      "mape_percent": 3.641084394496067e-14,
+      "p95_ape_percent": 7.170021665265074e-14,
+      "max_ape_percent": 7.480189757072868e-14
+    },
+    "holdout": {
+      "n": 2,
+      "mape_percent": 5.830463481370803e-14,
+      "p95_ape_percent": 8.300381618276521e-14,
+      "max_ape_percent": 8.574816966821601e-14
+    },
+    "train_by_context": {
+      "4096": {
+        "n": 3,
+        "mape_percent": 9.271062652964108e-14,
+        "p95_ape_percent": 1.139613205496679e-13,
+        "max_ape_percent": 1.157425464748246e-13
+      },
+      "8192": {
+        "n": 1,
+        "mape_percent": 9.350237196341085e-14,
+        "p95_ape_percent": 9.350237196341085e-14,
+        "max_ape_percent": 9.350237196341085e-14
+      },
+      "16384": {
+        "n": 3,
+        "mape_percent": 6.964376736819665e-14,
+        "p95_ape_percent": 8.337752354627802e-14,
+        "max_ape_percent": 8.574816966821601e-14
+      },
+      "32768": {
+        "n": 1,
+        "mape_percent": 3.889993966244689e-14,
+        "p95_ape_percent": 3.889993966244689e-14,
+        "max_ape_percent": 3.889993966244689e-14
+      },
+      "65536": {
+        "n": 1,
+        "mape_percent": 4.5806158627609526e-14,
+        "p95_ape_percent": 4.5806158627609526e-14,
+        "max_ape_percent": 4.5806158627609526e-14
+      },
+      "98304": {
+        "n": 2,
+        "mape_percent": 8.698301245191613e-15,
+        "p95_ape_percent": 1.6526772365864064e-14,
+        "max_ape_percent": 1.7396602490383227e-14
+      }
+    },
+    "repeat_stability": [
+      {
+        "bs": 16,
+        "ctx": 16384,
+        "first": 4.3579869184,
+        "repeat": 4.3579869184,
+        "diff_percent": 0.0
+      }
+    ],
+    "domain": {
+      "bs": [
+        1,
+        28
+      ],
+      "ctx": [
+        4096,
+        98304
+      ]
+    }
+  },
+  "prefill": {
+    "formula": "T_ms = p0 + pN*N + pA*A, N=batch*len, A=batch*len^2/2/1e6",
+    "coefficients": {
+      "p0_ms": 0.9999999999999986,
+      "pN_ms_per_token": 0.012345678899999999,
+      "pA_ms_per_mega_attention_pair": 0.004999999999999969,
+      "linear_tokens_per_s": 81000.00073710001
+    },
+    "train": {
+      "n": 15,
+      "mape_percent": 1.6077877026904798e-14,
+      "p95_ape_percent": 2.770826704312125e-14,
+      "max_ape_percent": 2.772600062953446e-14
+    },
+    "cv_leave_one_out": {
+      "n": 15,
+      "mape_percent": 3.945239166104411e-14,
+      "p95_ape_percent": 1.150408684586025e-13,
+      "max_ape_percent": 2.2028130550144296e-13
+    },
+    "holdout": {
+      "n": 6,
+      "mape_percent": 1.5416134833695573e-14,
+      "p95_ape_percent": 1.836007323432634e-14,
+      "max_ape_percent": 1.836192604469866e-14
+    },
+    "failed_points": [
+      {
+        "split": "train",
+        "batch": 2,
+        "length": 98304,
+        "status": "missing",
+        "ms": null
+      }
+    ]
+  },
+  "prefill_points_without_result": [
+    {
+      "split": "train",
+      "batch": 2,
+      "length": 98304,
+      "group": "pre_train_g4"
+    },
+    {
+      "split": "holdout",
+      "batch": 1,
+      "length": 65536,
+      "group": "pre_holdout_g1"
+    },
+    {
+      "split": "holdout",
+      "batch": 4,
+      "length": 65536,
+      "group": "pre_holdout_g1"
+    }
+  ],
+  "calibration_scope": "pilot / incomplete registered grid",
+  "selected_groups": [
+    "dec_train_bs1_ctx4096",
+    "dec_train_bs1_ctx16384",
+    "dec_train_bs4_ctx4096",
+    "dec_train_bs4_ctx8192",
+    "dec_train_bs4_ctx16384",
+    "dec_train_bs4_ctx65536",
+    "dec_train_bs8_ctx98304",
+    "dec_train_bs12_ctx98304",
+    "dec_train_bs16_ctx4096",
+    "dec_train_bs16_ctx16384",
+    "dec_train_bs28_ctx32768",
+    "dec_holdout_bs4_ctx16384",
+    "dec_holdout_bs8_ctx65536",
+    "pre_train_g0",
+    "pre_train_g1",
+    "pre_train_g2",
+    "pre_train_g3",
+    "pre_train_g4",
+    "pre_holdout_g0",
+    "pre_holdout_g2",
+    "dec_repeat_bs16_ctx16384"
+  ],
+  "validated_shape_sources": [
+    {
+      "id": "dec_train_bs1_ctx4096",
+      "batch": 1,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs1_ctx4096/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs1_ctx16384",
+      "batch": 1,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs1_ctx16384/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs4_ctx4096",
+      "batch": 4,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs4_ctx4096/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs4_ctx8192",
+      "batch": 4,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs4_ctx8192/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs4_ctx16384",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs4_ctx16384/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs4_ctx65536",
+      "batch": 4,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs4_ctx65536/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs8_ctx98304",
+      "batch": 8,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs8_ctx98304/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs12_ctx98304",
+      "batch": 12,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs12_ctx98304/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs16_ctx4096",
+      "batch": 16,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs16_ctx4096/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs16_ctx16384",
+      "batch": 16,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs16_ctx16384/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_train_bs28_ctx32768",
+      "batch": 28,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_train_bs28_ctx32768/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_holdout_bs4_ctx16384",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_holdout_bs4_ctx16384/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_holdout_bs8_ctx65536",
+      "batch": 8,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_holdout_bs8_ctx65536/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g1/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g1/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g1/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g1/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g3",
+      "batch": 1,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g3/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g3",
+      "batch": 4,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g3/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_train_g4",
+      "batch": 1,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_train_g4/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 1,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 1,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 8,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 8,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g0/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g2",
+      "batch": 1,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "pre_holdout_g2",
+      "batch": 2,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/pre_holdout_g2/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    },
+    {
+      "id": "dec_repeat_bs16_ctx16384",
+      "batch": 16,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/validation_checks/cpu-o9lpy7ys/synthetic_run/.attempts/dec_repeat_bs16_ctx16384/attempt-001",
+      "job": "SYNTHETIC-CPU-FIXTURE"
+    }
+  ],
+  "measurement_policy": {
+    "primary_rank": 0,
+    "rank_aggregation": "rank 0 per iteration, then summarize",
+    "auxiliary_aggregation": "max across ranks for each iteration, then summarize",
+    "per_sample_tp_barrier": false,
+    "numerical_checks": "separate validation process; not in measurement loops",
+    "prefill_tp4": "extension of the reference TP=1 prefill benchmark"
+  }
+}
