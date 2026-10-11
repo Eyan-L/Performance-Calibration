@@ -105,8 +105,10 @@ def native_arguments(module, manifest, point):
             '--max-running-requests', str(maximum_batch),
             '--max-mamba-cache-size', str(maximum_batch),
             '--cuda-graph-config', json.dumps(graph)]
-    if decode:
-        args.extend(['--max-total-tokens', str(point['bs'] * point['ctx'] + 32768)])
+    # Size the pool from the complete group, including already measured shapes
+    # during partial resume. Reserve the same token headroom as decode.
+    maximum_tokens = max(batch * length for batch, length in shapes(point))
+    args.extend(['--max-total-tokens', str(maximum_tokens + 32768)])
     parser = argparse.ArgumentParser()
     module.ServerArgs.add_cli_args(parser)
     return parser.parse_args(args)

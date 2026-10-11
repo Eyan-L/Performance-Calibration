@@ -1,0 +1,1019 @@
+{
+  "passed": true,
+  "run_signature": "7fb0b14e4afae10b75e4b242802e59bcdf79d45383bab73b16f2bd34a6535145",
+  "sglang_version": "0.5.21",
+  "groups": [
+    {
+      "id": "dec_train_bs1_ctx4096",
+      "kind": "decoder",
+      "max_total_tokens": 36864,
+      "full_group_shapes": [
+        [
+          1,
+          4096
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs1_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 40960,
+      "full_group_shapes": [
+        [
+          1,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs1_ctx12288",
+      "kind": "decoder",
+      "max_total_tokens": 45056,
+      "full_group_shapes": [
+        [
+          1,
+          12288
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs1_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 49152,
+      "full_group_shapes": [
+        [
+          1,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs1_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 57344,
+      "full_group_shapes": [
+        [
+          1,
+          24576
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs1_ctx32768",
+      "kind": "decoder",
+      "max_total_tokens": 65536,
+      "full_group_shapes": [
+        [
+          1,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs1_ctx65536",
+      "kind": "decoder",
+      "max_total_tokens": 98304,
+      "full_group_shapes": [
+        [
+          1,
+          65536
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs1_ctx98304",
+      "kind": "decoder",
+      "max_total_tokens": 131072,
+      "full_group_shapes": [
+        [
+          1,
+          98304
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs2_ctx4096",
+      "kind": "decoder",
+      "max_total_tokens": 40960,
+      "full_group_shapes": [
+        [
+          2,
+          4096
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs2_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 49152,
+      "full_group_shapes": [
+        [
+          2,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs2_ctx12288",
+      "kind": "decoder",
+      "max_total_tokens": 57344,
+      "full_group_shapes": [
+        [
+          2,
+          12288
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs2_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 65536,
+      "full_group_shapes": [
+        [
+          2,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs2_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 81920,
+      "full_group_shapes": [
+        [
+          2,
+          24576
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs2_ctx32768",
+      "kind": "decoder",
+      "max_total_tokens": 98304,
+      "full_group_shapes": [
+        [
+          2,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs2_ctx65536",
+      "kind": "decoder",
+      "max_total_tokens": 163840,
+      "full_group_shapes": [
+        [
+          2,
+          65536
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs2_ctx98304",
+      "kind": "decoder",
+      "max_total_tokens": 229376,
+      "full_group_shapes": [
+        [
+          2,
+          98304
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs4_ctx4096",
+      "kind": "decoder",
+      "max_total_tokens": 49152,
+      "full_group_shapes": [
+        [
+          4,
+          4096
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs4_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 65536,
+      "full_group_shapes": [
+        [
+          4,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs4_ctx12288",
+      "kind": "decoder",
+      "max_total_tokens": 81920,
+      "full_group_shapes": [
+        [
+          4,
+          12288
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs4_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 98304,
+      "full_group_shapes": [
+        [
+          4,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs4_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 131072,
+      "full_group_shapes": [
+        [
+          4,
+          24576
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs4_ctx32768",
+      "kind": "decoder",
+      "max_total_tokens": 163840,
+      "full_group_shapes": [
+        [
+          4,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs4_ctx65536",
+      "kind": "decoder",
+      "max_total_tokens": 294912,
+      "full_group_shapes": [
+        [
+          4,
+          65536
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs4_ctx98304",
+      "kind": "decoder",
+      "max_total_tokens": 425984,
+      "full_group_shapes": [
+        [
+          4,
+          98304
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs8_ctx4096",
+      "kind": "decoder",
+      "max_total_tokens": 65536,
+      "full_group_shapes": [
+        [
+          8,
+          4096
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs8_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 98304,
+      "full_group_shapes": [
+        [
+          8,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs8_ctx12288",
+      "kind": "decoder",
+      "max_total_tokens": 131072,
+      "full_group_shapes": [
+        [
+          8,
+          12288
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs8_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 163840,
+      "full_group_shapes": [
+        [
+          8,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs8_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 229376,
+      "full_group_shapes": [
+        [
+          8,
+          24576
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs8_ctx32768",
+      "kind": "decoder",
+      "max_total_tokens": 294912,
+      "full_group_shapes": [
+        [
+          8,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs8_ctx65536",
+      "kind": "decoder",
+      "max_total_tokens": 557056,
+      "full_group_shapes": [
+        [
+          8,
+          65536
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs8_ctx98304",
+      "kind": "decoder",
+      "max_total_tokens": 819200,
+      "full_group_shapes": [
+        [
+          8,
+          98304
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs12_ctx4096",
+      "kind": "decoder",
+      "max_total_tokens": 81920,
+      "full_group_shapes": [
+        [
+          12,
+          4096
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs12_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 131072,
+      "full_group_shapes": [
+        [
+          12,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs12_ctx12288",
+      "kind": "decoder",
+      "max_total_tokens": 180224,
+      "full_group_shapes": [
+        [
+          12,
+          12288
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs12_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 229376,
+      "full_group_shapes": [
+        [
+          12,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs12_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 327680,
+      "full_group_shapes": [
+        [
+          12,
+          24576
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs12_ctx32768",
+      "kind": "decoder",
+      "max_total_tokens": 425984,
+      "full_group_shapes": [
+        [
+          12,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs12_ctx65536",
+      "kind": "decoder",
+      "max_total_tokens": 819200,
+      "full_group_shapes": [
+        [
+          12,
+          65536
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs12_ctx98304",
+      "kind": "decoder",
+      "max_total_tokens": 1212416,
+      "full_group_shapes": [
+        [
+          12,
+          98304
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs16_ctx4096",
+      "kind": "decoder",
+      "max_total_tokens": 98304,
+      "full_group_shapes": [
+        [
+          16,
+          4096
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs16_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 163840,
+      "full_group_shapes": [
+        [
+          16,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs16_ctx12288",
+      "kind": "decoder",
+      "max_total_tokens": 229376,
+      "full_group_shapes": [
+        [
+          16,
+          12288
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs16_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 294912,
+      "full_group_shapes": [
+        [
+          16,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs16_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 425984,
+      "full_group_shapes": [
+        [
+          16,
+          24576
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs16_ctx32768",
+      "kind": "decoder",
+      "max_total_tokens": 557056,
+      "full_group_shapes": [
+        [
+          16,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs16_ctx65536",
+      "kind": "decoder",
+      "max_total_tokens": 1081344,
+      "full_group_shapes": [
+        [
+          16,
+          65536
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs20_ctx4096",
+      "kind": "decoder",
+      "max_total_tokens": 114688,
+      "full_group_shapes": [
+        [
+          20,
+          4096
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs20_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 196608,
+      "full_group_shapes": [
+        [
+          20,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs20_ctx12288",
+      "kind": "decoder",
+      "max_total_tokens": 278528,
+      "full_group_shapes": [
+        [
+          20,
+          12288
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs20_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 360448,
+      "full_group_shapes": [
+        [
+          20,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs20_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 524288,
+      "full_group_shapes": [
+        [
+          20,
+          24576
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs20_ctx32768",
+      "kind": "decoder",
+      "max_total_tokens": 688128,
+      "full_group_shapes": [
+        [
+          20,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs24_ctx4096",
+      "kind": "decoder",
+      "max_total_tokens": 131072,
+      "full_group_shapes": [
+        [
+          24,
+          4096
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs24_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 229376,
+      "full_group_shapes": [
+        [
+          24,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs24_ctx12288",
+      "kind": "decoder",
+      "max_total_tokens": 327680,
+      "full_group_shapes": [
+        [
+          24,
+          12288
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs24_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 425984,
+      "full_group_shapes": [
+        [
+          24,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs24_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 622592,
+      "full_group_shapes": [
+        [
+          24,
+          24576
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs24_ctx32768",
+      "kind": "decoder",
+      "max_total_tokens": 819200,
+      "full_group_shapes": [
+        [
+          24,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs28_ctx4096",
+      "kind": "decoder",
+      "max_total_tokens": 147456,
+      "full_group_shapes": [
+        [
+          28,
+          4096
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs28_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 262144,
+      "full_group_shapes": [
+        [
+          28,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs28_ctx12288",
+      "kind": "decoder",
+      "max_total_tokens": 376832,
+      "full_group_shapes": [
+        [
+          28,
+          12288
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs28_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 491520,
+      "full_group_shapes": [
+        [
+          28,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs28_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 720896,
+      "full_group_shapes": [
+        [
+          28,
+          24576
+        ]
+      ]
+    },
+    {
+      "id": "dec_train_bs28_ctx32768",
+      "kind": "decoder",
+      "max_total_tokens": 950272,
+      "full_group_shapes": [
+        [
+          28,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "dec_holdout_bs1_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 40960,
+      "full_group_shapes": [
+        [
+          1,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_holdout_bs4_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 98304,
+      "full_group_shapes": [
+        [
+          4,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_holdout_bs8_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 229376,
+      "full_group_shapes": [
+        [
+          8,
+          24576
+        ]
+      ]
+    },
+    {
+      "id": "dec_holdout_bs12_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 131072,
+      "full_group_shapes": [
+        [
+          12,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_holdout_bs16_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 294912,
+      "full_group_shapes": [
+        [
+          16,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_holdout_bs20_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 524288,
+      "full_group_shapes": [
+        [
+          20,
+          24576
+        ]
+      ]
+    },
+    {
+      "id": "dec_holdout_bs24_ctx12288",
+      "kind": "decoder",
+      "max_total_tokens": 327680,
+      "full_group_shapes": [
+        [
+          24,
+          12288
+        ]
+      ]
+    },
+    {
+      "id": "dec_holdout_bs28_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 262144,
+      "full_group_shapes": [
+        [
+          28,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_holdout_bs2_ctx32768",
+      "kind": "decoder",
+      "max_total_tokens": 98304,
+      "full_group_shapes": [
+        [
+          2,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "dec_holdout_bs8_ctx65536",
+      "kind": "decoder",
+      "max_total_tokens": 557056,
+      "full_group_shapes": [
+        [
+          8,
+          65536
+        ]
+      ]
+    },
+    {
+      "id": "pre_train_g0",
+      "kind": "prefill",
+      "max_total_tokens": 65536,
+      "full_group_shapes": [
+        [
+          1,
+          4096
+        ],
+        [
+          1,
+          8192
+        ],
+        [
+          1,
+          16384
+        ],
+        [
+          1,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "pre_train_g1",
+      "kind": "prefill",
+      "max_total_tokens": 163840,
+      "full_group_shapes": [
+        [
+          4,
+          4096
+        ],
+        [
+          4,
+          8192
+        ],
+        [
+          4,
+          16384
+        ],
+        [
+          4,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "pre_train_g2",
+      "kind": "prefill",
+      "max_total_tokens": 294912,
+      "full_group_shapes": [
+        [
+          8,
+          4096
+        ],
+        [
+          8,
+          8192
+        ],
+        [
+          8,
+          16384
+        ],
+        [
+          8,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "pre_train_g3",
+      "kind": "prefill",
+      "max_total_tokens": 294912,
+      "full_group_shapes": [
+        [
+          1,
+          65536
+        ],
+        [
+          4,
+          65536
+        ]
+      ]
+    },
+    {
+      "id": "pre_train_g4",
+      "kind": "prefill",
+      "max_total_tokens": 229376,
+      "full_group_shapes": [
+        [
+          1,
+          98304
+        ],
+        [
+          2,
+          98304
+        ]
+      ]
+    },
+    {
+      "id": "pre_holdout_g0",
+      "kind": "prefill",
+      "max_total_tokens": 294912,
+      "full_group_shapes": [
+        [
+          1,
+          8192
+        ],
+        [
+          1,
+          32768
+        ],
+        [
+          8,
+          8192
+        ],
+        [
+          8,
+          32768
+        ]
+      ]
+    },
+    {
+      "id": "pre_holdout_g1",
+      "kind": "prefill",
+      "max_total_tokens": 294912,
+      "full_group_shapes": [
+        [
+          1,
+          65536
+        ],
+        [
+          4,
+          65536
+        ]
+      ]
+    },
+    {
+      "id": "pre_holdout_g2",
+      "kind": "prefill",
+      "max_total_tokens": 229376,
+      "full_group_shapes": [
+        [
+          1,
+          98304
+        ],
+        [
+          2,
+          98304
+        ]
+      ]
+    },
+    {
+      "id": "dec_repeat_bs4_ctx8192",
+      "kind": "decoder",
+      "max_total_tokens": 65536,
+      "full_group_shapes": [
+        [
+          4,
+          8192
+        ]
+      ]
+    },
+    {
+      "id": "dec_repeat_bs16_ctx16384",
+      "kind": "decoder",
+      "max_total_tokens": 294912,
+      "full_group_shapes": [
+        [
+          16,
+          16384
+        ]
+      ]
+    },
+    {
+      "id": "dec_repeat_bs24_ctx24576",
+      "kind": "decoder",
+      "max_total_tokens": 622592,
+      "full_group_shapes": [
+        [
+          24,
+          24576
+        ]
+      ]
+    }
+  ],
+  "gpu_execution_tested": false,
+  "all_decode_arguments_identical_to_source": true
+}

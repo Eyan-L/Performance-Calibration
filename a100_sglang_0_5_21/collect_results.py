@@ -35,7 +35,8 @@ def collect(run, out, only=None):
         audit['missing_shapes'].extend({'id': point['id'], 'batch': b, 'length': l} for b, l in missing)
         for (b, length), item in recovered.items():
             source = {'id': point['id'], 'batch': b, 'length': length,
-                      'source': item['source'], 'job': item['job']}
+                      'source': item['source'], 'job': item['job'],
+                      'measurement_run_signature': item['result']['metadata']['run_signature']}
             audit['shape_sources'].append(source)
             if result is None:
                 audit['recovered_shapes'].append(source)

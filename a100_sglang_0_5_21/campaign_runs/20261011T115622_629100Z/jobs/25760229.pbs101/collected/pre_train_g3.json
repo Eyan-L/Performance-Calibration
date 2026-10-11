@@ -1,0 +1,144 @@
+{
+  "completed": false,
+  "points": [
+    {
+      "batch_size": 1,
+      "request_length": 65536,
+      "status": "ok",
+      "prompt_tokens": 65536,
+      "forward_ms_median": 5683.0126953125,
+      "forward_ms_mean": 5682.1861328125,
+      "forward_ms_p90": 5685.512988281251,
+      "iterations": 5,
+      "samples_ms": [
+        5683.0126953125,
+        5676.30126953125,
+        5683.0517578125,
+        5687.15380859375,
+        5681.4111328125
+      ],
+      "rank_samples_ms": [
+        [
+          5683.0126953125,
+          5676.30126953125,
+          5683.0517578125,
+          5687.15380859375,
+          5681.4111328125
+        ],
+        [
+          5683.16943359375,
+          5676.4375,
+          5683.013671875,
+          5687.28173828125,
+          5681.302734375
+        ],
+        [
+          5682.49951171875,
+          5676.3271484375,
+          5682.56103515625,
+          5687.11376953125,
+          5681.3671875
+        ],
+        [
+          5682.93603515625,
+          5676.24072265625,
+          5682.83349609375,
+          5686.98046875,
+          5681.1181640625
+        ]
+      ],
+      "input": {
+        "batch_size": 1,
+        "request_length": 65536,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_005",
+            "session_id": "concat0017",
+            "round_id": 0,
+            "split": "train",
+            "offset": 2419400,
+            "length": 134831,
+            "source_prompts": [
+              "20260728_100928_7d8271#1",
+              "20260728_100928_7d8271#2",
+              "20260728_100932_2b3f1a#1",
+              "20260728_100932_2b3f1a#2",
+              "20260728_100932_2b3f1a#3",
+              "20260728_100932_2b3f1a#4",
+              "20260728_100932_2b3f1a#5",
+              "20260728_100932_2b3f1a#6",
+              "20260728_100932_2b3f1a#7",
+              "20260728_100932_ab1acd#1",
+              "20260728_100932_ab1acd#2",
+              "20260728_100932_ab1acd#3",
+              "20260728_100932_ab1acd#4",
+              "20260728_100932_ab1acd#5",
+              "20260728_100932_ab1acd#6",
+              "20260728_100932_cd7717#1",
+              "20260728_100932_cd7717#2"
+            ]
+          }
+        ],
+        "token_sha256": "ae0609ae09ab5a849bb30027494655b14d23f5883bcbb91a06abd1b9c378bff3",
+        "corpus_token_sha256": "d738187105aeacbdedef591eaa537110f8880062fa35f8803b3b18dc53ef67c1"
+      },
+      "rank_layouts": [
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            65536
+          ],
+          "actual_input_token_count": 65536
+        },
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            65536
+          ],
+          "actual_input_token_count": 65536
+        },
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            65536
+          ],
+          "actual_input_token_count": 65536
+        },
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            65536
+          ],
+          "actual_input_token_count": 65536
+        }
+      ],
+      "rank_diagnostics": {
+        "max_samples_ms": [
+          5683.16943359375,
+          5676.4375,
+          5683.0517578125,
+          5687.28173828125,
+          5681.4111328125
+        ],
+        "max_median_ms": 5683.0517578125,
+        "per_rank_medians_ms": [
+          5683.0126953125,
+          5683.013671875,
+          5682.49951171875,
+          5682.83349609375
+        ]
+      }
+    },
+    {
+      "batch_size": 4,
+      "request_length": 65536,
+      "status": "missing",
+      "error": "No complete matching samples across all TP ranks"
+    }
+  ],
+  "metadata": {
+    "run_signature": "d1630e7487a510a23cb15be269c73b594a0b2e4f0b34530a3deb9c9d362a3cb8",
+    "partial_recovery": true
+  }
+}

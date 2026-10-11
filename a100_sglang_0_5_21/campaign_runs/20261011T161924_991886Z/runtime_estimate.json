@@ -1,0 +1,23 @@
+{
+  "job_id": "25762839.pbs101",
+  "exclude_queue_time": true,
+  "pilot_seconds": 3383.954741001129,
+  "pilot_decode_groups": 14,
+  "pilot_decode_mean_seconds": 131.92857142857142,
+  "pilot_prefill_groups": 7,
+  "pilot_prefill_mean_seconds": 161.87142857142857,
+  "pilot_validation_and_collection_seconds": 403.85474100112924,
+  "new_decode_groups": 64,
+  "new_prefill_groups": 8,
+  "linear_estimate_hours": 2.8172929836114244,
+  "recommended_estimate_hours": [
+    3,
+    4
+  ],
+  "caveats": [
+    "Pilot prefill OOMs stopped before collecting all samples.",
+    "Cold kernel compilation, different point sizes and shared storage add variation.",
+    "No new SGLang version, backend, dtype or timing protocol."
+  ],
+  "pbs_walltime_hours": 24
+}

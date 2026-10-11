@@ -1,0 +1,36 @@
+{
+  "completed": false,
+  "selected": [
+    "dec_train_bs1_ctx4096",
+    "dec_train_bs1_ctx16384",
+    "dec_train_bs4_ctx4096",
+    "dec_train_bs4_ctx8192",
+    "dec_train_bs4_ctx16384",
+    "dec_train_bs4_ctx65536",
+    "dec_train_bs8_ctx98304",
+    "dec_train_bs12_ctx98304",
+    "dec_train_bs16_ctx4096",
+    "dec_train_bs16_ctx16384",
+    "dec_train_bs28_ctx32768",
+    "dec_holdout_bs4_ctx16384",
+    "dec_holdout_bs8_ctx65536",
+    "pre_train_g0",
+    "pre_train_g1",
+    "pre_train_g2",
+    "pre_train_g3",
+    "pre_train_g4",
+    "pre_holdout_g0",
+    "pre_holdout_g2",
+    "dec_repeat_bs16_ctx16384"
+  ],
+  "remaining": [
+    "pre_train_g2",
+    "pre_train_g3",
+    "pre_train_g4",
+    "pre_holdout_g0",
+    "pre_holdout_g2"
+  ],
+  "failed_attempts": 5,
+  "run_signature": "d1630e7487a510a23cb15be269c73b594a0b2e4f0b34530a3deb9c9d362a3cb8",
+  "job": "25760229.pbs101"
+}

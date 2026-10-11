@@ -1,0 +1,14 @@
+{
+  "job_id": "25760229.pbs101",
+  "phase": "pilot",
+  "status": "submitted",
+  "recorded_at_utc": "2026-10-11 12:26:41 UTC",
+  "campaign_dir": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z",
+  "run_signature": "d1630e7487a510a23cb15be269c73b594a0b2e4f0b34530a3deb9c9d362a3cb8",
+  "walltime": "04:00:00",
+  "groups": 21,
+  "shapes": 36,
+  "pbs_file": "code/nscc_qwen38_pilot.pbs",
+  "output_log": "pilot.pbs.log",
+  "formal_grid_submitted": false
+}

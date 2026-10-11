@@ -10,6 +10,10 @@ from calibration_common import MEASUREMENT_POLICY, format_result, shapes, valida
 def read_group(run, point, signature, tp, smoke):
     """Return first valid attempt per shape, canonical result, and audit errors."""
     run = Path(run)
+    from decode_reuse import read_reused_decode
+    reused = read_reused_decode(run, point, signature, tp, smoke)
+    if reused is not None:
+        return reused
     canonical_path = run / (point['id'] + '.json')
     canonical = None
     if canonical_path.exists():

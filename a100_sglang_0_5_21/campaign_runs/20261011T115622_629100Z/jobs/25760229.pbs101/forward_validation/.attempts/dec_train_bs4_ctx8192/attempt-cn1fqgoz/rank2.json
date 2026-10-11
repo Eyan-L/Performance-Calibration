@@ -1,0 +1,148 @@
+{
+  "rank": 2,
+  "metadata": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+      "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+      "cache_paths": {
+        "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+        "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+        "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+        "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+        "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+        "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+      },
+      "reference_source_on_import_path": false,
+      "gpu_execution_tested": false
+    },
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "purpose": "forward_validation",
+    "gpu_memory_bytes": 42406903808,
+    "gpu_id": 2,
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "native_custom_all_reduce_disabled": false,
+    "communication": {
+      "requested_custom_all_reduce_disabled": false,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      },
+      "all_reduce_numeric_check": true
+    }
+  },
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 4,
+      "request_length": 8192,
+      "input": {
+        "batch_size": 4,
+        "request_length": 8192,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_019",
+            "session_id": "20260729_075306_ca0bfa",
+            "round_id": 18,
+            "split": "train",
+            "offset": 11401244,
+            "length": 28076,
+            "recorded_input_tokens": 28170,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_015",
+            "session_id": "20260729_065855_3e1b8f",
+            "round_id": 6,
+            "split": "train",
+            "offset": 7617552,
+            "length": 10358,
+            "recorded_input_tokens": 10452,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_009",
+            "session_id": "20260728_112729_a14d00",
+            "round_id": 5,
+            "split": "train",
+            "offset": 5329549,
+            "length": 12873,
+            "recorded_input_tokens": 12947,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_006",
+            "session_id": "20260728_111502_f26d8f",
+            "round_id": 5,
+            "split": "train",
+            "offset": 3658137,
+            "length": 14100,
+            "recorded_input_tokens": 14174,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "a9893b7216e360086e4c097db3e22ec14d6a9131d0feb12eaa9d32f76eefd5ea",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "validation": {
+        "shape_matches": true,
+        "finite_logits": true,
+        "logits_shape": [
+          4,
+          248320
+        ],
+        "batch": 4,
+        "context": 8192,
+        "graph": true,
+        "check_scope": "dedicated validation process; no calibration timing samples",
+        "batch_size": 4,
+        "actual_sequence_lengths": [
+          8193,
+          8193,
+          8193,
+          8193
+        ],
+        "actual_input_token_count": 4,
+        "layout_verified": true
+      }
+    }
+  ],
+  "stage": "complete",
+  "started_at": 1791726320.5817962,
+  "model_ready_at": 1791726423.028285,
+  "active_shape": [
+    4,
+    8192
+  ],
+  "ended_at": 1791726436.7641187
+}

@@ -1,0 +1,22 @@
+{
+  "ready": true,
+  "campaign_dir": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T161924_991886Z",
+  "run_signature": "7fb0b14e4afae10b75e4b242802e59bcdf79d45383bab73b16f2bd34a6535145",
+  "source_campaign": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z",
+  "groups": {
+    "decoder": 78,
+    "prefill": 8
+  },
+  "shapes": {
+    "decoder": 78,
+    "prefill": 24
+  },
+  "decode_shapes_reused": 14,
+  "prefill_shapes_reused": 0,
+  "groups_to_measure": 72,
+  "shapes_to_measure": 88,
+  "formal_sampling_counts": true,
+  "decode_resume_and_collection_passed": true,
+  "native_argument_validation_passed": true,
+  "created_at": 1791735599.2005384
+}

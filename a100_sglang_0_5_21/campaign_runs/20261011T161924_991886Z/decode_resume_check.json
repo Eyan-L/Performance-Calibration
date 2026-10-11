@@ -1,0 +1,23 @@
+{
+  "completed": true,
+  "selected": [
+    "dec_train_bs1_ctx4096",
+    "dec_train_bs1_ctx16384",
+    "dec_train_bs4_ctx4096",
+    "dec_train_bs4_ctx8192",
+    "dec_train_bs4_ctx16384",
+    "dec_train_bs4_ctx65536",
+    "dec_train_bs8_ctx98304",
+    "dec_train_bs12_ctx98304",
+    "dec_train_bs16_ctx4096",
+    "dec_train_bs16_ctx16384",
+    "dec_train_bs28_ctx32768",
+    "dec_holdout_bs4_ctx16384",
+    "dec_holdout_bs8_ctx65536",
+    "dec_repeat_bs16_ctx16384"
+  ],
+  "remaining": [],
+  "failed_attempts": 0,
+  "run_signature": "7fb0b14e4afae10b75e4b242802e59bcdf79d45383bab73b16f2bd34a6535145",
+  "job": null
+}

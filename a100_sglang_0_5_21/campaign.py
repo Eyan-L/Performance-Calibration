@@ -17,7 +17,7 @@ from run_points import execute as execute_process
 FILES = ('runtime_config.json', 'runtime_guard.py', 'run_in_sif.sh', 'calibration_common.py',
          'calibrate_point.py', 'run_points.py', 'collect_results.py', 'fit_results.py', 'gpu_preflight.py',
          'measurement_store.py', 'campaign.py', 'verify_campaign.py', 'report_results.py',
-         'nscc_qwen38_pilot.pbs', 'nscc_qwen38_full.pbs', 'README.md')
+         'nscc_qwen38_pilot.pbs', 'nscc_qwen38_full.pbs', 'README.md', 'decode_reuse.py')
 MODEL = Path('/scratch/users/ntu/n2602695/hf/hub/models--Qwen--Qwen3.8-27B/snapshots/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0')
 
 
@@ -30,7 +30,7 @@ def pilot_ids():
                         'pre_holdout_g0', 'pre_holdout_g2']
 
 
-def prepare(out=None):
+def prepare(out=None, reuse_decode_from=None):
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S_%fZ')
     destination = (out or ROOT / 'campaign_runs' / stamp).resolve()
     if destination.exists():
@@ -57,6 +57,11 @@ def prepare(out=None):
               'expected_remaining_groups': len(manifest['points']) - 21,
               'expected_remaining_shapes': sum(len(shapes(p)) for p in manifest['points']) - 36,
               'image_stat': {'size': image_stat.st_size, 'mtime_ns': image_stat.st_mtime_ns}}
+    if reuse_decode_from:
+        from decode_reuse import prepare_reuse
+        report['decode_reuse'] = prepare_reuse(reuse_decode_from, destination, specification, report)
+        report['expected_remaining_groups'] = report['full_groups'] - report['decode_reuse']['decode_shapes_reused']
+        report['expected_remaining_shapes'] = report['full_shapes'] - report['decode_reuse']['decode_shapes_reused']
     atomic_json(destination / 'campaign.json', report)
     (destination / 'jobs').mkdir()
     return report
@@ -74,6 +79,9 @@ def load_campaign(directory):
     stat = Path(CONFIG['image']).stat()
     if info['image_stat'] != {'size': stat.st_size, 'mtime_ns': stat.st_mtime_ns}:
         raise ValueError('SIF changed after preparation')
+    if info.get('decode_reuse'):
+        from decode_reuse import validate_catalog
+        validate_catalog(directory, info)
     return directory, info
 
 
@@ -92,8 +100,11 @@ def execute(directory, phase):
     approval = None
     try:
         if phase == 'full':
-            approval = json.loads((directory / 'pilot_acceptance.json').read_text())
-            if not approval.get('passed') or approval.get('run_signature') != info['run_signature']:
+            source_reuse = info.get('decode_reuse')
+            acceptance_file = 'source_pilot_acceptance.json' if source_reuse else 'pilot_acceptance.json'
+            approval = json.loads((directory / acceptance_file).read_text())
+            expected_signature = source_reuse['source_run_signature'] if source_reuse else info['run_signature']
+            if not approval.get('passed') or approval.get('run_signature') != expected_signature:
                 raise ValueError('Pilot has not passed acceptance; full grid is not allowed')
         def run(cmd, name, timeout):
             rc = execute_process([str(x) for x in cmd], job_dir / (name + '.log'), timeout)
@@ -131,16 +142,20 @@ def execute(directory, phase):
             measure += ['--only', *selected]
         status['stage'] = 'measurement'
         atomic_json(job_dir / 'status.json', status)
-        if phase == 'pilot':
+        if phase == 'pilot' or info.get('decode_reuse'):
             # Detect protocol/instrumentation errors on already proven shapes
             # before spending hours on the expanded grid. These points remain
             # in the shared results and will be skipped in the next call.
             bootstrap = measure[:measure.index('--completion-out')]
-            bootstrap += ['--completion-out', job_dir / 'bootstrap_completion.json',
-                          '--only', 'dec_train_bs4_ctx8192', 'pre_train_g0']
-            if run(bootstrap, 'bootstrap_measurement', 3900):
+            bootstrap_ids = ['dec_train_bs4_ctx8192', 'pre_train_g0']
+            if info.get('decode_reuse'):
+                # Verify the three formerly failing workload shapes before the
+                # remaining grid; their formal samples are reused below.
+                bootstrap_ids += ['pre_train_g2', 'pre_train_g3', 'pre_train_g4']
+            bootstrap += ['--completion-out', job_dir / 'bootstrap_completion.json', '--only', *bootstrap_ids]
+            if run(bootstrap, 'bootstrap_measurement', 7800 if info.get('decode_reuse') else 3900):
                 diagnostic = ['python3', runtime / 'collect_results.py', directory / 'results',
-                              job_dir / 'bootstrap_collected', '--only', 'dec_train_bs4_ctx8192', 'pre_train_g0']
+                              job_dir / 'bootstrap_collected', '--only', *bootstrap_ids]
                 run(diagnostic, 'bootstrap_collection', 300)
                 raise RuntimeError('Formal-count bootstrap failed; expanded measurement stopped immediately')
         status['measurement_rc'] = run(measure, 'measurement', wall)
@@ -185,12 +200,14 @@ def main():
     commands = parser.add_subparsers(dest='command', required=True)
     prep = commands.add_parser('prepare')
     prep.add_argument('--out', type=Path)
+    prep.add_argument('--reuse-decode-from', type=Path,
+                      help='Reuse accepted unchanged decode only; remeasure every prefill under the new KV cap')
     run = commands.add_parser('run')
     run.add_argument('campaign', type=Path)
     run.add_argument('--phase', choices=('pilot', 'full'), required=True)
     args = parser.parse_args()
     if args.command == 'prepare':
-        info = prepare(args.out)
+        info = prepare(args.out, args.reuse_decode_from)
         print(json.dumps(info, indent=2))
     else:
         execute(args.campaign, args.phase)

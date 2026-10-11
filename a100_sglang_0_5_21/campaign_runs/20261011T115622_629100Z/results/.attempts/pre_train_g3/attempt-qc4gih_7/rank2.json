@@ -1,0 +1,129 @@
+{
+  "rank": 2,
+  "metadata": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+      "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+      "cache_paths": {
+        "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+        "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+        "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+        "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+        "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+        "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+      },
+      "reference_source_on_import_path": false,
+      "gpu_execution_tested": false
+    },
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "purpose": "measurement",
+    "gpu_memory_bytes": 42406903808,
+    "gpu_id": 2,
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "native_custom_all_reduce_disabled": false,
+    "communication": {
+      "requested_custom_all_reduce_disabled": false,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      }
+    }
+  },
+  "completed": false,
+  "points": [
+    {
+      "batch_size": 1,
+      "request_length": 65536,
+      "samples_ms": [
+        5682.49951171875,
+        5676.3271484375,
+        5682.56103515625,
+        5687.11376953125,
+        5681.3671875
+      ],
+      "input": {
+        "batch_size": 1,
+        "request_length": 65536,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_005",
+            "session_id": "concat0017",
+            "round_id": 0,
+            "split": "train",
+            "offset": 2419400,
+            "length": 134831,
+            "source_prompts": [
+              "20260728_100928_7d8271#1",
+              "20260728_100928_7d8271#2",
+              "20260728_100932_2b3f1a#1",
+              "20260728_100932_2b3f1a#2",
+              "20260728_100932_2b3f1a#3",
+              "20260728_100932_2b3f1a#4",
+              "20260728_100932_2b3f1a#5",
+              "20260728_100932_2b3f1a#6",
+              "20260728_100932_2b3f1a#7",
+              "20260728_100932_ab1acd#1",
+              "20260728_100932_ab1acd#2",
+              "20260728_100932_ab1acd#3",
+              "20260728_100932_ab1acd#4",
+              "20260728_100932_ab1acd#5",
+              "20260728_100932_ab1acd#6",
+              "20260728_100932_cd7717#1",
+              "20260728_100932_cd7717#2"
+            ]
+          }
+        ],
+        "token_sha256": "ae0609ae09ab5a849bb30027494655b14d23f5883bcbb91a06abd1b9c378bff3",
+        "corpus_token_sha256": "d738187105aeacbdedef591eaa537110f8880062fa35f8803b3b18dc53ef67c1"
+      },
+      "layout": {
+        "batch_size": 1,
+        "actual_sequence_lengths": [
+          65536
+        ],
+        "actual_input_token_count": 65536
+      }
+    }
+  ],
+  "stage": "measure",
+  "started_at": 1791728855.1405525,
+  "model_ready_at": 1791728878.4870343,
+  "active_shape": [
+    4,
+    65536
+  ],
+  "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 768.00 MiB. GPU 2 has a total capacity of 39.49 GiB of which 720.88 MiB is free. Including non-PyTorch memory, this process has 38.78 GiB memory in use. Of the allocated memory 35.65 GiB is allocated by PyTorch, and 128.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)",
+  "error_kind": "out_of_memory",
+  "ended_at": 1791728924.9657218
+}

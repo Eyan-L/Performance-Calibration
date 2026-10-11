@@ -26,9 +26,8 @@ from measurement_store import assemble_group, missing_shapes, read_group
 def complete_result(path, point, signature, tp, smoke):
     if not path.is_file():
         return False
-    result = json.loads(path.read_text())
-    validate_result(result, point, signature, tp, smoke)
-    return True
+    recovered, canonical, invalid = read_group(path.parent, point, signature, tp, smoke)
+    return canonical is not None and not invalid and not missing_shapes(point, recovered)
 
 
 def command(args, point, result, pending_shapes=None):

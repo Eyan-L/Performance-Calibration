@@ -1,0 +1,24 @@
+{
+  "job_id": "25762839.pbs101",
+  "phase": "full",
+  "status": "submitted",
+  "recorded_at_utc": "2026-10-11T16:27:44.163925+00:00",
+  "campaign_dir": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T161924_991886Z",
+  "run_signature": "7fb0b14e4afae10b75e4b242802e59bcdf79d45383bab73b16f2bd34a6535145",
+  "walltime": "24:00:00",
+  "full_groups": 86,
+  "full_shapes": 102,
+  "decode_shapes_reused": 14,
+  "prefill_shapes_reused": 0,
+  "groups_to_measure": 72,
+  "shapes_to_measure": 88,
+  "command": [
+    "qsub",
+    "-v",
+    "CALIB_CAMPAIGN_DIR=/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T161924_991886Z",
+    "-o",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T161924_991886Z/full.pbs.log",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T161924_991886Z/code/nscc_qwen38_full.pbs"
+  ],
+  "output_log": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T161924_991886Z/full.pbs.log"
+}

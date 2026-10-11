@@ -180,6 +180,7 @@ def verify(directory, job_dir, phase):
                 measurements[(point['kind'], prefix, *shape)] = value
                 audit['validated_shapes'].append({'id': point['id'], 'batch': shape[0], 'length': shape[1],
                     'source': item['source'], 'job': item['job'], 'input_token_sha256': identity['token_sha256'],
+                    'measurement_run_signature': result['metadata']['run_signature'],
                     'source_result_sha256': digest_json(result)})
         except (ValueError, KeyError, IndexError, TypeError, OSError) as exc:
             audit['errors'].append({'id': point['id'], 'error': str(exc)})
@@ -238,15 +239,24 @@ def verify(directory, job_dir, phase):
     except (ValueError, KeyError, TypeError) as exc:
         audit['errors'].append(str(exc))
     if phase == 'full':
-        pilot = json.loads((directory / 'pilot_acceptance.json').read_text())
+        reuse = info.get('decode_reuse')
+        pilot = json.loads((directory / ('source_pilot_acceptance.json' if reuse else 'pilot_acceptance.json')).read_text())
         current = {(r['id'], r['batch'], r['length']): r for r in audit['validated_shapes']}
-        for previous in pilot['validated_shapes']:
+        previous_shapes = [r for r in pilot['validated_shapes'] if not reuse or r['id'].startswith('dec_')]
+        for previous in previous_shapes:
             item = current.get((previous['id'], previous['batch'], previous['length']))
             if item is None or any(item[k] != previous[k] for k in ('source', 'source_result_sha256')):
                 audit['errors'].append('Accepted pilot data changed or were measured again')
         if pilot['communication_profiles'] != audit['communication_profiles']:
             audit['errors'].append('Effective communication setup differs from the accepted pilot')
-        audit['pilot_shapes_reused'] = len(pilot['validated_shapes'])
+        audit['pilot_shapes_reused'] = len(previous_shapes)
+        if reuse:
+            audit['prefill_shapes_reused'] = 0
+            if len(previous_shapes) != reuse['decode_shapes_reused']:
+                audit['errors'].append('Decode reuse coverage differs from authorization')
+            if any(r['measurement_run_signature'] != signature for r in audit['validated_shapes']
+                   if r['id'].startswith('pre_')):
+                audit['errors'].append('Prefill contains measurements from before the KV-cap change')
     audit['measurement_coverage_complete'] = len(audit['validated_shapes']) == sum(len(shapes(p)) for p in points)
     audit['selected_shapes'] = sum(len(shapes(p)) for p in points)
     audit['remaining_registered_groups'] = fit['missing_preregistered_points']

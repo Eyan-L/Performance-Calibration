@@ -27,6 +27,9 @@ scratch run directory.
   are checked in separate validation processes before measurement. Those
   processes produce no timing samples and cannot enter collection or resume.
 - TP=4 prefill is an extension of the reference's TP=1-only prefill script.
+- Both phases cap the KV pool at the original group's maximum `batch * context`
+  plus 32768 tokens. The headroom is an engineering choice, not an official
+  SGLang constant. Partial prefill resume preserves the original group capacity.
 - `--smoke` uses the reference's shorter counts (decode 1/3/10, prefill 1/2).
   Store smoke and full-grid measurements in separate directories.
 
@@ -120,3 +123,21 @@ There is no automatic full-job submission before pilot acceptance and review.
 
 Qwen3.6 needs its own model config and memory-aware manifest; do not reuse the
 Qwen3.8 manifest for it.
+
+### Updating the prefill KV pool after an accepted pilot
+
+```bash
+python3 -B campaign.py prepare --reuse-decode-from /path/to/original/campaign
+# Submit the new campaign's frozen full PBS with CALIB_CAMPAIGN_DIR as above.
+```
+
+This creates a separate frozen campaign and does not modify the original code
+or measurements. It verifies the original pilot, unchanged decode computation,
+timing, arguments, inputs and runtime, then pins all 14 original decode results
+and their raw artifacts. Reused records retain their original signatures and
+job IDs; collection explicitly records each measurement's source signature.
+Every prefill shape is measured again with the capped pool. The full job first
+checks the hardware against the source pilot, runs independent forward checks,
+and measures the base prefill group and the three previously failing workload
+shapes at formal sampling counts. These new samples are reused by the subsequent
+full-grid driver. A failed bootstrap stops the full grid and preserves evidence.

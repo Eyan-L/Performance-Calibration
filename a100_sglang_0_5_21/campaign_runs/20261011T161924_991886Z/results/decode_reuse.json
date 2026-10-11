@@ -1,0 +1,398 @@
+{
+  "schema": "prefill-kv-cap-decode-reuse.v1",
+  "target_run_signature": "7fb0b14e4afae10b75e4b242802e59bcdf79d45383bab73b16f2bd34a6535145",
+  "source_run_signature": "d1630e7487a510a23cb15be269c73b594a0b2e4f0b34530a3deb9c9d362a3cb8",
+  "source_campaign": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z",
+  "source_files_sha256": {
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/campaign.json": "61829bafaa87b59d92834a0fb138de1a4bed7700ed3361087daec8c2a89ef1f5",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/pilot_acceptance.json": "1bc11ea5531e535c6dd33016400f7885ebe96c5d9904750873c317e6d904872c",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/run_config.json": "d05d44555780a39b506636647dab7742baa4a3293e2f7673aed3a0e80f2943c5",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/manifest.json": "e1965cd0121ca21e4842fc8b571bb8378fee4f25ea2ab114f6b014b228524922",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/runtime_config.json": "96c8cb4982a3df1d8a68dfcc6cba79d603f11683f58fb84ca4e4b31a587fcd07",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/runtime_guard.py": "8d78dc6d2aed1d1f6c9fdafa1a13ad21fe84da39c0376e492a6b6647760ee9f2",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/run_in_sif.sh": "8ee3eacb3b9badf0bf5de658fa0db1527404df70230c6597b4359e712a56264f",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/calibration_common.py": "57a0915d5ef86b95123976318a4f7f991cee198cc786ae446f658d4778d907ad",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/calibrate_point.py": "3f790fb6c9c013805b17f65c7381d0896f0036c683f7710f073cbb20aaa562ab",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/run_points.py": "1410dee39a0d24996f38183c8269072c89577abbdb3345636882c2e77ae6f4a4",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/collect_results.py": "93cdf0f6f45ee4c2c7dfb5278a0771b7b36192e8326befa1e4d33b4415aa32a8",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/fit_results.py": "4162dd7ede406a8929781c268dce07d9ee2409c79661b3204ebb950b304a1584",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/gpu_preflight.py": "54ba991c8cac058af8cf15668724a42642465f5940639b05f544289f798261e7",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/measurement_store.py": "fdf356b2c7c911886defdc1c29032ab810342c2905f16e52cec6f22585750cd9",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/campaign.py": "551a117c61e5f783225427c27250882485f077707382aeb467c71602474b5237",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/verify_campaign.py": "91458978326db4376058a3a9ae2a94f4ad489b2029ddeda404f36e46652bf4b1",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/report_results.py": "424a6f4d2f6277f65e672255c5fabcbde459f45ba5861fc328d36ab13d69141e",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/nscc_qwen38_pilot.pbs": "f4163d8f902b6d317e19b86dc233da7cd4ecd27dd4d8f3645d2c67bb07e39863",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/nscc_qwen38_full.pbs": "198d36c0460c2e423961201f20e4512abed9cff2536a5ec6ebcf50203eb5593e",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/code/README.md": "ee40abe5c175e2dab24f332cbcdb067c222227d31a21d05775343e38069a595d",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/jobs/25760229.pbs101/gpu_preflight.json": "f084379958eb416a87c8fd97ef8889fc116298e6842e811c82d3be7b8b5e647f"
+  },
+  "points": {
+    "dec_train_bs1_ctx4096": {
+      "point": {
+        "id": "dec_train_bs1_ctx4096",
+        "kind": "decoder",
+        "bs": 1,
+        "ctx": 4096,
+        "split": "train",
+        "corpus": "short",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 0.27
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx4096/attempt-ax3w0xna",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "c764f5a959a4c2130ca834755356485c6fd414861e573a284dd91139931617d1",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_train_bs1_ctx4096.json": "6ea6f9efe9d43e2e4e22a00a03e4f41c2c209303cecb8ae5dc803d0b2d9a9f13",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx4096/attempt-ax3w0xna/rank3.json": "bcc3039bfe9d19b6cb80a08abab99b14d72078b684a7d3bd485391ebaefd3832",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx4096/attempt-ax3w0xna/status.json": "25d454326c760f93f22a8143a3e2b627810cdb04d1c6c706d9aede1dd6d52152",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx4096/attempt-ax3w0xna/rank2.json": "fa90c82e701c7f0e94ba5f4a054363371f13a44fe0b030bf0c4a91a265a77b44",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx4096/attempt-ax3w0xna/rank0.json": "34f05d45bc1ca8b978b1f32792c8887f56ced0a318caf3a7a9f56e2a6081be5f",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx4096/attempt-ax3w0xna/rank1.json": "35ffc6522cdc49cf9f682eb4b41e3503d2c3825aa37c97441191634a1e7acf2f",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx4096/attempt-ax3w0xna/request.json": "dc7e502fe6685eff32665abc76494983ab78464246f50194f565a4fac81ff4ed"
+      }
+    },
+    "dec_train_bs1_ctx16384": {
+      "point": {
+        "id": "dec_train_bs1_ctx16384",
+        "kind": "decoder",
+        "bs": 1,
+        "ctx": 16384,
+        "split": "train",
+        "corpus": "short",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 1.08
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx16384/attempt-t86ghect",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "43ea4963f7ec7114d47898114dff46a4f64c307b6539bdf1f2f252bf56acbaf9",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_train_bs1_ctx16384.json": "a100713bdb0d998125a48236d1082626309a462d8a30b7897c32e638c070b8b3",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx16384/attempt-t86ghect/rank3.json": "8ece233b8d887eb57256bfcbd1fb88c59bb788f9019eda81b7b2fe9ca1a284f5",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx16384/attempt-t86ghect/status.json": "492beb3d879c1e4e4b81ebd07b2e0607fcd3832059e0354d92c95b74e0fa38d7",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx16384/attempt-t86ghect/rank2.json": "1db7567895df9b75214f40fdefa800e579c1ad115bbb6798fc37a743e1cf9fd9",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx16384/attempt-t86ghect/rank0.json": "d939fa5ebff7671e5b7ea9c83e0bb671aacf73e4ab4d448e6f7949e815b0205c",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx16384/attempt-t86ghect/rank1.json": "8781b861322e1ca9eee947628c93513114d291fd5cbea77d1e942ddd0ec7856b",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs1_ctx16384/attempt-t86ghect/request.json": "7519dc639eaa36333c4146fa2d0f3a3b6717d7c6db8aca34049a0ec2e2d95989"
+      }
+    },
+    "dec_train_bs4_ctx4096": {
+      "point": {
+        "id": "dec_train_bs4_ctx4096",
+        "kind": "decoder",
+        "bs": 4,
+        "ctx": 4096,
+        "split": "train",
+        "corpus": "short",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 1.09
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx4096/attempt-7gkkgspw",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "6d24364a835c9d36f05c234a01ec636ad26b55fd644f5645160b506dfce33af3",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_train_bs4_ctx4096.json": "b4b56a0aa85c548e83f851f8866c1574da80787b89f6a0c27f974f8c27804ce9",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx4096/attempt-7gkkgspw/rank3.json": "9d241c74127a1c0ecb2fb46aabe96b3612bc1a5ea6999e20a2d347bb30302c5a",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx4096/attempt-7gkkgspw/status.json": "877d5a2abd54e6364ca1494fc58269a9f17f919d58f80b8832eaa03315dd4188",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx4096/attempt-7gkkgspw/rank2.json": "1c1e47a497735239a6965732dd1c90f2c75993696b84664b0ae8cbce32306ac0",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx4096/attempt-7gkkgspw/rank0.json": "e41564d4d0cd4be60322e014a4c24c74b206f1f0e7843bb8c8cc0797ae0bf34b",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx4096/attempt-7gkkgspw/rank1.json": "30d6655e0c6a68f36c0bca8c4aadee2b0318803c9ba5a72e880556b50add2004",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx4096/attempt-7gkkgspw/request.json": "5016dd73057a9608049f731dc680a44c9d330e70831ab4121d9a2855fd82f9e9"
+      }
+    },
+    "dec_train_bs4_ctx8192": {
+      "point": {
+        "id": "dec_train_bs4_ctx8192",
+        "kind": "decoder",
+        "bs": 4,
+        "ctx": 8192,
+        "split": "train",
+        "corpus": "short",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 2.16
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx8192/attempt-qlglstkf",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "61f7a307034d649f0c19f6678c28e6ad08d43df435e78355170872ad17f1533c",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_train_bs4_ctx8192.json": "a25d264e351eea7d271f856f7b2e7a57747af1b159385fd7c3b79cc38404c552",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx8192/attempt-qlglstkf/rank3.json": "5055dcc2b8ec7084909b3c9544c3b3904c2670103470a08703e9d9da3f4eeb34",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx8192/attempt-qlglstkf/status.json": "ede862644d665c6f072113d35b7ac2bb7d3be0942ec867827ee41e51adceeaff",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx8192/attempt-qlglstkf/rank2.json": "fd5d2a3e1a20c88e17351c348471ebbb3a363a1fd4bce250c129b4e4f8fca48d",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx8192/attempt-qlglstkf/rank0.json": "6a48725237a2f7808c4f14fb6a1994bc2d44c22f96b181649e4fc9500f3e047b",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx8192/attempt-qlglstkf/rank1.json": "3ab6742006bc97b432df33b1d63afa7ddff9101d7b88668722f0ae6978cd773e",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx8192/attempt-qlglstkf/request.json": "98f7cdf4e162a97a03577ec7e4774e9b10b097f150ed6078737d9467b48a00d7"
+      }
+    },
+    "dec_train_bs4_ctx16384": {
+      "point": {
+        "id": "dec_train_bs4_ctx16384",
+        "kind": "decoder",
+        "bs": 4,
+        "ctx": 16384,
+        "split": "train",
+        "corpus": "short",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 4.31
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx16384/attempt-dp2erjx6",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "5cd856eeccc868ced2583fb784f8652706938fdb2ac6bc3d017ac853b4d6884e",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_train_bs4_ctx16384.json": "7e420b90c7ee04f2582dc2c1c37ca1f9df463de1725f2728bd133b7f0d15b483",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx16384/attempt-dp2erjx6/rank3.json": "29813a0cf52d919dcf392bf715af1c27b2eaf75cea4bed0c4f30f67ed9a2d950",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx16384/attempt-dp2erjx6/status.json": "1c203e6e09a1da2fcd4c0e586d1ed7b31f23c08bc7cab3351b06ad076c3a835f",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx16384/attempt-dp2erjx6/rank2.json": "2ef648f8c8e22e69e61677a38119dc642cff94f1e5f330f0c5b191dfd12330f6",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx16384/attempt-dp2erjx6/rank0.json": "cf184c05bff2cf6dc52f0493868989377942af17174165b8c6bbff5e81e088e5",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx16384/attempt-dp2erjx6/rank1.json": "45d1917e3772cf6a74998172a63020cae0c0c8f105c2d519f9952ccc44c9a0d7",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx16384/attempt-dp2erjx6/request.json": "67867338b8ed7c604ab35cb6586261f6bf02d317e994b1cf5ac53ac081ebd130"
+      }
+    },
+    "dec_train_bs4_ctx65536": {
+      "point": {
+        "id": "dec_train_bs4_ctx65536",
+        "kind": "decoder",
+        "bs": 4,
+        "ctx": 65536,
+        "split": "train",
+        "corpus": "long",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 17.2
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx65536/attempt-bccc6vb7",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "db3003c17be17788d60bd3e151ee775330873e26727d211285dd818782f976f4",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_train_bs4_ctx65536.json": "b0f4742480f41647e7405f96c6c35fcf5641018c811f4d321ae1bb19710a6119",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx65536/attempt-bccc6vb7/rank3.json": "3ce554efc053c7cba89c369b3931f62f06d008925fd542f64c08dcffff836685",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx65536/attempt-bccc6vb7/status.json": "caca66cf7bb3e5aa6a85b3b3279e3bd8b508588e3af01424fcdbbbcfad3a04af",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx65536/attempt-bccc6vb7/rank2.json": "29eb26d949f1f1a25001c2ffb5ec7786fb722395bdbf163dfd690762388df67a",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx65536/attempt-bccc6vb7/rank0.json": "183ec4505cb7d33af5e9044d16d58c2f05d28fcd5fe9b62301df7e701d7e19a8",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx65536/attempt-bccc6vb7/rank1.json": "87a9cbab8b1b0ab1f4799fa876ac274993a711d3b76ae620d6127321e5627ae7",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs4_ctx65536/attempt-bccc6vb7/request.json": "1ea77df0ba14d1603167ce15d66a53d260fb54e875a30b61b91b2074c0041ff4"
+      }
+    },
+    "dec_train_bs8_ctx98304": {
+      "point": {
+        "id": "dec_train_bs8_ctx98304",
+        "kind": "decoder",
+        "bs": 8,
+        "ctx": 98304,
+        "split": "train",
+        "corpus": "long",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 51.57
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs8_ctx98304/attempt-9j0dsvmm",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "7cccc6f6190ccccf51fefa470d4b627d7fdf1c3d6c51bbc193824f041d6ea4ba",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_train_bs8_ctx98304.json": "65bfe1d829ea2114d390d891d343436b3cb88014978536cd63fca9055f58481f",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs8_ctx98304/attempt-9j0dsvmm/rank3.json": "e475735404abedcc0be778cce406371a43bac919d4e7d66a92201178eb7da1ea",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs8_ctx98304/attempt-9j0dsvmm/status.json": "19954cff5905e474dd19379e5bd5af74e5c9178fdf2b54eb0d1fd8f21556f7d7",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs8_ctx98304/attempt-9j0dsvmm/rank2.json": "dd0250053d942596072a030645c6d651702c142b73c63ed90f372ee07a0bf59e",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs8_ctx98304/attempt-9j0dsvmm/rank0.json": "31e36a26d052f5b6e413ece2d52e0ba519ad8b4bbeb2833a6ec59497b207bcb8",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs8_ctx98304/attempt-9j0dsvmm/rank1.json": "6b7f2e4e5a258ac4629665705a2517a9fbb1c4557b68a74ac4964e5ddcee4499",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs8_ctx98304/attempt-9j0dsvmm/request.json": "cdc7be3ba543c08f67f9420f139766d9846f1143e109f9af6b90afa148fc16ee"
+      }
+    },
+    "dec_train_bs12_ctx98304": {
+      "point": {
+        "id": "dec_train_bs12_ctx98304",
+        "kind": "decoder",
+        "bs": 12,
+        "ctx": 98304,
+        "split": "train",
+        "corpus": "long",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 77.36
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs12_ctx98304/attempt-73rqk_mm",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "a1a0d3e163f400f34021af31944ffa8293201722164d97f7cbb71620f2b466e0",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_train_bs12_ctx98304.json": "9d34436b8f01907bdda0d8aa691f955d17aeb9ef6428d4d6b06a80800438a874",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs12_ctx98304/attempt-73rqk_mm/rank3.json": "6487ab841152943318158a7f16c6a3d53111a0042e740f5591e9b761ad8ad5ea",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs12_ctx98304/attempt-73rqk_mm/status.json": "f4ca0cca518f35ee1801bdc2af8a08f76ccdcf9c148ccfded809bf34753b1c75",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs12_ctx98304/attempt-73rqk_mm/rank2.json": "136dacef08fb9b08a7db55e2c6b9d6c4ae2880a38a3ed0e595bf5158eaafb4b7",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs12_ctx98304/attempt-73rqk_mm/rank0.json": "de579e2fbc6dc7182be031cae96e65c49b374a226ac211c59946cb2cef176466",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs12_ctx98304/attempt-73rqk_mm/rank1.json": "aa8d4766ad5363a6994d4aed0ac67cc2419dcd9821d5c5cf94b3576afacde91f",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs12_ctx98304/attempt-73rqk_mm/request.json": "e22507dacb6eab733ffa2291cbb037069825eeeaf06608fb81a7037ff4b08824"
+      }
+    },
+    "dec_train_bs16_ctx4096": {
+      "point": {
+        "id": "dec_train_bs16_ctx4096",
+        "kind": "decoder",
+        "bs": 16,
+        "ctx": 4096,
+        "split": "train",
+        "corpus": "short",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 4.36
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx4096/attempt-wtdb36_t",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "bd0dfc58a5f5343c9d2a6caf0a16754dc64ae262acad16c029741d9560e9b2f8",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_train_bs16_ctx4096.json": "bb566ba0429b09435f0e7e36263f54f5127897072c340c1b891de78f7c813639",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx4096/attempt-wtdb36_t/rank3.json": "0179abf81e3f94d0832064ce9e391771362c6ffbaad119c8ae9c66cb5288bd7e",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx4096/attempt-wtdb36_t/status.json": "ed09ca4edb96a2bf4abaad94ddbb12ab89921b728623ac1e48d4b4599bd59dac",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx4096/attempt-wtdb36_t/rank2.json": "e5a7670a9e9d8c233d5c2b9d6226209850076b03bd9eb2582b935e20ba4caa70",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx4096/attempt-wtdb36_t/rank0.json": "41037cc8e32989d66cdbaf1c9c513150c72a43a633b5c945fba6b86279104340",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx4096/attempt-wtdb36_t/rank1.json": "80a46819ccb48fa558a031aab00319d933173ce0ae1ce4aa054238e1d8dc712b",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx4096/attempt-wtdb36_t/request.json": "f4aae65e3ab44c8a25177da001966feb1a69a7e858abf20dbd76023ea971b4e4"
+      }
+    },
+    "dec_train_bs16_ctx16384": {
+      "point": {
+        "id": "dec_train_bs16_ctx16384",
+        "kind": "decoder",
+        "bs": 16,
+        "ctx": 16384,
+        "split": "train",
+        "corpus": "short",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 17.25
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx16384/attempt-q0z0urr7",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "f5658b72449b23327583be8e11ba11ad9aa57b9a2259a1ad8dee5585b18cd433",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_train_bs16_ctx16384.json": "efd3c3c877234e027a76e1a9eabae645b450e8ce3d40a564999edbb1816768a0",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx16384/attempt-q0z0urr7/rank3.json": "75db5e68bc5a6f70a73495a0749feef9b33b8b639895a1d762813b24dfac2ab1",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx16384/attempt-q0z0urr7/status.json": "0d8081e4657f8fdbf58f835bfdc2a1ac4ea1078b07369bef6b142e73d14915f8",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx16384/attempt-q0z0urr7/rank2.json": "f923b0c7301e37ceb43bf4056ddc97ba5a4b7f0a12dfa49fd4921255d476f6b3",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx16384/attempt-q0z0urr7/rank0.json": "dc8b77c9393c99c918c86ab903e0a166626442bcdd9a76a5b1ddb06affbbac35",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx16384/attempt-q0z0urr7/rank1.json": "55b24e75673278256425afd2e12d6c36429e538212fc4d98b5f01d07cab8ac39",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs16_ctx16384/attempt-q0z0urr7/request.json": "3c48def1e1ea75b443912f723a30f4cc670ace8313f88eec724983db07bfb8e1"
+      }
+    },
+    "dec_train_bs28_ctx32768": {
+      "point": {
+        "id": "dec_train_bs28_ctx32768",
+        "kind": "decoder",
+        "bs": 28,
+        "ctx": 32768,
+        "split": "train",
+        "corpus": "long",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 60.25
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs28_ctx32768/attempt-5gzsnk6_",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "f759134c93ac16615fcc0c553b85751e54682608d1e6f74abeef3e196f6625b8",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_train_bs28_ctx32768.json": "25aa0f25c53cdf2dbb32c9a0834f305e3377ab426fe29954c0897f511dc4e392",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs28_ctx32768/attempt-5gzsnk6_/rank3.json": "4beb6a60efed5cba9194aec2f69c66b19ab80fdd5303181df13a2edec94dfc14",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs28_ctx32768/attempt-5gzsnk6_/status.json": "35e9b79fe6caaf55b6cefe283ff92da522e533b513b1f3aaf9bc19503e58c9f6",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs28_ctx32768/attempt-5gzsnk6_/rank2.json": "a7c3625efbe8b1b04a5d21a94a7e6df084cf1c2f58e480b6d680cb0a956c0e63",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs28_ctx32768/attempt-5gzsnk6_/rank0.json": "e981f5ecec5ebef3bb66dac64684bf36611cd79902a201b1dace8b5c63e4a341",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs28_ctx32768/attempt-5gzsnk6_/rank1.json": "108d1d118a9d4c7b0a31016416050b76d6d2505388971c83a05e426aab9bbce8",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_train_bs28_ctx32768/attempt-5gzsnk6_/request.json": "a9e0c1be78124a1bb78a2ccff0f54f960739cfd4a67bc46aefe1b7a56e411630"
+      }
+    },
+    "dec_holdout_bs4_ctx16384": {
+      "point": {
+        "id": "dec_holdout_bs4_ctx16384",
+        "kind": "decoder",
+        "bs": 4,
+        "ctx": 16384,
+        "split": "holdout",
+        "corpus": "short",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 4.31
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs4_ctx16384/attempt-53hm3k2_",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "cc494c00e12d73639a2f1665658e209112a3a49414b3abb3cf37486ca6d61e16",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_holdout_bs4_ctx16384.json": "a8472df06b0d3ef82ccce7f97692fba89d276e8028d1c52a8af2fc751144a24f",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs4_ctx16384/attempt-53hm3k2_/rank3.json": "378e03a858259b8d30702014f20ebcb90edb122a28cbc794cef591e93bd5ba04",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs4_ctx16384/attempt-53hm3k2_/status.json": "797045559d32e9e1f1f24f28009edc1c02bc5215bea1703793fb2c1afcc49d0c",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs4_ctx16384/attempt-53hm3k2_/rank2.json": "c51c792e7599595b79c99498a60aac71ee1a715c9730359ced1afcd4c019a06e",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs4_ctx16384/attempt-53hm3k2_/rank0.json": "c0b3c7e6a5bd3d4d2f65a0bcacc23494b6936b8af2f9c050882b6b65df4f7be1",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs4_ctx16384/attempt-53hm3k2_/rank1.json": "3ce47cf46a433de17251717f084ab366256b8733e5b87c5d288df9a66a8f9589",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs4_ctx16384/attempt-53hm3k2_/request.json": "219098e91fd5e7e4e1a7b8b499f2c97c9e48a3130a3df92e0d21fa05c9d0eeb0"
+      }
+    },
+    "dec_holdout_bs8_ctx65536": {
+      "point": {
+        "id": "dec_holdout_bs8_ctx65536",
+        "kind": "decoder",
+        "bs": 8,
+        "ctx": 65536,
+        "split": "holdout",
+        "corpus": "long",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 34.39
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs8_ctx65536/attempt-cjpfsj_d",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "0acce40b68442cb92dcbcdaa87eaef2b33a9bd345807871626739a1e3ddea133",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_holdout_bs8_ctx65536.json": "88493725191ffbc2384bef541f532c8e3028b973bd8e14a099649cfffa112975",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs8_ctx65536/attempt-cjpfsj_d/rank3.json": "d07f5367b148d0e83ff0791e8cef7b9ddd1f273925e5df5ff671418dbe4196a9",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs8_ctx65536/attempt-cjpfsj_d/status.json": "1e97a511df642fb8e007b002499c6c08755c8c83d5a654ae5de993aace51677f",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs8_ctx65536/attempt-cjpfsj_d/rank2.json": "ca0203e635bfa300994bf10294f3f540175e7496822dcca5c930a6bc846743a5",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs8_ctx65536/attempt-cjpfsj_d/rank0.json": "a00c3aee7e57eeb233b70e40238e268f0849f120227ad22b776e9924a1da23cd",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs8_ctx65536/attempt-cjpfsj_d/rank1.json": "133f98f0eeaad5b8689bcf58473e531d4a67d674b6e0491ed04b41cfd9b6ebe3",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_holdout_bs8_ctx65536/attempt-cjpfsj_d/request.json": "c32bf4861f27aeca4b07fface1e406287543f2ed6dc9d1b3a27e177e5671541f"
+      }
+    },
+    "dec_repeat_bs16_ctx16384": {
+      "point": {
+        "id": "dec_repeat_bs16_ctx16384",
+        "kind": "decoder",
+        "bs": 16,
+        "ctx": 16384,
+        "split": "train",
+        "corpus": "short",
+        "warmups": 3,
+        "iters": 9,
+        "steps": 30,
+        "kv_gb": 17.25
+      },
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_repeat_bs16_ctx16384/attempt-r_nfscl_",
+      "job": "25760229.pbs101",
+      "source_result_sha256": "5aa0711e8a00c3adc31b6f4ff4f8aadbc9f9eb1dad26013be0fca95446e6e192",
+      "files_sha256": {
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/dec_repeat_bs16_ctx16384.json": "1af6b0bd79f922e0e266a6a4ff9ec41b82d78f5cd769e7f6ef5fb0b22ffb86e4",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_repeat_bs16_ctx16384/attempt-r_nfscl_/rank3.json": "7a4768d68ad3228a73fc05686e7bbd260602dc38d16ee0f59ec47645391f45b1",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_repeat_bs16_ctx16384/attempt-r_nfscl_/status.json": "3bb5b4c7d8d257a690bb43caa272b35461cb79dda97c0e41febba7af873dab6a",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_repeat_bs16_ctx16384/attempt-r_nfscl_/rank2.json": "a5deedeb3af2d68864bd69d3c959e032b1c16cb1d0d93a080ea88861dbf8fba3",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_repeat_bs16_ctx16384/attempt-r_nfscl_/rank0.json": "62af7532c5cb94257258fbb1050eac7fab3cbf401a96d118174bdb04cb3b58f5",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_repeat_bs16_ctx16384/attempt-r_nfscl_/rank1.json": "f88c41580c0e0d94b6757f123f1f1dd41f1b447387de0063fdc4ff63996d6832",
+        "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/results/.attempts/dec_repeat_bs16_ctx16384/attempt-r_nfscl_/request.json": "5613866442acd4849824c141a46c55f74730ed6515d7f119aad82a9d3a8879ae"
+      }
+    }
+  },
+  "prefill_shapes_reused": 0,
+  "decode_arguments_identical": true,
+  "decode_computation_and_timing_identical": true
+}

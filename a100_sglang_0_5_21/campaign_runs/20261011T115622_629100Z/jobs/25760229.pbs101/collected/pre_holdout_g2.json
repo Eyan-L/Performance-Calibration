@@ -1,0 +1,146 @@
+{
+  "completed": false,
+  "points": [
+    {
+      "batch_size": 1,
+      "request_length": 98304,
+      "status": "ok",
+      "prompt_tokens": 98304,
+      "forward_ms_median": 9558.3837890625,
+      "forward_ms_mean": 9560.3087890625,
+      "forward_ms_p90": 9567.244140625,
+      "iterations": 5,
+      "samples_ms": [
+        9553.5087890625,
+        9558.3837890625,
+        9564.8505859375,
+        9555.9609375,
+        9568.83984375
+      ],
+      "rank_samples_ms": [
+        [
+          9553.5087890625,
+          9558.3837890625,
+          9564.8505859375,
+          9555.9609375,
+          9568.83984375
+        ],
+        [
+          9553.3603515625,
+          9558.001953125,
+          9564.9306640625,
+          9555.7041015625,
+          9568.9287109375
+        ],
+        [
+          9553.505859375,
+          9558.3154296875,
+          9564.8515625,
+          9555.9501953125,
+          9568.8017578125
+        ],
+        [
+          9553.2685546875,
+          9558.203125,
+          9564.9150390625,
+          9555.8974609375,
+          9568.765625
+        ]
+      ],
+      "input": {
+        "batch_size": 1,
+        "request_length": 98304,
+        "split": "holdout",
+        "selected_entries": [
+          {
+            "task_id": "dr_008",
+            "session_id": "concat0026",
+            "round_id": 0,
+            "split": "holdout",
+            "offset": 3653800,
+            "length": 131621,
+            "source_prompts": [
+              "20260728_112118_62cdeb#1",
+              "20260728_112118_62cdeb#2",
+              "20260728_112126_06246c#1",
+              "20260728_112126_06246c#2",
+              "20260728_112126_06246c#3",
+              "20260728_112126_06246c#4",
+              "20260728_112126_420fb8#1",
+              "20260728_112126_420fb8#2",
+              "20260728_112126_420fb8#3",
+              "20260728_112126_420fb8#4",
+              "20260728_112126_420fb8#5",
+              "20260728_112126_420fb8#6",
+              "20260728_112126_420fb8#7",
+              "20260728_112126_8366be#1",
+              "20260728_112126_8366be#2",
+              "20260728_112126_8366be#3",
+              "20260728_112126_8366be#4",
+              "20260728_112126_c55aef#1",
+              "20260728_112126_c55aef#2"
+            ]
+          }
+        ],
+        "token_sha256": "b5e622e338a95bf990ed4003200d3f485f4bc801f23ad54734ccd60f6e260d9b",
+        "corpus_token_sha256": "d738187105aeacbdedef591eaa537110f8880062fa35f8803b3b18dc53ef67c1"
+      },
+      "rank_layouts": [
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            98304
+          ],
+          "actual_input_token_count": 98304
+        },
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            98304
+          ],
+          "actual_input_token_count": 98304
+        },
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            98304
+          ],
+          "actual_input_token_count": 98304
+        },
+        {
+          "batch_size": 1,
+          "actual_sequence_lengths": [
+            98304
+          ],
+          "actual_input_token_count": 98304
+        }
+      ],
+      "rank_diagnostics": {
+        "max_samples_ms": [
+          9553.5087890625,
+          9558.3837890625,
+          9564.9306640625,
+          9555.9609375,
+          9568.9287109375
+        ],
+        "max_median_ms": 9558.3837890625,
+        "per_rank_medians_ms": [
+          9558.3837890625,
+          9558.001953125,
+          9558.3154296875,
+          9558.203125
+        ]
+      }
+    },
+    {
+      "batch_size": 2,
+      "request_length": 98304,
+      "status": "missing",
+      "error": "No complete matching samples across all TP ranks"
+    }
+  ],
+  "metadata": {
+    "run_signature": "d1630e7487a510a23cb15be269c73b594a0b2e4f0b34530a3deb9c9d362a3cb8",
+    "partial_recovery": true
+  }
+}

@@ -70,6 +70,8 @@ def render_report(collected, fitted):
                 row[key] = None
     specification = json.loads((collected / 'run_config.json').read_text())
     model['measurement_policy'] = specification['measurement_policy']
+    if 'kv_pool_policy' in specification:
+        model['kv_pool_policy'] = specification['kv_pool_policy']
     atomic_json(fitted / 'model.json', model)
     lines = ['# Qwen3.8 A100 TP=4 calibration', '',
              '**Scope:** ' + model['calibration_scope'], '',
@@ -81,6 +83,12 @@ def render_report(collected, fitted):
              'Training data determine coefficients; holdout and repeat data do not enter fitting.', '',
              '| Phase | Evaluation | N | MAPE (%) | P95 error (%) | Max error (%) |',
              '|---|---|---:|---:|---:|---:|']
+    if 'kv_pool_policy' in specification:
+        position = lines.index('| Phase | Evaluation | N | MAPE (%) | P95 error (%) | Max error (%) |')
+        lines[position:position] = [
+            'KV pool cap: maximum batch × context in the original group + 32768 tokens.', '',
+            'Per-shape source signatures and job IDs identify any reused decode measurements; '
+            'prefill measurements use this campaign\'s capped pool.', '']
     for phase, validation in (('decoder', 'cv_checkerboard5'), ('prefill', 'cv_leave_one_out')):
         for name in ('train', validation, 'holdout'):
             item = model[phase][name]

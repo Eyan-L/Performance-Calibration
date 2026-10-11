@@ -103,9 +103,13 @@ def run_specification(manifest_path, model_path, smoke):
         raise ValueError(f"Model config {actual} does not match manifest {manifest['model']}")
     sources = ('runtime_guard.py', 'run_in_sif.sh', 'calibration_common.py',
                'calibrate_point.py', 'run_points.py', 'collect_results.py', 'gpu_preflight.py', 'fit_results.py',
-               'measurement_store.py', 'campaign.py', 'verify_campaign.py', 'report_results.py')
+               'measurement_store.py', 'campaign.py', 'verify_campaign.py', 'report_results.py',
+               'decode_reuse.py')
     return {'schema': 'native-sglang-calibration.v2', 'runtime': CONFIG,
             'measurement_policy': MEASUREMENT_POLICY,
+            'kv_pool_policy': {'decode': 'batch * context + 32768',
+                               'prefill': 'max(batch * context over original group) + 32768',
+                               'safety_tokens': 32768},
             'manifest_sha256': hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
             'model_path': str(model_path), 'model_config_sha256': hashlib.sha256(config_path.read_bytes()).hexdigest(),
             'corpus_index_sha256': {c: hashlib.sha256((KIT / 'inputs' / ('corpus_' + c) / 'index.json').read_bytes()).hexdigest()
