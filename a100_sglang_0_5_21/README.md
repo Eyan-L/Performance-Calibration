@@ -8,7 +8,9 @@ scratch run directory.
 
 ## Measurement definition
 
-- BF16 weights / KV, seed 0, no radix cache; native all-reduce selection.
+- BF16 weights / KV, seed 0, no radix cache; custom all-reduce is explicitly
+  disabled with `--disable-custom-all-reduce` in both measurement and validation.
+  Use the same flag in subsequent replay runs to match this communication policy.
 - Decode: fixed-context batch, native full CUDA graph, 30 forwards per sample,
   3 warmups and 9 samples. Context preparation uses one request at a time and
   8192-token chunks, outside timing. The repeated batch does not grow its context.

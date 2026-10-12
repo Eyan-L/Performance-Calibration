@@ -100,6 +100,7 @@ def native_arguments(module, manifest, point):
                         'max_bs': maximum_batch, 'bs': [maximum_batch]}}
     args = ['--model-path', manifest['_model_path'], '--tp-size', str(manifest['tp']),
             '--random-seed', '0', '--kv-cache-dtype', 'bfloat16', '--disable-radix-cache',
+            '--disable-custom-all-reduce',
             '--attention-backend', manifest['attention_backend'],
             '--mem-fraction-static', '.90' if decode else '.70',
             '--max-running-requests', str(maximum_batch),

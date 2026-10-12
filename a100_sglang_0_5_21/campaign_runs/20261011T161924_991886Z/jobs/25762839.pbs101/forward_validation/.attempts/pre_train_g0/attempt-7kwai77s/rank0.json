@@ -1,0 +1,238 @@
+{
+  "rank": 0,
+  "metadata": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+      "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+      "cache_paths": {
+        "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+        "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+        "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+        "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+        "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+        "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+      },
+      "reference_source_on_import_path": false,
+      "gpu_execution_tested": false
+    },
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "purpose": "forward_validation",
+    "gpu_memory_bytes": 42406903808,
+    "gpu_id": 0,
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "native_custom_all_reduce_disabled": false,
+    "communication": {
+      "requested_custom_all_reduce_disabled": false,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      },
+      "all_reduce_numeric_check": true
+    }
+  },
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 1,
+      "request_length": 4096,
+      "input": {
+        "batch_size": 1,
+        "request_length": 4096,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143326_09591e",
+            "round_id": 5,
+            "split": "train",
+            "offset": 8711359,
+            "length": 5322,
+            "recorded_input_tokens": 5396,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "41d0e808e0127f2a39f38b3a8723fbbbca60d94a7e7b9e8c210a9f6e689f6965",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "validation": {
+        "shape_matches": true,
+        "finite_logits": true,
+        "logits_shape": [
+          1,
+          248320
+        ],
+        "batch": 1,
+        "context": 4096,
+        "graph": false,
+        "check_scope": "dedicated validation process; no calibration timing samples",
+        "batch_size": 1,
+        "actual_sequence_lengths": [
+          4096
+        ],
+        "actual_input_token_count": 4096,
+        "layout_verified": true
+      }
+    },
+    {
+      "batch_size": 1,
+      "request_length": 8192,
+      "input": {
+        "batch_size": 1,
+        "request_length": 8192,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_007",
+            "session_id": "20260728_111819_01a28c",
+            "round_id": 3,
+            "split": "train",
+            "offset": 3735457,
+            "length": 10494,
+            "recorded_input_tokens": 10568,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "b8df06856a3f9bdf8579888318b9b748f5a49e30d6fa97b8500a5bcdc93b2fdc",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "validation": {
+        "shape_matches": true,
+        "finite_logits": true,
+        "logits_shape": [
+          1,
+          248320
+        ],
+        "batch": 1,
+        "context": 8192,
+        "graph": false,
+        "check_scope": "dedicated validation process; no calibration timing samples",
+        "batch_size": 1,
+        "actual_sequence_lengths": [
+          8192
+        ],
+        "actual_input_token_count": 8192,
+        "layout_verified": true
+      }
+    },
+    {
+      "batch_size": 1,
+      "request_length": 16384,
+      "input": {
+        "batch_size": 1,
+        "request_length": 16384,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_019",
+            "session_id": "20260729_075306_ca0bfa",
+            "round_id": 15,
+            "split": "train",
+            "offset": 11318231,
+            "length": 27517,
+            "recorded_input_tokens": 27611,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "2973d1e8bd23ee2809247e069331ab7342729388de9846fad2f6e38a85e20b2c",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "validation": {
+        "shape_matches": true,
+        "finite_logits": true,
+        "logits_shape": [
+          1,
+          248320
+        ],
+        "batch": 1,
+        "context": 16384,
+        "graph": false,
+        "check_scope": "dedicated validation process; no calibration timing samples",
+        "batch_size": 1,
+        "actual_sequence_lengths": [
+          16384
+        ],
+        "actual_input_token_count": 16384,
+        "layout_verified": true
+      }
+    },
+    {
+      "batch_size": 1,
+      "request_length": 32768,
+      "input": {
+        "batch_size": 1,
+        "request_length": 32768,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_015",
+            "session_id": "20260729_065855_3e1b8f",
+            "round_id": 14,
+            "split": "train",
+            "offset": 7836611,
+            "length": 38070,
+            "recorded_input_tokens": 38164,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "8bd58d2289c1d786725808dee6691714d0ec9ea38e4d922dd6b7dde3620ca258",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "validation": {
+        "shape_matches": true,
+        "finite_logits": true,
+        "logits_shape": [
+          1,
+          248320
+        ],
+        "batch": 1,
+        "context": 32768,
+        "graph": false,
+        "check_scope": "dedicated validation process; no calibration timing samples",
+        "batch_size": 1,
+        "actual_sequence_lengths": [
+          32768
+        ],
+        "actual_input_token_count": 32768,
+        "layout_verified": true
+      }
+    }
+  ],
+  "stage": "complete",
+  "started_at": 1791762618.8584952,
+  "model_ready_at": 1791762642.4410498,
+  "active_shape": [
+    1,
+    32768
+  ],
+  "ended_at": 1791762654.384621
+}

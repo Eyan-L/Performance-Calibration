@@ -59,6 +59,7 @@ def check_decode_compatibility(source, specification):
                              'max-mamba-cache-size', 'cuda-graph-config', 'max-total-tokens'):
                     parser.add_argument('--' + flag)
                 parser.add_argument('--disable-radix-cache', action='store_true')
+                parser.add_argument('--disable-custom-all-reduce', action='store_true')
     import argparse
     namespace = {'argparse': argparse, 'json': json, 'shapes': shapes}
     functions = []

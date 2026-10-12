@@ -70,12 +70,17 @@ def render_report(collected, fitted):
                 row[key] = None
     specification = json.loads((collected / 'run_config.json').read_text())
     model['measurement_policy'] = specification['measurement_policy']
+    communication = 'native communication selection'
+    if 'communication_policy' in specification:
+        model['communication_policy'] = specification['communication_policy']
+        if specification['communication_policy'].get('disable_custom_all_reduce'):
+            communication = 'custom all-reduce explicitly disabled'
     if 'kv_pool_policy' in specification:
         model['kv_pool_policy'] = specification['kv_pool_policy']
     atomic_json(fitted / 'model.json', model)
     lines = ['# Qwen3.8 A100 TP=4 calibration', '',
              '**Scope:** ' + model['calibration_scope'], '',
-             'SGLang 0.5.21; BF16 weights/KV; FlashInfer; native communication selection.', '',
+             f'SGLang 0.5.21; BF16 weights/KV; FlashInfer; {communication}.', '',
              'Times cover GPU forward only. Loading, compilation, input preparation and sampling are excluded.', '',
              'Primary timings use rank 0. All-rank samples and per-iteration maxima are diagnostics only.', '',
              'No added per-sample TP barrier. Numerical forward checks run in separate validation processes.', '',

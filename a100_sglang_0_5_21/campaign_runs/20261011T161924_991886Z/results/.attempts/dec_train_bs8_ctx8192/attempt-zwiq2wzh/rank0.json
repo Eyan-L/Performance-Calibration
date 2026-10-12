@@ -1,0 +1,191 @@
+{
+  "rank": 0,
+  "metadata": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+      "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+      "cache_paths": {
+        "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+        "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+        "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+        "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+        "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+        "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+      },
+      "reference_source_on_import_path": false,
+      "gpu_execution_tested": false
+    },
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "purpose": "measurement",
+    "gpu_memory_bytes": 42406903808,
+    "gpu_id": 0,
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "native_custom_all_reduce_disabled": false,
+    "communication": {
+      "requested_custom_all_reduce_disabled": false,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      }
+    }
+  },
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 8,
+      "request_length": 8192,
+      "samples_ms": [
+        531.8297729492188,
+        532.1195678710938,
+        531.9495849609375,
+        531.7642211914062,
+        531.8441162109375,
+        531.6720581054688,
+        532.0396728515625,
+        531.7509155273438,
+        532.0130615234375
+      ],
+      "input": {
+        "batch_size": 8,
+        "request_length": 8192,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_006",
+            "session_id": "20260728_111438_5cbbd1",
+            "round_id": 10,
+            "split": "train",
+            "offset": 3448092,
+            "length": 26865,
+            "recorded_input_tokens": 26959,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_006",
+            "session_id": "20260728_111356_102268",
+            "round_id": 7,
+            "split": "train",
+            "offset": 3205182,
+            "length": 9072,
+            "recorded_input_tokens": 9072,
+            "has_tools": false
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143313_4d756b",
+            "round_id": 3,
+            "split": "train",
+            "offset": 8348929,
+            "length": 15034,
+            "recorded_input_tokens": 30448,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143313_c7a767",
+            "round_id": 16,
+            "split": "train",
+            "offset": 8630355,
+            "length": 14461,
+            "recorded_input_tokens": 14461,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143326_83c1c9",
+            "round_id": 9,
+            "split": "train",
+            "offset": 8921846,
+            "length": 31640,
+            "recorded_input_tokens": 31640,
+            "has_tools": false
+          },
+          {
+            "task_id": "dr_019",
+            "session_id": "20260729_075306_ca0bfa",
+            "round_id": 10,
+            "split": "train",
+            "offset": 11192448,
+            "length": 22495,
+            "recorded_input_tokens": 22589,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_006",
+            "session_id": "20260728_111356_102268",
+            "round_id": 6,
+            "split": "train",
+            "offset": 3194872,
+            "length": 10310,
+            "recorded_input_tokens": 10384,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_015",
+            "session_id": "20260729_065756_952417",
+            "round_id": 7,
+            "split": "train",
+            "offset": 7519349,
+            "length": 10845,
+            "recorded_input_tokens": 10845,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "c26401ca4edebc582689cb130bd404cdc3a9d307ab774774aa40a230a6cc844b",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "layout": {
+        "batch_size": 8,
+        "actual_sequence_lengths": [
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193
+        ],
+        "actual_input_token_count": 8
+      }
+    }
+  ],
+  "stage": "complete",
+  "started_at": 1791765704.6467023,
+  "model_ready_at": 1791765733.6926763,
+  "active_shape": [
+    8,
+    8192
+  ],
+  "ended_at": 1791765745.82712
+}

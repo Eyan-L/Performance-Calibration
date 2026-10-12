@@ -107,6 +107,7 @@ def run_specification(manifest_path, model_path, smoke):
                'decode_reuse.py')
     return {'schema': 'native-sglang-calibration.v2', 'runtime': CONFIG,
             'measurement_policy': MEASUREMENT_POLICY,
+            'communication_policy': {'disable_custom_all_reduce': True},
             'kv_pool_policy': {'decode': 'batch * context + 32768',
                                'prefill': 'max(batch * context over original group) + 32768',
                                'safety_tokens': 32768},

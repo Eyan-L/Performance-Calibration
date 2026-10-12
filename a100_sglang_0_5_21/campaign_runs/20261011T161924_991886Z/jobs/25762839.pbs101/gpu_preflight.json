@@ -1,0 +1,227 @@
+{
+  "completed": true,
+  "started_at": 1791762364.027161,
+  "devices": [
+    {
+      "rank": 0,
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memory_bytes": 42406903808,
+      "compute_capability": [
+        8,
+        0
+      ],
+      "bf16_matmul": true
+    },
+    {
+      "rank": 1,
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memory_bytes": 42406903808,
+      "compute_capability": [
+        8,
+        0
+      ],
+      "bf16_matmul": true
+    },
+    {
+      "rank": 2,
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memory_bytes": 42406903808,
+      "compute_capability": [
+        8,
+        0
+      ],
+      "bf16_matmul": true
+    },
+    {
+      "rank": 3,
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memory_bytes": 42406903808,
+      "compute_capability": [
+        8,
+        0
+      ],
+      "bf16_matmul": true
+    }
+  ],
+  "cuda_visible_devices": "GPU-0b3f2349-175d-c634-9e22-a5be67bade65,GPU-8c3e3518-6eee-d5f5-535a-c13f46263590,GPU-561c6b71-7343-fa1e-c211-2b1b4dd801ae,GPU-f139556b-2534-026e-1e05-489aaccc5ced",
+  "ld_library_path": "/usr/local/cuda/compat:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/cuda/lib64:/.singularity.d/libs:/.singularity.d/libs",
+  "hostname": "x1000c3s3b0n0",
+  "runtime": {
+    "sglang_distribution_version": "0.5.21",
+    "sglang_source_version": "0.5.21",
+    "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+    "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+    "torch": "2.13.0+cu130",
+    "torch_cuda": "13.0",
+    "transformers": "5.12.1",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+    "cache_paths": {
+      "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+      "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+      "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+      "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+      "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+      "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+    },
+    "reference_source_on_import_path": false,
+    "gpu_execution_tested": false
+  },
+  "nvidia_smi": "0, NVIDIA A100-SXM4-40GB, GPU-f139556b-2534-026e-1e05-489aaccc5ced, 570.124.06, 40960 MiB\n1, NVIDIA A100-SXM4-40GB, GPU-561c6b71-7343-fa1e-c211-2b1b4dd801ae, 570.124.06, 40960 MiB\n2, NVIDIA A100-SXM4-40GB, GPU-8c3e3518-6eee-d5f5-535a-c13f46263590, 570.124.06, 40960 MiB\n3, NVIDIA A100-SXM4-40GB, GPU-0b3f2349-175d-c634-9e22-a5be67bade65, 570.124.06, 40960 MiB",
+  "hardware": [
+    {
+      "index": "0",
+      "name": "NVIDIA A100-SXM4-40GB",
+      "uuid": "GPU-f139556b-2534-026e-1e05-489aaccc5ced",
+      "driver": "570.124.06",
+      "memory_mb": "40960",
+      "max_sm_mhz": "1410",
+      "max_memory_mhz": "1215",
+      "power_limit_w": "400.00"
+    },
+    {
+      "index": "1",
+      "name": "NVIDIA A100-SXM4-40GB",
+      "uuid": "GPU-561c6b71-7343-fa1e-c211-2b1b4dd801ae",
+      "driver": "570.124.06",
+      "memory_mb": "40960",
+      "max_sm_mhz": "1410",
+      "max_memory_mhz": "1215",
+      "power_limit_w": "400.00"
+    },
+    {
+      "index": "2",
+      "name": "NVIDIA A100-SXM4-40GB",
+      "uuid": "GPU-8c3e3518-6eee-d5f5-535a-c13f46263590",
+      "driver": "570.124.06",
+      "memory_mb": "40960",
+      "max_sm_mhz": "1410",
+      "max_memory_mhz": "1215",
+      "power_limit_w": "400.00"
+    },
+    {
+      "index": "3",
+      "name": "NVIDIA A100-SXM4-40GB",
+      "uuid": "GPU-0b3f2349-175d-c634-9e22-a5be67bade65",
+      "driver": "570.124.06",
+      "memory_mb": "40960",
+      "max_sm_mhz": "1410",
+      "max_memory_mhz": "1215",
+      "power_limit_w": "400.00"
+    }
+  ],
+  "topology": "\t\u001b[4mGPU0\tGPU1\tGPU2\tGPU3\tNIC0\tNIC1\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNV4\tNV4\tNV4\tSYS\tPHB\t48-63,112-127\t3\t\tN/A\nGPU1\tNV4\t X \tNV4\tNV4\tSYS\tSYS\t32-47,96-111\t2\t\tN/A\nGPU2\tNV4\tNV4\t X \tNV4\tSYS\tSYS\t16-31,80-95\t1\t\tN/A\nGPU3\tNV4\tNV4\tNV4\t X \tPHB\tSYS\t0-15,64-79\t0\t\tN/A\nNIC0\tSYS\tSYS\tSYS\tPHB\t X \tSYS\t\t\t\t\nNIC1\tPHB\tSYS\tSYS\tSYS\tSYS\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0\n  NIC1: mlx5_1\n\n",
+  "cuda_driver_libraries": [
+    "/usr/local/cuda-13.0/compat/libcuda.so.580.126.20"
+  ],
+  "environment_fingerprint": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif"
+    },
+    "devices": [
+      [
+        "NVIDIA A100-SXM4-40GB",
+        42406903808,
+        [
+          8,
+          0
+        ]
+      ],
+      [
+        "NVIDIA A100-SXM4-40GB",
+        42406903808,
+        [
+          8,
+          0
+        ]
+      ],
+      [
+        "NVIDIA A100-SXM4-40GB",
+        42406903808,
+        [
+          8,
+          0
+        ]
+      ],
+      [
+        "NVIDIA A100-SXM4-40GB",
+        42406903808,
+        [
+          8,
+          0
+        ]
+      ]
+    ],
+    "hardware": [
+      [
+        "NVIDIA A100-SXM4-40GB",
+        "570.124.06",
+        "40960",
+        "1410",
+        "1215",
+        "400.00"
+      ],
+      [
+        "NVIDIA A100-SXM4-40GB",
+        "570.124.06",
+        "40960",
+        "1410",
+        "1215",
+        "400.00"
+      ],
+      [
+        "NVIDIA A100-SXM4-40GB",
+        "570.124.06",
+        "40960",
+        "1410",
+        "1215",
+        "400.00"
+      ],
+      [
+        "NVIDIA A100-SXM4-40GB",
+        "570.124.06",
+        "40960",
+        "1410",
+        "1215",
+        "400.00"
+      ]
+    ],
+    "cuda_driver_libraries": [
+      "libcuda.so.580.126.20"
+    ],
+    "gpu_links": [
+      [
+        "X",
+        "NV4",
+        "NV4",
+        "NV4"
+      ],
+      [
+        "NV4",
+        "X",
+        "NV4",
+        "NV4"
+      ],
+      [
+        "NV4",
+        "NV4",
+        "X",
+        "NV4"
+      ],
+      [
+        "NV4",
+        "NV4",
+        "NV4",
+        "X"
+      ]
+    ]
+  },
+  "reference_environment_matched": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T115622_629100Z/jobs/25760229.pbs101/gpu_preflight.json",
+  "ended_at": 1791762366.5374968
+}

@@ -1,0 +1,58 @@
+CMD bash /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T161924_991886Z/code/run_in_sif.sh /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T161924_991886Z/code/fit_results.py /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T161924_991886Z/jobs/25762839.pbs101/collected --out /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261011T161924_991886Z/jobs/25762839.pbs101/fit
+INFO:    Mounting image with FUSE.
+{"runtime_verified": {"sglang_distribution_version": "0.5.21", "sglang_source_version": "0.5.21", "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py", "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py", "torch": "2.13.0+cu130", "torch_cuda": "13.0", "transformers": "5.12.1", "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]", "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif", "cache_paths": {"XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg", "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton", "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch", "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer", "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm", "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"}, "reference_source_on_import_path": false, "gpu_execution_tested": false}}
+{
+ "missing": 0,
+ "prefill_points_without_result": [],
+ "decoder_coef": {
+  "t0_ms": 15.786028869830137,
+  "tB_ms_per_request": 0.13123118604272116,
+  "tK_ms_per_kv_gb": 0.17980986957737663
+ },
+ "decoder": {
+  "train": {
+   "n": 65,
+   "mape_percent": 1.559420869057267,
+   "p95_ape_percent": 4.821073399721402,
+   "max_ape_percent": 6.114036870924923
+  },
+  "cv_checkerboard5": {
+   "n": 65,
+   "mape_percent": 1.6105948201551066,
+   "p95_ape_percent": 4.949625304191239,
+   "max_ape_percent": 6.271977626810357
+  },
+  "holdout": {
+   "n": 10,
+   "mape_percent": 1.6591957255513938,
+   "p95_ape_percent": 4.337374884304915,
+   "max_ape_percent": 5.960557258943141
+  }
+ },
+ "prefill_coef": {
+  "p0_ms": 25.605411616747585,
+  "pN_ms_per_token": 0.06442367099971257,
+  "pA_ms_per_mega_attention_pair": 0.6576632617726414,
+  "linear_tokens_per_s": 15522.244921505042
+ },
+ "prefill": {
+  "train": {
+   "n": 16,
+   "mape_percent": 0.37097921473070244,
+   "p95_ape_percent": 0.7906142705631013,
+   "max_ape_percent": 0.8103715729927867
+  },
+  "cv_leave_one_out": {
+   "n": 16,
+   "mape_percent": 0.5455431303119842,
+   "p95_ape_percent": 1.3197139737500423,
+   "max_ape_percent": 2.3208690688728084
+  },
+  "holdout": {
+   "n": 8,
+   "mape_percent": 0.37249722025990434,
+   "p95_ape_percent": 0.6508479173057414,
+   "max_ape_percent": 0.7741153676569343
+  }
+ }
+}
