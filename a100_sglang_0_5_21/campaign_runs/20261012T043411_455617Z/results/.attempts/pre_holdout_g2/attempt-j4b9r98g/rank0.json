@@ -1,0 +1,128 @@
+{
+  "rank": 0,
+  "metadata": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+      "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+      "cache_paths": {
+        "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+        "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+        "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+        "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+        "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+        "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+      },
+      "reference_source_on_import_path": false,
+      "gpu_execution_tested": false
+    },
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "purpose": "measurement",
+    "gpu_memory_bytes": 42406903808,
+    "gpu_id": 0,
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "native_custom_all_reduce_disabled": true,
+    "communication": {
+      "requested_custom_all_reduce_disabled": true,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      }
+    }
+  },
+  "completed": false,
+  "points": [
+    {
+      "batch_size": 1,
+      "request_length": 98304,
+      "samples_ms": [
+        2869.86865234375,
+        2885.686279296875,
+        2868.747314453125,
+        2892.505126953125,
+        2891.924560546875
+      ],
+      "input": {
+        "batch_size": 1,
+        "request_length": 98304,
+        "split": "holdout",
+        "selected_entries": [
+          {
+            "task_id": "dr_008",
+            "session_id": "concat0026",
+            "round_id": 0,
+            "split": "holdout",
+            "offset": 3653800,
+            "length": 131621,
+            "source_prompts": [
+              "20260728_112118_62cdeb#1",
+              "20260728_112118_62cdeb#2",
+              "20260728_112126_06246c#1",
+              "20260728_112126_06246c#2",
+              "20260728_112126_06246c#3",
+              "20260728_112126_06246c#4",
+              "20260728_112126_420fb8#1",
+              "20260728_112126_420fb8#2",
+              "20260728_112126_420fb8#3",
+              "20260728_112126_420fb8#4",
+              "20260728_112126_420fb8#5",
+              "20260728_112126_420fb8#6",
+              "20260728_112126_420fb8#7",
+              "20260728_112126_8366be#1",
+              "20260728_112126_8366be#2",
+              "20260728_112126_8366be#3",
+              "20260728_112126_8366be#4",
+              "20260728_112126_c55aef#1",
+              "20260728_112126_c55aef#2"
+            ]
+          }
+        ],
+        "token_sha256": "b5e622e338a95bf990ed4003200d3f485f4bc801f23ad54734ccd60f6e260d9b",
+        "corpus_token_sha256": "d738187105aeacbdedef591eaa537110f8880062fa35f8803b3b18dc53ef67c1"
+      },
+      "layout": {
+        "batch_size": 1,
+        "actual_sequence_lengths": [
+          98304
+        ],
+        "actual_input_token_count": 98304
+      }
+    }
+  ],
+  "stage": "measure",
+  "started_at": 1791795048.0511534,
+  "model_ready_at": 1791795086.54817,
+  "active_shape": [
+    2,
+    98304
+  ]
+}

@@ -30,26 +30,35 @@ def pilot_ids():
                         'pre_holdout_g0', 'pre_holdout_g2']
 
 
-def prepare(out=None, reuse_decode_from=None):
+def prepare(out=None, reuse_decode_from=None, manifest_path=None, model_path=None):
+    manifest_path = manifest_path or KIT / 'manifests/qwen38bf16_a100x4_flashinfer.json'
+    model_path = (model_path or MODEL).resolve()
+    manifest = json.loads(manifest_path.read_text())
+    files = FILES
+    if manifest['model'] == 'qwen36bf16':
+        files = tuple(n for n in FILES if not n.startswith('nscc_qwen38_')) + (
+            'nscc_qwen36_pilot.pbs', 'nscc_qwen36_full.pbs', 'model_configs/qwen36bf16.config.json')
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S_%fZ')
     destination = (out or ROOT / 'campaign_runs' / stamp).resolve()
     if destination.exists():
         raise FileExistsError(destination)
     (destination / 'code').mkdir(parents=True)
     hashes = {}
-    for name in FILES:
+    for name in files:
+        (destination / 'code' / name).parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT / name, destination / 'code' / name)
         hashes[name] = hashlib.sha256((destination / 'code' / name).read_bytes()).hexdigest()
-    shutil.copyfile(KIT / 'manifests/qwen38bf16_a100x4_flashinfer.json', destination / 'manifest.json')
+    shutil.copyfile(manifest_path, destination / 'manifest.json')
     manifest = json.loads((destination / 'manifest.json').read_text())
     selected = [p for p in manifest['points'] if p['id'] in pilot_ids()]
     if len(selected) != 21 or sum(len(shapes(p)) for p in selected) != 36:
         raise ValueError('Pilot selection differs from the agreed 21 groups / 36 shapes')
-    specification = run_specification(destination / 'manifest.json', MODEL, False)
+    specification = run_specification(destination / 'manifest.json', model_path, False)
     specification['implementation_sha256'] = {n: hashes[n] for n in specification['implementation_sha256']}
     image_stat = Path(CONFIG['image']).stat()
-    report = {'schema': 'qwen38-calibration-campaign.v1', 'created_at': time.time(),
-              'campaign_dir': str(destination), 'model_path': str(MODEL), 'files_sha256': hashes,
+    report = {'schema': ('qwen36' if manifest['model'] == 'qwen36bf16' else 'qwen38') + '-calibration-campaign.v1',
+              'created_at': time.time(), 'model': manifest['model'],
+              'campaign_dir': str(destination), 'model_path': str(model_path), 'files_sha256': hashes,
               'run_signature': digest_json(specification), 'pilot_ids': [p['id'] for p in selected],
               'measurement_policy': specification['measurement_policy'],
               'pilot_groups': 21, 'pilot_shapes': 36, 'full_groups': len(manifest['points']),
@@ -200,6 +209,8 @@ def main():
     commands = parser.add_subparsers(dest='command', required=True)
     prep = commands.add_parser('prepare')
     prep.add_argument('--out', type=Path)
+    prep.add_argument('--manifest', type=Path, help='Model-specific grid; defaults to the reference Qwen3.8 grid')
+    prep.add_argument('--model-path', type=Path, help='Cached BF16 checkpoint; defaults to Qwen3.8-27B')
     prep.add_argument('--reuse-decode-from', type=Path,
                       help='Reuse accepted unchanged decode only; remeasure every prefill under the new KV cap')
     run = commands.add_parser('run')
@@ -207,7 +218,7 @@ def main():
     run.add_argument('--phase', choices=('pilot', 'full'), required=True)
     args = parser.parse_args()
     if args.command == 'prepare':
-        info = prepare(args.out, args.reuse_decode_from)
+        info = prepare(args.out, args.reuse_decode_from, args.manifest, args.model_path)
         print(json.dumps(info, indent=2))
     else:
         execute(args.campaign, args.phase)

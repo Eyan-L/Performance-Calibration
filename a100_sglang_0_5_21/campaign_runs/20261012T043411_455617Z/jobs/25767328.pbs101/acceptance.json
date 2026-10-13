@@ -1,0 +1,536 @@
+{
+  "passed": true,
+  "phase": "pilot",
+  "job_dir": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25767328.pbs101",
+  "run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+  "gpu_preflight": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25767328.pbs101/gpu_preflight.json",
+  "errors": [],
+  "validated_shapes": [
+    {
+      "id": "dec_train_bs1_ctx4096",
+      "batch": 1,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs1_ctx4096/attempt-9a822lyl",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "41d0e808e0127f2a39f38b3a8723fbbbca60d94a7e7b9e8c210a9f6e689f6965",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "4da4b0d6f57c0ca6f6874ea3240ae53f06e062eea851f42786b7480999475d1b"
+    },
+    {
+      "id": "dec_train_bs1_ctx16384",
+      "batch": 1,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs1_ctx16384/attempt-0793cpzt",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "2973d1e8bd23ee2809247e069331ab7342729388de9846fad2f6e38a85e20b2c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "9ade080e2de076ff3209a1f5363138f1bd15d8b9ba7e2a5bfa360eb18a6bf0ad"
+    },
+    {
+      "id": "dec_train_bs4_ctx4096",
+      "batch": 4,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx4096/attempt-dcvbvxis",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "05d1bdf87305817a90028161af6732747a1798c9fc83de301b60492655f75391",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "3ea2a22278efe14488c76abb811a139d75e111dc490994581edf57d04b4cc338"
+    },
+    {
+      "id": "dec_train_bs4_ctx8192",
+      "batch": 4,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx8192/attempt-0a_u2_4x",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "a9893b7216e360086e4c097db3e22ec14d6a9131d0feb12eaa9d32f76eefd5ea",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "4db057e66bdebb643ab3e2475348c42bd7c6e188d76530044aaedec558bc51e8"
+    },
+    {
+      "id": "dec_train_bs4_ctx16384",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx16384/attempt-taivnu87",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "bff440048b06d3e88f2aee3c906b2c7611da6578cf3e1ab944a63cf966ad1e80",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "6e4b65ec9e823675216259eb6c0df7182ff74d62fa15b825c65be54a25bfdc28"
+    },
+    {
+      "id": "dec_train_bs4_ctx65536",
+      "batch": 4,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx65536/attempt-inhbn76f",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "7b120ed37288cc6130a59b43d07ef2fffbc8ddd9ee02fbf6894aef28d4de52b4",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "501117dd2e921a2c3cd0657e1b9d1e83273759e083dee7aef954f92765e9b593"
+    },
+    {
+      "id": "dec_train_bs8_ctx98304",
+      "batch": 8,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs8_ctx98304/attempt-djbhqxxo",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "f6a57868708248694e4180a5b7b1daef931cd44fad829f562aff4a99a41d0fc8",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "59c57d94dcdd1c687416a9611bdea67a0e1b32c38b88a8c9aa45ba85dbc370dd"
+    },
+    {
+      "id": "dec_train_bs12_ctx98304",
+      "batch": 12,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs12_ctx98304/attempt-wl1v7_2e",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "485bcf7eb76bc17ecb5c2ea185bc3fb12efe5dcf5f3cb00d4315a1826a3a530d",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "6b31e72ba75dc42c6eb5041d90fd04ef91327dd54be94705b503bfcf4452197a"
+    },
+    {
+      "id": "dec_train_bs16_ctx4096",
+      "batch": 16,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs16_ctx4096/attempt-xiv0pyb7",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "2bbd82c2bbe1e41771c614c538ff2add886ae04000a15f9c04a64a37472b3c5d",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "604cb15c0686c52df40f8b7d817ee28c67c641a092e3aea13270704d8b0b0789"
+    },
+    {
+      "id": "dec_train_bs16_ctx16384",
+      "batch": 16,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs16_ctx16384/attempt-d73dhgoa",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "7b7dd22ca6e45757583f6dc5e57d2d65120d87d0eb4f1ab498feb9a486e6468c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "ba58f2ec0ee0bb6b2f0539babf611e283702229e985151db532a07dc42ba0996"
+    },
+    {
+      "id": "dec_train_bs28_ctx32768",
+      "batch": 28,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs28_ctx32768/attempt-5_1vshti",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "baf621500a13a8c8a6de2ef4d755ba11a635dce8822a6ff272c1c28720ff7bfc",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "70bf43b54bd12dd2ef9549951900e9c623dfda7e5397f1f0cacd386a74b7aced"
+    },
+    {
+      "id": "dec_holdout_bs4_ctx16384",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs4_ctx16384/attempt-r8r6jsc9",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "0567da3b0397091d240f2eea11076016554ae9832a24ceb2912905b7564ea0bd",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "3d1b147dd05f165ba43870a2e7f581647bf5ec378a3464dd73546be14650c09e"
+    },
+    {
+      "id": "dec_holdout_bs8_ctx65536",
+      "batch": 8,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs8_ctx65536/attempt-v8pc43fs",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "96b6396108dcd3b477c5304d87ce32fb23883a48fd1051e5264230289d47078a",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "1b86dfdfc4f4dfe77a784734b8087450d082cb22f899800fc41113972d655b92"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g0/attempt-1y_017aa",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "41d0e808e0127f2a39f38b3a8723fbbbca60d94a7e7b9e8c210a9f6e689f6965",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "d3e97fbc3f8d65e81bee16bc0c36cb633bfa1ab350098ea9ef858c8ed9b18387"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g0/attempt-1y_017aa",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "b8df06856a3f9bdf8579888318b9b748f5a49e30d6fa97b8500a5bcdc93b2fdc",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "81c40f71666c2326e9293782fa2731cf629562e30fd259dcf52999da3a792a28"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g0/attempt-1y_017aa",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "2973d1e8bd23ee2809247e069331ab7342729388de9846fad2f6e38a85e20b2c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "fd8eabb16b937575cd01974a4b673cb3a24e896dc19f0a9aa4d1246c839ce2b5"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g0/attempt-1y_017aa",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "8bd58d2289c1d786725808dee6691714d0ec9ea38e4d922dd6b7dde3620ca258",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "4d2a3b7b526459a7dbbb84af16a0b26c51dea5dd5a9bcd50f1f9e4e2e8f9e737"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g1/attempt-tubzc6p9",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "05d1bdf87305817a90028161af6732747a1798c9fc83de301b60492655f75391",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "cc130072484bd885b855bdea5d96c730b96a77d9fa67885d60f24c539d74d420"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g1/attempt-tubzc6p9",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "a9893b7216e360086e4c097db3e22ec14d6a9131d0feb12eaa9d32f76eefd5ea",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "e5dfbaa5b0b74ad00d6203db8ac9d7682537389d13b2dbb9cd18e09cf44e8a77"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g1/attempt-tubzc6p9",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "bff440048b06d3e88f2aee3c906b2c7611da6578cf3e1ab944a63cf966ad1e80",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "62cc3250d0ea53c2dcbff96da209b5fb2457084265d5f90cc88cf657202b1c37"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g1/attempt-tubzc6p9",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "0e7c203fb3f8c1dc4d1c76668060ce04d352625688e2e1571e63f994c0fc4491",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "260318ac1cd49f5aa2ce5250c869ef094f9d7f367a54fdb7918b9026361d0293"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g2/attempt-rcewimvw",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "d2bc0b648cf5b973a6dc2cb0f55a5e210e927e259f7e1536dbdb3355a93d0c8a",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "df61f26c10865fce80299bae41f55d1c8d4a635e1791ccf0145abbd426e8c4e6"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g2/attempt-rcewimvw",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "c26401ca4edebc582689cb130bd404cdc3a9d307ab774774aa40a230a6cc844b",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "90fa7a58628761e18614274bb3c74de0f9d21801f0a1fd82bc9d68846fda9b65"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g2/attempt-rcewimvw",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "56434c1fc543d97555b19daeaeb212c0bcce69163dda2513bc2be25938ba867c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "2d7c29eb3ee57a71e4f29a59f0a3db847c7576f5000d88d3e0366c854cea0d1c"
+    },
+    {
+      "id": "pre_train_g3",
+      "batch": 1,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g3/attempt-wnxxzhoo",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "ae0609ae09ab5a849bb30027494655b14d23f5883bcbb91a06abd1b9c378bff3",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "909cc750425357431757498d458a0d0c00bab4d5439510375bc7863e587eaaee"
+    },
+    {
+      "id": "pre_train_g4",
+      "batch": 1,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g4/attempt-9yr4m437",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "2a0d2e3777a546dd24aea057e5725b6e31e761a8921dab455ef8c540ec9f04f7",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "33ebdf300507d3fe0868ca92ac99c0abaf901168b49d63d1e5352779d5f67a3b"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 1,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g0/attempt-ehkbwl76",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "b9690e13e52bcd9956015f302de2113a1cb61b8f849b465d3feae824b5039e34",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "62ec024803376c623fe7895893e77db6fabc972932c2b9cddce92b7b9ff07dfb"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 1,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g0/attempt-ehkbwl76",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "45e2934a8773cedc77ba69be38a16a50abcef224cb96dc1587557dd026a9f289",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "193fc82a7305b0428956e869b5b6959905a7f865132f0812c221ab5835a6b676"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 8,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g0/attempt-ehkbwl76",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "7c43b2808ed37930100ebd5951f93727a70a35389c97422508f4ee703d1233c0",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "71c02d9ac9884d2ac86717347766331154c0100edd4e7fe2e3bd724add592f14"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 8,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g0/attempt-ehkbwl76",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "254705fa94c29d7ebab8ca7ef4ff3e0a4829da3f0eae544138e2f5409319bb08",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "c52591761954ccb82c364ebdd51569b765d6064971d010aa156899c6d823d275"
+    },
+    {
+      "id": "pre_holdout_g2",
+      "batch": 1,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g2/attempt-j4b9r98g",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "b5e622e338a95bf990ed4003200d3f485f4bc801f23ad54734ccd60f6e260d9b",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "db58c1c68cc6550ba675f0273a7198d89dfe65ef1ee81b85b80cb307d7f471fb"
+    },
+    {
+      "id": "dec_repeat_bs16_ctx16384",
+      "batch": 16,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_repeat_bs16_ctx16384/attempt-76p0xqi_",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "7b7dd22ca6e45757583f6dc5e57d2d65120d87d0eb4f1ab498feb9a486e6468c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "c2e3e2286473fe158d20e340d54664a89b9d59362625e078e6fd673103266b93"
+    }
+  ],
+  "unsupported_shapes": [
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 32768,
+      "oom_evidence": [
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g2/attempt-rcewimvw/rank3.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 3 has a total capacity of 39.49 GiB of which 7.13 GiB is free. Including non-PyTorch memory, this process has 32.36 GiB memory in use. Of the allocated memory 26.56 GiB is allocated by PyTorch, and 2.58 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g2/attempt-rcewimvw/rank2.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 2 has a total capacity of 39.49 GiB of which 7.34 GiB is free. Including non-PyTorch memory, this process has 32.15 GiB memory in use. Of the allocated memory 26.56 GiB is allocated by PyTorch, and 2.58 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g2/attempt-rcewimvw/rank0.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 39.49 GiB of which 7.34 GiB is free. Including non-PyTorch memory, this process has 32.15 GiB memory in use. Of the allocated memory 26.56 GiB is allocated by PyTorch, and 2.58 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g2/attempt-rcewimvw/rank1.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 1 has a total capacity of 39.49 GiB of which 7.13 GiB is free. Including non-PyTorch memory, this process has 32.36 GiB memory in use. Of the allocated memory 26.56 GiB is allocated by PyTorch, and 2.58 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        }
+      ]
+    },
+    {
+      "id": "pre_train_g3",
+      "batch": 4,
+      "length": 65536,
+      "oom_evidence": [
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g3/attempt-wnxxzhoo/rank3.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 3 has a total capacity of 39.49 GiB of which 1.65 GiB is free. Including non-PyTorch memory, this process has 37.83 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g3/attempt-wnxxzhoo/rank2.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 2 has a total capacity of 39.49 GiB of which 1.86 GiB is free. Including non-PyTorch memory, this process has 37.62 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g3/attempt-wnxxzhoo/rank0.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 39.49 GiB of which 1.86 GiB is free. Including non-PyTorch memory, this process has 37.62 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g3/attempt-wnxxzhoo/rank1.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 1 has a total capacity of 39.49 GiB of which 1.65 GiB is free. Including non-PyTorch memory, this process has 37.83 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        }
+      ]
+    },
+    {
+      "id": "pre_train_g4",
+      "batch": 2,
+      "length": 98304,
+      "oom_evidence": [
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g4/attempt-9yr4m437/rank3.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 6.00 GiB. GPU 3 has a total capacity of 39.49 GiB of which 5.95 GiB is free. Including non-PyTorch memory, this process has 33.53 GiB memory in use. Of the allocated memory 24.17 GiB is allocated by PyTorch, and 6.15 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g4/attempt-9yr4m437/rank1.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 6.00 GiB. GPU 1 has a total capacity of 39.49 GiB of which 5.95 GiB is free. Including non-PyTorch memory, this process has 33.53 GiB memory in use. Of the allocated memory 24.17 GiB is allocated by PyTorch, and 6.15 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        }
+      ]
+    },
+    {
+      "id": "pre_holdout_g2",
+      "batch": 2,
+      "length": 98304,
+      "oom_evidence": [
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g2/attempt-j4b9r98g/rank3.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 6.00 GiB. GPU 3 has a total capacity of 39.49 GiB of which 5.95 GiB is free. Including non-PyTorch memory, this process has 33.53 GiB memory in use. Of the allocated memory 24.17 GiB is allocated by PyTorch, and 6.15 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g2/attempt-j4b9r98g/rank1.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 6.00 GiB. GPU 1 has a total capacity of 39.49 GiB of which 5.95 GiB is free. Including non-PyTorch memory, this process has 33.53 GiB memory in use. Of the allocated memory 24.17 GiB is allocated by PyTorch, and 6.15 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        }
+      ]
+    }
+  ],
+  "communication_profiles": [
+    {
+      "requested_custom_all_reduce_disabled": true,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      }
+    }
+  ],
+  "fit_accuracy_is_not_an_acceptance_filter": true,
+  "independent_forward_validation": [
+    {
+      "id": "dec_train_bs4_ctx8192",
+      "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25767328.pbs101/forward_validation/dec_train_bs4_ctx8192.json",
+      "sha256": "4ad5b9060e004cc41d7ba8f863078bb270f32b3e75944be82db8437107e39812",
+      "validated_shapes": 1
+    },
+    {
+      "id": "pre_train_g0",
+      "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25767328.pbs101/forward_validation/pre_train_g0.json",
+      "sha256": "fcd548790098b36ef6164d717204b515fe9c8528274730a27d26de7694f0d71f",
+      "validated_shapes": 4
+    }
+  ],
+  "repeat_stability": [
+    {
+      "bs": 16,
+      "ctx": 16384,
+      "first": 10.799479166666666,
+      "repeat": 10.787498982747396,
+      "diff_percent": -0.11093297865926738
+    }
+  ],
+  "measurement_coverage_complete": false,
+  "selected_shapes": 36,
+  "remaining_registered_groups": [
+    "dec_train_bs1_ctx8192",
+    "dec_train_bs1_ctx12288",
+    "dec_train_bs1_ctx24576",
+    "dec_train_bs1_ctx32768",
+    "dec_train_bs1_ctx65536",
+    "dec_train_bs1_ctx98304",
+    "dec_train_bs2_ctx4096",
+    "dec_train_bs2_ctx8192",
+    "dec_train_bs2_ctx12288",
+    "dec_train_bs2_ctx16384",
+    "dec_train_bs2_ctx24576",
+    "dec_train_bs2_ctx32768",
+    "dec_train_bs2_ctx65536",
+    "dec_train_bs2_ctx98304",
+    "dec_train_bs4_ctx12288",
+    "dec_train_bs4_ctx24576",
+    "dec_train_bs4_ctx32768",
+    "dec_train_bs4_ctx98304",
+    "dec_train_bs8_ctx4096",
+    "dec_train_bs8_ctx8192",
+    "dec_train_bs8_ctx12288",
+    "dec_train_bs8_ctx16384",
+    "dec_train_bs8_ctx24576",
+    "dec_train_bs8_ctx32768",
+    "dec_train_bs8_ctx65536",
+    "dec_train_bs12_ctx4096",
+    "dec_train_bs12_ctx8192",
+    "dec_train_bs12_ctx12288",
+    "dec_train_bs12_ctx16384",
+    "dec_train_bs12_ctx24576",
+    "dec_train_bs12_ctx32768",
+    "dec_train_bs12_ctx65536",
+    "dec_train_bs16_ctx8192",
+    "dec_train_bs16_ctx12288",
+    "dec_train_bs16_ctx24576",
+    "dec_train_bs16_ctx32768",
+    "dec_train_bs16_ctx65536",
+    "dec_train_bs16_ctx98304",
+    "dec_train_bs20_ctx4096",
+    "dec_train_bs20_ctx8192",
+    "dec_train_bs20_ctx12288",
+    "dec_train_bs20_ctx16384",
+    "dec_train_bs20_ctx24576",
+    "dec_train_bs20_ctx32768",
+    "dec_train_bs20_ctx65536",
+    "dec_train_bs24_ctx4096",
+    "dec_train_bs24_ctx8192",
+    "dec_train_bs24_ctx12288",
+    "dec_train_bs24_ctx16384",
+    "dec_train_bs24_ctx24576",
+    "dec_train_bs24_ctx32768",
+    "dec_train_bs24_ctx65536",
+    "dec_train_bs28_ctx4096",
+    "dec_train_bs28_ctx8192",
+    "dec_train_bs28_ctx12288",
+    "dec_train_bs28_ctx16384",
+    "dec_train_bs28_ctx24576",
+    "dec_holdout_bs1_ctx8192",
+    "dec_holdout_bs8_ctx24576",
+    "dec_holdout_bs12_ctx8192",
+    "dec_holdout_bs16_ctx16384",
+    "dec_holdout_bs20_ctx24576",
+    "dec_holdout_bs24_ctx12288",
+    "dec_holdout_bs28_ctx8192",
+    "dec_holdout_bs2_ctx32768",
+    "dec_holdout_bs16_ctx98304",
+    "pre_holdout_g1",
+    "dec_repeat_bs4_ctx8192",
+    "dec_repeat_bs24_ctx24576"
+  ]
+}

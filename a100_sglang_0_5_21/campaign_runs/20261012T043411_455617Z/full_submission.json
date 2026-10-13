@@ -1,0 +1,13 @@
+{
+  "job": "25771918.pbs101",
+  "phase": "full",
+  "walltime": "06:00:00",
+  "walltime_updated_via": "qalter -l walltime=06:00:00 25771918.pbs101",
+  "campaign": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z",
+  "run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+  "execution_policy": "Reuse valid pilot samples; attempt missing shapes with unchanged measurement code; continue after OOM and fit only valid samples",
+  "pilot_shapes_to_reuse": 32,
+  "registered_shapes": 106,
+  "model_scope": "successfully measured grid; unsupported OOM shapes remain recorded",
+  "cancelled_diagnostic_jobs": ["25771346.pbs101", "25771353.pbs101"]
+}

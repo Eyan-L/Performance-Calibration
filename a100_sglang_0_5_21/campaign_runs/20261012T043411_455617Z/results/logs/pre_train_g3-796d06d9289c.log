@@ -1,0 +1,624 @@
+CMD bash /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/run_in_sif.sh --gpu /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py --manifest /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/manifest.json --point-id pre_train_g3 --model-path /scratch/users/ntu/n2602695/hf/hub/models--Qwen--Qwen3.6-35B-A3B/snapshots/995ad96eacd98c81ed38be0c5b274b04031597b0 --out /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/pre_train_g3.json --only-shapes 1:65536 4:65536
+CUDA 13 forward compatibility enabled; host driver 570.124.06
+INFO:    Mounting image with FUSE.
+{"runtime_verified": {"sglang_distribution_version": "0.5.21", "sglang_source_version": "0.5.21", "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py", "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py", "torch": "2.13.0+cu130", "torch_cuda": "13.0", "transformers": "5.12.1", "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]", "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif", "cache_paths": {"XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg", "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton", "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch", "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer", "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm", "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"}, "reference_source_on_import_path": false, "gpu_execution_tested": false}}
+[2026-10-12 16:43:47] Fail to set RLIMIT_NOFILE: current limit exceeds maximum limit
+[2026-10-12 16:44:12 CALIB-TP2] Init parallel begin.
+[2026-10-12 16:44:12 CALIB-TP0] Init parallel begin.
+[2026-10-12 16:44:12 CALIB-TP3] Init parallel begin.
+[2026-10-12 16:44:12 CALIB-TP1] Init parallel begin.
+[2026-10-12 16:44:12 CALIB-TP0] sglang is using nccl==2.30.7
+[2026-10-12 16:44:13 CALIB-TP0] Init parallel ends. elapsed=1.04 s
+[2026-10-12 16:44:13 CALIB-TP3] Init parallel ends. elapsed=0.92 s
+[2026-10-12 16:44:13 CALIB-TP2] Init parallel ends. elapsed=1.14 s
+[2026-10-12 16:44:13 CALIB-TP1] Init parallel ends. elapsed=0.57 s
+[2026-10-12 16:44:13 CALIB-TP0] Memory baseline taken. mem usage=0.00 GB
+[2026-10-12 16:44:13 CALIB-TP3] Memory baseline taken. mem usage=0.00 GB
+[2026-10-12 16:44:13 CALIB-TP2] Memory baseline taken. mem usage=0.00 GB
+[2026-10-12 16:44:13 CALIB-TP1] Memory baseline taken. mem usage=0.00 GB
+[2026-10-12 16:44:17 CALIB-TP3] Load weight begin. avail mem=37.99 GB
+[2026-10-12 16:44:17 CALIB-TP0] Load weight begin. avail mem=38.06 GB
+[2026-10-12 16:44:17 CALIB-TP2] Load weight begin. avail mem=38.06 GB
+[2026-10-12 16:44:17 CALIB-TP1] Load weight begin. avail mem=37.99 GB
+[2026-10-12 16:44:17 CALIB-TP0] Multimodal attention backend not set. Use triton_attn.
+[2026-10-12 16:44:17 CALIB-TP3] Multimodal attention backend not set. Use triton_attn.
+[2026-10-12 16:44:17 CALIB-TP2] Multimodal attention backend not set. Use triton_attn.
+[2026-10-12 16:44:17 CALIB-TP0] Using triton_attn as multimodal attention backend.
+[2026-10-12 16:44:17 CALIB-TP1] Multimodal attention backend not set. Use triton_attn.
+[2026-10-12 16:44:17 CALIB-TP3] Using triton_attn as multimodal attention backend.
+[2026-10-12 16:44:17 CALIB-TP2] Using triton_attn as multimodal attention backend.
+[2026-10-12 16:44:17 CALIB-TP1] Using triton_attn as multimodal attention backend.
+[2026-10-12 16:44:17 CALIB-TP3] using attn output gate!
+[2026-10-12 16:44:17 CALIB-TP2] using attn output gate!
+[2026-10-12 16:44:17 CALIB-TP0] using attn output gate!
+[2026-10-12 16:44:17 CALIB-TP1] using attn output gate!
+Multi-thread loading shards:   0% Completed | 0/26 [00:00<?, ?it/s]Multi-thread loading shards:   4% Completed | 1/26 [00:01<00:27,  1.10s/it]Multi-thread loading shards:   8% Completed | 2/26 [00:01<00:21,  1.12it/s]Multi-thread loading shards:  12% Completed | 3/26 [00:03<00:24,  1.07s/it]Multi-thread loading shards:  15% Completed | 4/26 [00:04<00:25,  1.16s/it]Multi-thread loading shards:  19% Completed | 5/26 [00:05<00:25,  1.21s/it]Multi-thread loading shards:  23% Completed | 6/26 [00:07<00:27,  1.39s/it]Multi-thread loading shards:  27% Completed | 7/26 [00:07<00:19,  1.01s/it]Multi-thread loading shards:  31% Completed | 8/26 [00:08<00:18,  1.03s/it]Multi-thread loading shards:  35% Completed | 9/26 [00:09<00:16,  1.06it/s]Multi-thread loading shards:  38% Completed | 10/26 [00:10<00:15,  1.03it/s]Multi-thread loading shards:  42% Completed | 11/26 [00:11<00:13,  1.11it/s]Multi-thread loading shards:  46% Completed | 12/26 [00:12<00:14,  1.02s/it]Multi-thread loading shards:  50% Completed | 13/26 [00:13<00:11,  1.13it/s]Multi-thread loading shards:  54% Completed | 14/26 [00:14<00:11,  1.01it/s]Multi-thread loading shards:  58% Completed | 15/26 [00:14<00:09,  1.15it/s]Multi-thread loading shards:  62% Completed | 16/26 [00:16<00:10,  1.10s/it]Multi-thread loading shards:  65% Completed | 17/26 [00:16<00:07,  1.21it/s]Multi-thread loading shards:  69% Completed | 18/26 [00:17<00:07,  1.12it/s]Multi-thread loading shards:  73% Completed | 19/26 [00:18<00:05,  1.20it/s]Multi-thread loading shards:  77% Completed | 20/26 [00:19<00:05,  1.05it/s]Multi-thread loading shards:  81% Completed | 21/26 [00:20<00:04,  1.21it/s]Multi-thread loading shards:  85% Completed | 22/26 [00:21<00:03,  1.08it/s]Multi-thread loading shards:  88% Completed | 23/26 [00:22<00:02,  1.01it/s]Multi-thread loading shards:  92% Completed | 24/26 [00:23<00:02,  1.03s/it]Multi-thread loading shards:  96% Completed | 25/26 [00:24<00:00,  1.08it/s]Multi-thread loading shards: 100% Completed | 26/26 [00:24<00:00,  1.32it/s]Multi-thread loading shards: 100% Completed | 26/26 [00:24<00:00,  1.05it/s]
+[2026-10-12 16:44:42 CALIB-TP0] Load weight end. elapsed=25.15 s, type=Qwen3_5MoeForConditionalGeneration, avail mem=21.57 GB, mem usage=16.48 GB.
+[2026-10-12 16:44:43 CALIB-TP2] Load weight end. elapsed=25.46 s, type=Qwen3_5MoeForConditionalGeneration, avail mem=21.57 GB, mem usage=16.48 GB.
+[2026-10-12 16:44:43 CALIB-TP3] Load weight end. elapsed=25.60 s, type=Qwen3_5MoeForConditionalGeneration, avail mem=21.50 GB, mem usage=16.48 GB.
+[2026-10-12 16:44:43 CALIB-TP1] Load weight end. elapsed=25.64 s, type=Qwen3_5MoeForConditionalGeneration, avail mem=21.50 GB, mem usage=16.48 GB.
+[2026-10-12 16:44:43 CALIB-TP0] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-10-12 16:44:43 CALIB-TP3] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-10-12 16:44:43 CALIB-TP2] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-10-12 16:44:43 CALIB-TP1] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-10-12 16:44:43 CALIB-TP0] Mamba Cache is allocated. max_mamba_cache_size: 4, conv_state size: 0.00GB, ssm_state size: 0.07GB 
+[2026-10-12 16:44:43 CALIB-TP1] Mamba Cache is allocated. max_mamba_cache_size: 4, conv_state size: 0.00GB, ssm_state size: 0.07GB 
+[2026-10-12 16:44:43 CALIB-TP3] Mamba Cache is allocated. max_mamba_cache_size: 4, conv_state size: 0.00GB, ssm_state size: 0.07GB 
+[2026-10-12 16:44:43 CALIB-TP2] Mamba Cache is allocated. max_mamba_cache_size: 4, conv_state size: 0.00GB, ssm_state size: 0.07GB 
+[2026-10-12 16:44:43 CALIB-TP1] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 294912, K size: 1.41 GB, V size: 1.41 GB
+[2026-10-12 16:44:43 CALIB-TP3] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 294912, K size: 1.41 GB, V size: 1.41 GB
+[2026-10-12 16:44:43 CALIB-TP0] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 294912, K size: 1.41 GB, V size: 1.41 GB
+[2026-10-12 16:44:43 CALIB-TP2] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 294912, K size: 1.41 GB, V size: 1.41 GB
+[2026-10-12 16:44:43 CALIB-TP1] Memory pool end. avail mem=18.52 GB
+[2026-10-12 16:44:43 CALIB-TP3] Memory pool end. avail mem=18.52 GB
+[2026-10-12 16:44:43 CALIB-TP0] Memory pool end. avail mem=18.59 GB
+[2026-10-12 16:44:43 CALIB-TP2] Memory pool end. avail mem=18.59 GB
+[2026-10-12 16:44:44 CALIB-TP0] Linear attention kernel backend: decode=triton, prefill=triton, verify=triton
+[2026-10-12 16:44:44 CALIB-TP2] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-12 16:44:44 CALIB-TP3] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-12 16:44:44 CALIB-TP1] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-12 16:44:44 CALIB-TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-12 16:44:44 CALIB-TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-12 16:44:44 CALIB-TP2] Disable prefill CUDA graph because cuda_graph_config resolved prefill.backend='disabled' (e.g. via --cuda-graph-backend-prefill=disabled or auto-disable rules).
+[2026-10-12 16:44:44 CALIB-TP3] Disable prefill CUDA graph because cuda_graph_config resolved prefill.backend='disabled' (e.g. via --cuda-graph-backend-prefill=disabled or auto-disable rules).
+[2026-10-12 16:44:44 CALIB-TP1] Disable prefill CUDA graph because cuda_graph_config resolved prefill.backend='disabled' (e.g. via --cuda-graph-backend-prefill=disabled or auto-disable rules).
+[2026-10-12 16:44:44 CALIB-TP0] Disable prefill CUDA graph because cuda_graph_config resolved prefill.backend='disabled' (e.g. via --cuda-graph-backend-prefill=disabled or auto-disable rules).
+/opt/sglang/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+[rank0]:[W1012 16:44:44.010865710 ProcessGroupNCCL.cpp:5276] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+[2026-10-12 16:44:45 CALIB-TP2] Reset HybridReqToTokenPool
+[2026-10-12 16:44:45 CALIB-TP0] Reset HybridReqToTokenPool
+[2026-10-12 16:44:45 CALIB-TP1] Reset HybridReqToTokenPool
+[2026-10-12 16:44:46 CALIB-TP3] Reset HybridReqToTokenPool
+[2026-10-12 16:44:49 CALIB-TP0] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-12 16:44:49 CALIB-TP3] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-12 16:44:49 CALIB-TP2] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-12 16:44:49 CALIB-TP1] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-12 16:44:49 CALIB-TP0] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB_down.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-12 16:44:49 CALIB-TP3] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB_down.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-12 16:44:49 CALIB-TP1] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB_down.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-12 16:44:49 CALIB-TP2] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB_down.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-12 16:44:51 CALIB-TP1] multimem all-gather disabled (no multicast for world_size=4)
+[2026-10-12 16:44:51 CALIB-TP0] multimem all-gather disabled (no multicast for world_size=4)
+[2026-10-12 16:44:51 CALIB-TP2] multimem all-gather disabled (no multicast for world_size=4)
+[2026-10-12 16:44:51 CALIB-TP3] multimem all-gather disabled (no multicast for world_size=4)
+[2026-10-12 16:44:51 CALIB-TP0] Reset HybridReqToTokenPool
+[2026-10-12 16:44:51 CALIB-TP1] Reset HybridReqToTokenPool
+[2026-10-12 16:44:51 CALIB-TP3] Reset HybridReqToTokenPool
+[2026-10-12 16:44:51 CALIB-TP2] Reset HybridReqToTokenPool
+[2026-10-12 16:44:53 CALIB-TP0] Reset HybridReqToTokenPool
+[2026-10-12 16:44:53 CALIB-TP1] Reset HybridReqToTokenPool
+[2026-10-12 16:44:53 CALIB-TP2] Reset HybridReqToTokenPool
+[2026-10-12 16:44:53 CALIB-TP3] Reset HybridReqToTokenPool
+[2026-10-12 16:44:54 CALIB-TP0] Reset HybridReqToTokenPool
+[2026-10-12 16:44:54 CALIB-TP3] Reset HybridReqToTokenPool
+[2026-10-12 16:44:54 CALIB-TP1] Reset HybridReqToTokenPool
+[2026-10-12 16:44:54 CALIB-TP2] Reset HybridReqToTokenPool
+[2026-10-12 16:44:56 CALIB-TP0] Reset HybridReqToTokenPool
+[2026-10-12 16:44:56 CALIB-TP1] Reset HybridReqToTokenPool
+[2026-10-12 16:44:56 CALIB-TP3] Reset HybridReqToTokenPool
+[2026-10-12 16:44:56 CALIB-TP2] Reset HybridReqToTokenPool
+[2026-10-12 16:44:58 CALIB-TP0] Reset HybridReqToTokenPool
+[2026-10-12 16:44:58 CALIB-TP3] Reset HybridReqToTokenPool
+[2026-10-12 16:44:58 CALIB-TP1] Reset HybridReqToTokenPool
+[2026-10-12 16:44:58 CALIB-TP2] Reset HybridReqToTokenPool
+[2026-10-12 16:44:59 CALIB-TP0] Reset HybridReqToTokenPool
+[2026-10-12 16:44:59 CALIB-TP1] Reset HybridReqToTokenPool
+[2026-10-12 16:44:59 CALIB-TP3] Reset HybridReqToTokenPool
+[2026-10-12 16:44:59 CALIB-TP2] Reset HybridReqToTokenPool
+[2026-10-12 16:45:01 CALIB-TP1] Reset HybridReqToTokenPool
+[2026-10-12 16:45:01 CALIB-TP0] Reset HybridReqToTokenPool
+[2026-10-12 16:45:01 CALIB-TP2] Reset HybridReqToTokenPool
+[2026-10-12 16:45:02 CALIB-TP3] Reset HybridReqToTokenPool
+[rank3]:[W1012 16:45:02.759594475 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 3 while trying to allocate 8589934592 bytes (free: 5126356992, total: 42406903808).
+[rank2]:[W1012 16:45:02.759600296 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 2 while trying to allocate 8589934592 bytes (free: 5352849408, total: 42406903808).
+[rank0]:[W1012 16:45:02.759602640 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 8589934592 bytes (free: 5352849408, total: 42406903808).
+[rank1]:[W1012 16:45:02.759608271 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 1 while trying to allocate 8589934592 bytes (free: 5126356992, total: 42406903808).
+[2026-10-12 16:45:09 CALIB-TP0] Reset HybridReqToTokenPool
+[2026-10-12 16:45:09 CALIB-TP3] Reset HybridReqToTokenPool
+[2026-10-12 16:45:09 CALIB-TP2] Reset HybridReqToTokenPool
+[2026-10-12 16:45:09 CALIB-TP1] Reset HybridReqToTokenPool
+[rank3]:[W1012 16:45:09.230034828 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 3 while trying to allocate 8589934592 bytes (free: 1775108096, total: 42406903808).
+[rank1]:[W1012 16:45:09.230035780 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 1 while trying to allocate 8589934592 bytes (free: 1775108096, total: 42406903808).
+[rank2]:[W1012 16:45:09.230039447 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 2 while trying to allocate 8589934592 bytes (free: 2001600512, total: 42406903808).
+[rank0]:[W1012 16:45:09.230051410 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 8589934592 bytes (free: 2001600512, total: 42406903808).
+[rank3]:[W1012 16:45:09.230430835 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 3 while trying to allocate 8589934592 bytes (free: 1775108096, total: 42406903808).
+[rank1]:[W1012 16:45:09.230431256 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 1 while trying to allocate 8589934592 bytes (free: 1775108096, total: 42406903808).
+[rank2]:[W1012 16:45:09.230433240 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 2 while trying to allocate 8589934592 bytes (free: 2001600512, total: 42406903808).
+[rank0]:[W1012 16:45:09.230433680 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 8589934592 bytes (free: 2001600512, total: 42406903808).
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 336, in worker
+    record['points'] = measure_prefill(module, wrapped, point, smoke, checkpoint,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 220, in measure_prefill
+    module.extend(requests, runner)
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py", line 520, in extend
+    logits_output = model_runner.forward(forward_batch).logits_output
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/model_runner.py", line 1753, in forward
+    output = self._forward_raw(
+             ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/model_runner.py", line 1945, in _forward_raw
+    ret = self.eager_runner.execute(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/runner/eager_runner.py", line 227, in execute
+    return self._execute_extend(forward_batch, pp_proxy_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/runner/eager_runner.py", line 371, in _execute_extend
+    ret = model_runner.model.forward(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 197, in timed_forward
+    output = original(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_vl.py", line 1641, in forward
+    hidden_states = general_mm_embed_routine(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/managers/mm_utils.py", line 813, in general_mm_embed_routine
+    hidden_states = language_model(
+                    ^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_5.py", line 1821, in forward
+    hidden_states = layer(
+                    ^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_5.py", line 1556, in forward
+    hidden_states = self.mlp(
+                    ^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen2_moe.py", line 861, in forward
+    final_hidden_states = self._forward_router_experts(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen2_moe.py", line 732, in _forward_router_experts
+    return self.experts(hidden_states, topk_output)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1558, in forward
+    return self.forward_impl(
+           ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1579, in forward_impl
+    combine_input = self.run_moe_core(
+                    ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1644, in run_moe_core
+    return self.quant_method.apply(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/quantization/unquant.py", line 1041, in apply
+    return self.forward(
+           ^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/kernels/fused_op.py", line 659, in forward
+    result = method(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/quantization/unquant.py", line 1149, in forward_cuda
+    return self.runner.run(dispatch_output, quant_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/runner.py", line 199, in run
+    return self.fused_func(dispatch_output, quant_info, self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton.py", line 238, in fused_experts_none_to_triton
+    output = fused_experts(
+             ^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 335, in fused_experts
+    return outplace_fused_experts(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/_ops.py", line 1279, in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 235, in outplace_fused_experts
+    return fused_experts_impl(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 1054, in fused_experts_impl
+    return _fused_moe_kernel_sequence(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 830, in _fused_moe_kernel_sequence
+    intermediate_cache3 = torch.empty(
+                          ^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 1 has a total capacity of 39.49 GiB of which 1.65 GiB is free. Including non-PyTorch memory, this process has 37.83 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+Process SpawnProcess-4:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 336, in worker
+    record['points'] = measure_prefill(module, wrapped, point, smoke, checkpoint,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 220, in measure_prefill
+    module.extend(requests, runner)
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py", line 520, in extend
+    logits_output = model_runner.forward(forward_batch).logits_output
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/model_runner.py", line 1753, in forward
+    output = self._forward_raw(
+             ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/model_runner.py", line 1945, in _forward_raw
+    ret = self.eager_runner.execute(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/runner/eager_runner.py", line 227, in execute
+    return self._execute_extend(forward_batch, pp_proxy_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/runner/eager_runner.py", line 371, in _execute_extend
+    ret = model_runner.model.forward(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 197, in timed_forward
+    output = original(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_vl.py", line 1641, in forward
+    hidden_states = general_mm_embed_routine(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/managers/mm_utils.py", line 813, in general_mm_embed_routine
+    hidden_states = language_model(
+                    ^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_5.py", line 1821, in forward
+    hidden_states = layer(
+                    ^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_5.py", line 1556, in forward
+    hidden_states = self.mlp(
+                    ^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen2_moe.py", line 861, in forward
+    final_hidden_states = self._forward_router_experts(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen2_moe.py", line 732, in _forward_router_experts
+    return self.experts(hidden_states, topk_output)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1558, in forward
+    return self.forward_impl(
+           ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1579, in forward_impl
+    combine_input = self.run_moe_core(
+                    ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1644, in run_moe_core
+    return self.quant_method.apply(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/quantization/unquant.py", line 1041, in apply
+    return self.forward(
+           ^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/kernels/fused_op.py", line 659, in forward
+    result = method(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/quantization/unquant.py", line 1149, in forward_cuda
+    return self.runner.run(dispatch_output, quant_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/runner.py", line 199, in run
+    return self.fused_func(dispatch_output, quant_info, self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton.py", line 238, in fused_experts_none_to_triton
+    output = fused_experts(
+             ^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 335, in fused_experts
+    return outplace_fused_experts(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/_ops.py", line 1279, in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 235, in outplace_fused_experts
+    return fused_experts_impl(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 1054, in fused_experts_impl
+    return _fused_moe_kernel_sequence(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 830, in _fused_moe_kernel_sequence
+    intermediate_cache3 = torch.empty(
+                          ^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 3 has a total capacity of 39.49 GiB of which 1.65 GiB is free. Including non-PyTorch memory, this process has 37.83 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+Process SpawnProcess-3:
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 336, in worker
+    record['points'] = measure_prefill(module, wrapped, point, smoke, checkpoint,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 220, in measure_prefill
+    module.extend(requests, runner)
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py", line 520, in extend
+    logits_output = model_runner.forward(forward_batch).logits_output
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/model_runner.py", line 1753, in forward
+    output = self._forward_raw(
+             ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/model_runner.py", line 1945, in _forward_raw
+    ret = self.eager_runner.execute(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/runner/eager_runner.py", line 227, in execute
+    return self._execute_extend(forward_batch, pp_proxy_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/runner/eager_runner.py", line 371, in _execute_extend
+    ret = model_runner.model.forward(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 197, in timed_forward
+    output = original(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_vl.py", line 1641, in forward
+    hidden_states = general_mm_embed_routine(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/managers/mm_utils.py", line 813, in general_mm_embed_routine
+    hidden_states = language_model(
+                    ^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_5.py", line 1821, in forward
+    hidden_states = layer(
+                    ^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_5.py", line 1556, in forward
+    hidden_states = self.mlp(
+                    ^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen2_moe.py", line 861, in forward
+    final_hidden_states = self._forward_router_experts(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen2_moe.py", line 732, in _forward_router_experts
+    return self.experts(hidden_states, topk_output)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1558, in forward
+    return self.forward_impl(
+           ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1579, in forward_impl
+    combine_input = self.run_moe_core(
+                    ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1644, in run_moe_core
+    return self.quant_method.apply(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/quantization/unquant.py", line 1041, in apply
+    return self.forward(
+           ^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/kernels/fused_op.py", line 659, in forward
+    result = method(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/quantization/unquant.py", line 1149, in forward_cuda
+    return self.runner.run(dispatch_output, quant_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/runner.py", line 199, in run
+    return self.fused_func(dispatch_output, quant_info, self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton.py", line 238, in fused_experts_none_to_triton
+    output = fused_experts(
+             ^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 335, in fused_experts
+    return outplace_fused_experts(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/_ops.py", line 1279, in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 235, in outplace_fused_experts
+    return fused_experts_impl(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 1054, in fused_experts_impl
+    return _fused_moe_kernel_sequence(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 830, in _fused_moe_kernel_sequence
+    intermediate_cache3 = torch.empty(
+                          ^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 2 has a total capacity of 39.49 GiB of which 1.86 GiB is free. Including non-PyTorch memory, this process has 37.62 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 336, in worker
+    record['points'] = measure_prefill(module, wrapped, point, smoke, checkpoint,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 220, in measure_prefill
+    module.extend(requests, runner)
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py", line 520, in extend
+    logits_output = model_runner.forward(forward_batch).logits_output
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/model_runner.py", line 1753, in forward
+    output = self._forward_raw(
+             ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/model_runner.py", line 1945, in _forward_raw
+    ret = self.eager_runner.execute(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/runner/eager_runner.py", line 227, in execute
+    return self._execute_extend(forward_batch, pp_proxy_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/model_executor/runner/eager_runner.py", line 371, in _execute_extend
+    ret = model_runner.model.forward(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 197, in timed_forward
+    output = original(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_vl.py", line 1641, in forward
+    hidden_states = general_mm_embed_routine(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/managers/mm_utils.py", line 813, in general_mm_embed_routine
+    hidden_states = language_model(
+                    ^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_5.py", line 1821, in forward
+    hidden_states = layer(
+                    ^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen3_5.py", line 1556, in forward
+    hidden_states = self.mlp(
+                    ^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen2_moe.py", line 861, in forward
+    final_hidden_states = self._forward_router_experts(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/models/qwen2_moe.py", line 732, in _forward_router_experts
+    return self.experts(hidden_states, topk_output)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1558, in forward
+    return self.forward_impl(
+           ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1579, in forward_impl
+    combine_input = self.run_moe_core(
+                    ^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/fused_moe_triton/layer.py", line 1644, in run_moe_core
+    return self.quant_method.apply(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/quantization/unquant.py", line 1041, in apply
+    return self.forward(
+           ^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/kernels/fused_op.py", line 659, in forward
+    result = method(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/quantization/unquant.py", line 1149, in forward_cuda
+    return self.runner.run(dispatch_output, quant_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/runner.py", line 199, in run
+    return self.fused_func(dispatch_output, quant_info, self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton.py", line 238, in fused_experts_none_to_triton
+    output = fused_experts(
+             ^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 335, in fused_experts
+    return outplace_fused_experts(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/torch/_ops.py", line 1279, in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 235, in outplace_fused_experts
+    return fused_experts_impl(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 1054, in fused_experts_impl
+    return _fused_moe_kernel_sequence(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/fused_moe.py", line 830, in _fused_moe_kernel_sequence
+    intermediate_cache3 = torch.empty(
+                          ^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 39.49 GiB of which 1.86 GiB is free. Including non-PyTorch memory, this process has 37.62 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+max_total_num_tokens=294912
+Traceback (most recent call last):
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/runtime_guard.py", line 93, in <module>
+    main()
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/runtime_guard.py", line 89, in main
+    runpy.run_path(str(script), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 484, in <module>
+    main()
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 460, in main
+    launch(server_args, port_args, manifest, point, args.smoke, directory, requested_shapes, args.validation_only)
+  File "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py", line 371, in launch
+    raise RuntimeError(f'TP worker {process.pid} exited {process.exitcode}')
+RuntimeError: TP worker 66320 exited 1

@@ -78,7 +78,8 @@ def render_report(collected, fitted):
     if 'kv_pool_policy' in specification:
         model['kv_pool_policy'] = specification['kv_pool_policy']
     atomic_json(fitted / 'model.json', model)
-    lines = ['# Qwen3.8 A100 TP=4 calibration', '',
+    label = 'Qwen3.6-35B-A3B' if model['model'] == 'qwen36bf16' else 'Qwen3.8-27B'
+    lines = [f'# {label} A100 TP={specification["tp"]} calibration', '',
              '**Scope:** ' + model['calibration_scope'], '',
              f'SGLang 0.5.21; BF16 weights/KV; FlashInfer; {communication}.', '',
              'Times cover GPU forward only. Loading, compilation, input preparation and sampling are excluded.', '',

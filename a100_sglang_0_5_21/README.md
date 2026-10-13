@@ -6,6 +6,35 @@ kit remains unchanged; its corpus and manifest are inputs, not import paths.
 Compilation caches use node-local `/tmp`; results and logs use the specified
 scratch run directory.
 
+## Final Task B results
+
+Both models were calibrated with SGLang 0.5.21, BF16 weights/KV, and TP=4
+on A100 40GB. Fits use training points; cross-validation, held-out points,
+and repeat measurements evaluate the predictions against measured GPU times.
+
+| Model | Valid shapes | Decode holdout MAPE | Prefill holdout MAPE | Final report |
+| --- | --- | --- | --- | --- |
+| Qwen3.8-27B | 102/102 | 1.66% | 0.37% | [Report](campaign_runs/20261011T161924_991886Z/jobs/25762839.pbs101/fit/report.md) |
+| Qwen3.6-35B-A3B | 105/106 | 2.81% | 1.05% | [Report](campaign_runs/20261012T043411_455617Z/jobs/25771918.pbs101/fit/report.md) |
+
+Each report's directory contains `model.json`, fit-design verification,
+measured/predicted CSV tables, and error plots. Its parent job directory
+contains acceptance, coverage, numerical validation, and execution logs;
+the campaign's `results/.attempts` retains all-rank raw samples and failures.
+Frozen code, manifests, and source signatures identify the actual measurement
+configuration. The two final jobs passed acceptance.
+
+Qwen3.6 reused 32 accepted pilot shapes and excluded one held-out prefill
+shape after OOM: batch 4, context 65536. The fit therefore describes the
+successfully measured grid. Decode's largest training error is 12.56%,
+at batch 1 / context 4096; its largest holdout error is 11.35%. Prefill's
+largest holdout error is 1.52%. Full region-level errors are in the reports.
+
+Qwen3.8 requested native communication selection and logged NCCL fallback
+after custom all-reduce initialization failed. Qwen3.6 explicitly disabled
+custom all-reduce. Historical records retain these actual configurations.
+The cost models predict GPU forward time under the recorded benchmark paths.
+
 ## Measurement definition
 
 - BF16 weights / KV, seed 0, no radix cache; custom all-reduce is explicitly
@@ -123,8 +152,31 @@ Each phase's independent numerical checks are separate from reused measurements.
 The full phase audits that pilot source attempts and samples remain unchanged.
 There is no automatic full-job submission before pilot acceptance and review.
 
-Qwen3.6 needs its own model config and memory-aware manifest; do not reuse the
-Qwen3.8 manifest for it.
+## Qwen3.6-35B-A3B
+
+Generate its model config and grid from the cached BF16 checkpoint, then freeze
+a separate campaign:
+
+```bash
+python3 -B prepare_qwen36.py
+python3 -B campaign.py prepare \
+  --manifest manifests/qwen36bf16_a100x4_flashinfer.json \
+  --model-path /scratch/users/ntu/n2602695/hf/hub/models--Qwen--Qwen3.6-35B-A3B/snapshots/995ad96eacd98c81ed38be0c5b274b04031597b0
+```
+
+Submit that campaign's `code/nscc_qwen36_pilot.pbs` with `CALIB_CAMPAIGN_DIR`
+and PBS output directed to scratch. After reviewing acceptance, use its
+`code/nscc_qwen36_full.pbs`; successful pilot timings are reused by the full job.
+Measurement, fitting formulas, and sampling counts match the Qwen3.8 adapter.
+The reference kit and existing campaigns remain unchanged.
+
+The Qwen3.6 decoder feasibility rule accounts for physical KV replication:
+2 KV heads at TP=4 give a replication factor of 2. The original candidate grid
+is filtered before measurement using 75% of total nominal GPU memory minus
+checkpoint bytes, including replication and the 32768-token pool headroom.
+Skipped points and the memory rule are recorded in the manifest. The fitted
+`K` feature remains logical full-attention KV GB, as in the reference formula.
+The common startup flag explicitly disables custom all-reduce.
 
 ### Updating the prefill KV pool after an accepted pilot
 

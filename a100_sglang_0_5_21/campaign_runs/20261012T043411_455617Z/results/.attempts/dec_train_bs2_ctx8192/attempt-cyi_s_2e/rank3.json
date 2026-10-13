@@ -1,0 +1,125 @@
+{
+  "rank": 3,
+  "metadata": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+      "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+      "cache_paths": {
+        "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+        "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+        "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+        "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+        "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+        "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+      },
+      "reference_source_on_import_path": false,
+      "gpu_execution_tested": false
+    },
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "purpose": "measurement",
+    "gpu_memory_bytes": 42406903808,
+    "gpu_id": 3,
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "native_custom_all_reduce_disabled": true,
+    "communication": {
+      "requested_custom_all_reduce_disabled": true,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      }
+    }
+  },
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 2,
+      "request_length": 8192,
+      "samples_ms": [
+        184.36402893066406,
+        184.25753784179688,
+        184.22784423828125,
+        184.23910522460938,
+        184.2810821533203,
+        184.16844177246094,
+        184.11724853515625,
+        184.30259704589844,
+        184.07936096191406
+      ],
+      "input": {
+        "batch_size": 2,
+        "request_length": 8192,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143313_c7a767",
+            "round_id": 13,
+            "split": "train",
+            "offset": 8592334,
+            "length": 12557,
+            "recorded_input_tokens": 12557,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_015",
+            "session_id": "20260729_065756_19be94",
+            "round_id": 9,
+            "split": "train",
+            "offset": 7397899,
+            "length": 9779,
+            "recorded_input_tokens": 9779,
+            "has_tools": false
+          }
+        ],
+        "token_sha256": "a776910eb39b8660375ba60cecb9581dd413ea15cac2e7cf0c2972ca71f3c57b",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "layout": {
+        "batch_size": 2,
+        "actual_sequence_lengths": [
+          8193,
+          8193
+        ],
+        "actual_input_token_count": 2
+      }
+    }
+  ],
+  "stage": "complete",
+  "started_at": 1791842378.8537815,
+  "model_ready_at": 1791842422.0194545,
+  "active_shape": [
+    2,
+    8192
+  ],
+  "ended_at": 1791842424.943809
+}

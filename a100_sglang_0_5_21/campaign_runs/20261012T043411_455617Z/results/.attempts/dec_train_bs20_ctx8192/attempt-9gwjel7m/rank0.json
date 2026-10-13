@@ -1,0 +1,323 @@
+{
+  "rank": 0,
+  "metadata": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+      "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+      "cache_paths": {
+        "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+        "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+        "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+        "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+        "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+        "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+      },
+      "reference_source_on_import_path": false,
+      "gpu_execution_tested": false
+    },
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "purpose": "measurement",
+    "gpu_memory_bytes": 42406903808,
+    "gpu_id": 0,
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "native_custom_all_reduce_disabled": true,
+    "communication": {
+      "requested_custom_all_reduce_disabled": true,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      }
+    }
+  },
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 20,
+      "request_length": 8192,
+      "samples_ms": [
+        310.5208435058594,
+        310.518798828125,
+        310.90277099609375,
+        311.06866455078125,
+        311.6861572265625,
+        311.5304870605469,
+        311.2192077636719,
+        312.1059875488281,
+        312.5770263671875
+      ],
+      "input": {
+        "batch_size": 20,
+        "request_length": 8192,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_007",
+            "session_id": "20260728_111815_8002b3",
+            "round_id": 2,
+            "split": "train",
+            "offset": 3713087,
+            "length": 10334,
+            "recorded_input_tokens": 5769,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_015",
+            "session_id": "20260729_065930_282df0",
+            "round_id": 3,
+            "split": "train",
+            "offset": 8220212,
+            "length": 8723,
+            "recorded_input_tokens": 8797,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_001",
+            "session_id": "20260728_105056_23170d",
+            "round_id": 3,
+            "split": "train",
+            "offset": 398499,
+            "length": 9633,
+            "recorded_input_tokens": 9707,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_001",
+            "session_id": "20260728_104929_60f366",
+            "round_id": 3,
+            "split": "train",
+            "offset": 145589,
+            "length": 8499,
+            "recorded_input_tokens": 8573,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_005",
+            "session_id": "20260728_100932_2b3f1a",
+            "round_id": 4,
+            "split": "train",
+            "offset": 2678783,
+            "length": 11337,
+            "recorded_input_tokens": 11411,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_001",
+            "session_id": "20260728_105014_58dea9",
+            "round_id": 7,
+            "split": "train",
+            "offset": 314910,
+            "length": 12883,
+            "recorded_input_tokens": 12883,
+            "has_tools": false
+          },
+          {
+            "task_id": "dr_005",
+            "session_id": "20260728_101017_41980a",
+            "round_id": 10,
+            "split": "train",
+            "offset": 3029854,
+            "length": 31974,
+            "recorded_input_tokens": 32068,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_002",
+            "session_id": "20260728_114732_e8ed91",
+            "round_id": 5,
+            "split": "train",
+            "offset": 1062443,
+            "length": 9799,
+            "recorded_input_tokens": 9893,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_007",
+            "session_id": "20260728_111819_12d59b",
+            "round_id": 4,
+            "split": "train",
+            "offset": 3822007,
+            "length": 11782,
+            "recorded_input_tokens": 11856,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143313_4d756b",
+            "round_id": 5,
+            "split": "train",
+            "offset": 8379189,
+            "length": 17983,
+            "recorded_input_tokens": 17983,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_015",
+            "session_id": "20260729_065756_19be94",
+            "round_id": 8,
+            "split": "train",
+            "offset": 7385017,
+            "length": 12882,
+            "recorded_input_tokens": 12882,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_003",
+            "session_id": "20260728_115212_413eb9",
+            "round_id": 4,
+            "split": "train",
+            "offset": 1670277,
+            "length": 10779,
+            "recorded_input_tokens": 10853,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_002",
+            "session_id": "20260728_114646_a27ac6",
+            "round_id": 5,
+            "split": "train",
+            "offset": 996551,
+            "length": 10242,
+            "recorded_input_tokens": 10316,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_012",
+            "session_id": "20260729_055931_187f25",
+            "round_id": 8,
+            "split": "train",
+            "offset": 5731461,
+            "length": 25535,
+            "recorded_input_tokens": 25629,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_001",
+            "session_id": "20260728_105056_6d06f1",
+            "round_id": 7,
+            "split": "train",
+            "offset": 504441,
+            "length": 12148,
+            "recorded_input_tokens": 12148,
+            "has_tools": false
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143326_83c1c9",
+            "round_id": 6,
+            "split": "train",
+            "offset": 8842369,
+            "length": 22685,
+            "recorded_input_tokens": 22759,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_005",
+            "session_id": "20260728_101017_41980a",
+            "round_id": 2,
+            "split": "train",
+            "offset": 2859109,
+            "length": 16793,
+            "recorded_input_tokens": 16887,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_013",
+            "session_id": "20260729_063459_4155da",
+            "round_id": 8,
+            "split": "train",
+            "offset": 6103783,
+            "length": 10196,
+            "recorded_input_tokens": 10196,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_015",
+            "session_id": "20260729_065855_3e1b8f",
+            "round_id": 13,
+            "split": "train",
+            "offset": 7799351,
+            "length": 37260,
+            "recorded_input_tokens": 37354,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_003",
+            "session_id": "20260728_115303_115d0d",
+            "round_id": 8,
+            "split": "train",
+            "offset": 2073148,
+            "length": 27675,
+            "recorded_input_tokens": 27769,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "69d86032d3fe4dde02b842574835ec1b61ae8a57a974e5943328caa9676d1d75",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "layout": {
+        "batch_size": 20,
+        "actual_sequence_lengths": [
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193,
+          8193
+        ],
+        "actual_input_token_count": 20
+      }
+    }
+  ],
+  "stage": "complete",
+  "started_at": 1791846129.566409,
+  "model_ready_at": 1791846172.566792,
+  "active_shape": [
+    20,
+    8192
+  ],
+  "ended_at": 1791846186.1159055
+}

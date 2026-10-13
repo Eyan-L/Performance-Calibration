@@ -1,0 +1,18 @@
+{
+  "job": "25767328.pbs101",
+  "phase": "pilot",
+  "model": "qwen36bf16",
+  "run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+  "walltime": "04:00:00",
+  "groups": 21,
+  "shapes": 36,
+  "full_submission_requires_pilot_acceptance": true,
+  "command": [
+    "qsub",
+    "-v",
+    "CALIB_CAMPAIGN_DIR=/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z",
+    "-o",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/pilot.pbs.log",
+    "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/nscc_qwen36_pilot.pbs"
+  ]
+}

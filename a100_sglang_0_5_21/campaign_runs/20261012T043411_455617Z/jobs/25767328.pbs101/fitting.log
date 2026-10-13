@@ -1,0 +1,95 @@
+CMD bash /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/run_in_sif.sh /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/fit_results.py /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25767328.pbs101/collected --out /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25767328.pbs101/fit --allow-incomplete
+INFO:    Mounting image with FUSE.
+{"runtime_verified": {"sglang_distribution_version": "0.5.21", "sglang_source_version": "0.5.21", "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py", "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py", "torch": "2.13.0+cu130", "torch_cuda": "13.0", "transformers": "5.12.1", "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]", "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif", "cache_paths": {"XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg", "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton", "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch", "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer", "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm", "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"}, "reference_source_on_import_path": false, "gpu_execution_tested": false}}
+{
+ "missing": 69,
+ "prefill_points_without_result": [
+  {
+   "split": "train",
+   "batch": 8,
+   "length": 32768,
+   "group": "pre_train_g2"
+  },
+  {
+   "split": "train",
+   "batch": 4,
+   "length": 65536,
+   "group": "pre_train_g3"
+  },
+  {
+   "split": "train",
+   "batch": 2,
+   "length": 98304,
+   "group": "pre_train_g4"
+  },
+  {
+   "split": "holdout",
+   "batch": 1,
+   "length": 65536,
+   "group": "pre_holdout_g1"
+  },
+  {
+   "split": "holdout",
+   "batch": 4,
+   "length": 65536,
+   "group": "pre_holdout_g1"
+  },
+  {
+   "split": "holdout",
+   "batch": 2,
+   "length": 98304,
+   "group": "pre_holdout_g2"
+  }
+ ],
+ "decoder_coef": {
+  "t0_ms": 5.794415490753896,
+  "tB_ms_per_request": 0.17537127006610792,
+  "tK_ms_per_kv_gb": 0.3659327379286987
+ },
+ "decoder": {
+  "train": {
+   "n": 11,
+   "mape_percent": 3.693013041655065,
+   "p95_ape_percent": 10.093160715889194,
+   "max_ape_percent": 11.425830711864569
+  },
+  "cv_checkerboard5": {
+   "n": 11,
+   "mape_percent": 4.930408468036506,
+   "p95_ape_percent": 11.826814672043842,
+   "max_ape_percent": 14.057189683710774
+  },
+  "holdout": {
+   "n": 2,
+   "mape_percent": 2.5538967818150704,
+   "p95_ape_percent": 3.028837024805132,
+   "max_ape_percent": 3.081608162915139
+  }
+ },
+ "prefill_coef": {
+  "p0_ms": 32.85869083141882,
+  "pN_ms_per_token": 0.014344259379978169,
+  "pA_ms_per_mega_attention_pair": 0.29959028487300227,
+  "linear_tokens_per_s": 69714.29988193102
+ },
+ "prefill": {
+  "train": {
+   "n": 13,
+   "mape_percent": 0.6662047849815134,
+   "p95_ape_percent": 1.3006013030945804,
+   "max_ape_percent": 1.4285570896714233
+  },
+  "cv_leave_one_out": {
+   "n": 13,
+   "mape_percent": 0.9384119699830579,
+   "p95_ape_percent": 1.9130402503974187,
+   "max_ape_percent": 2.281055153495608
+  },
+  "holdout": {
+   "n": 5,
+   "mape_percent": 0.7331215331780468,
+   "p95_ape_percent": 1.2595412641468042,
+   "max_ape_percent": 1.3276351134352877
+  }
+ }
+}

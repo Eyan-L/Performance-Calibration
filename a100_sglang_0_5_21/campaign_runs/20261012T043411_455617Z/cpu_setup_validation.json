@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "model": "qwen36bf16",
+  "run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+  "checkpoint_and_fit_config_match": true,
+  "actual_sglang_kv_heads_per_rank": 1,
+  "pilot_groups": 21,
+  "pilot_shapes": 36,
+  "full_groups": 90,
+  "full_shapes": 106,
+  "gpu_execution_tested": false
+}

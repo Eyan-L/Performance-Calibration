@@ -8,7 +8,7 @@ import math
 import sys
 from pathlib import Path
 
-from calibration_common import KIT, atomic_json
+from calibration_common import KIT, atomic_json, reference_model_config
 from report_results import render_report
 
 
@@ -27,10 +27,8 @@ def main():
     spec = importlib.util.spec_from_file_location('reference_fit', KIT / 'fit' / 'fit_amd_models.py')
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    config = KIT / 'inputs' / 'model_configs' / 'qwen38bf16.config.json'
     manifest = json.loads((args.collected / 'manifest.json').read_text())
-    if manifest['model'] != 'qwen38bf16':
-        raise ValueError('Provide a separate model config before fitting another model')
+    config = reference_model_config(manifest['model'])
     decoder = [r for r in module.load_decoder(args.collected, module.kv_gb_per_token(config)) if r['split'] == 'train']
     prefill = [r for r in module.load_prefill(args.collected) if r['split'] == 'train' and r['status'] == 'ok']
     d = np.array([[1, r['bs'], r['K']] for r in decoder], dtype=float).reshape(-1, 3)

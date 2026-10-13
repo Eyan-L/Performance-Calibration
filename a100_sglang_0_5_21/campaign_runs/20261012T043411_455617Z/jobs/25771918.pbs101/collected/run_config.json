@@ -1,0 +1,56 @@
+{
+  "schema": "native-sglang-calibration.v2",
+  "runtime": {
+    "sglang_version": "0.5.21",
+    "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+    "image_source": "docker://lmsysorg/sglang:v0.5.21",
+    "image_source_digest": "sha256:2dbe4c7f53230b09aaa8fa41891c13c51d9d2e253f486a70822aaf08783fff75",
+    "image_sha256": "3fc0f0ee71a83c230dd9c412ef7e5b1d0249300a0f8b00ca6d48fdab8d60871e",
+    "sglang_source_root": "/sgl-workspace/sglang/python/sglang",
+    "native_benchmark_module": "sglang.benchmark.one_batch",
+    "reference_kit": "/scratch/users/ntu/n2602695/Performance/qwen38_calib_kit_r001"
+  },
+  "measurement_policy": {
+    "primary_rank": 0,
+    "rank_aggregation": "rank 0 per iteration, then summarize",
+    "auxiliary_aggregation": "max across ranks for each iteration, then summarize",
+    "per_sample_tp_barrier": false,
+    "numerical_checks": "separate validation process; not in measurement loops",
+    "prefill_tp4": "extension of the reference TP=1 prefill benchmark"
+  },
+  "communication_policy": {
+    "disable_custom_all_reduce": true
+  },
+  "kv_pool_policy": {
+    "decode": "batch * context + 32768",
+    "prefill": "max(batch * context over original group) + 32768",
+    "safety_tokens": 32768
+  },
+  "manifest_sha256": "d9998c36da5afcd0cb9d0d4fe0b5c825062fab5961cfb598329508a4f6f7481c",
+  "model_path": "/scratch/users/ntu/n2602695/hf/hub/models--Qwen--Qwen3.6-35B-A3B/snapshots/995ad96eacd98c81ed38be0c5b274b04031597b0",
+  "model_config_sha256": "93a4693fa9d8392fbfccd4b3c9873f4bfdcb14fdede978b123d07d19675efe99",
+  "corpus_index_sha256": {
+    "short": "b813c0a4d69aa33522e0261cf2b42855a47665cacc16c6f4e7812b3e2beb4a3d",
+    "long": "e3507c78208a3ca68903827cc5b2581814a6a73e3197c5f125a9033781dc9032"
+  },
+  "reference_fit_sha256": "3a9d3a1ec1ecff993d4f89701e9db3a2490eece2ca06b3b077577b26d8b521ec",
+  "reference_model_config_sha256": "a535dda50243c13dc2c55921451175d204d4f1f96b9322d4a8f47005a88fcd75",
+  "smoke": false,
+  "tp": 4,
+  "attention_backend": "flashinfer",
+  "implementation_sha256": {
+    "runtime_guard.py": "8d78dc6d2aed1d1f6c9fdafa1a13ad21fe84da39c0376e492a6b6647760ee9f2",
+    "run_in_sif.sh": "8ee3eacb3b9badf0bf5de658fa0db1527404df70230c6597b4359e712a56264f",
+    "calibration_common.py": "aea3bdb56f2e4e62308c79fcba2b505c1227e7e4d51265e7fe67bb49c14811a4",
+    "calibrate_point.py": "fa904fcd51457ad04a0372b873724f077ee3c345a26fc717943e8d63b4b3d679",
+    "run_points.py": "b448a0ef05c1a36bf37ece8ccb53cf5e2e0653d9f0e6c67d1050b9df5ac11b6e",
+    "collect_results.py": "c4771cd08a0fb5d7f6a94a50f7417fa5fcd0db78aecfb29d32f9bbb8cd7a965b",
+    "gpu_preflight.py": "54ba991c8cac058af8cf15668724a42642465f5940639b05f544289f798261e7",
+    "fit_results.py": "493ec1c9e4833d67228338e2164199794d3612753ced6227a650a2286b3a2858",
+    "measurement_store.py": "0c1edad393dc64621de1e82100b3e78dd281970ce37e62a613d76c1cde1b9863",
+    "campaign.py": "4c6c35505e70ec135556f201827c4cf7ee43c931c2981ee9345e655c46d3aef3",
+    "verify_campaign.py": "2ac08f107226e04dde1b772acd6cdfca0c32a50bdf8a72b068c88b00137be58c",
+    "report_results.py": "8e4bb9f23ff68e8f386fdb63125f84e45388eebf972a06e3980353387e5054fa",
+    "decode_reuse.py": "d3e1991e37d6b7f10ceea98305f6b969e860486371d1136f4d6c8df4095ac583"
+  }
+}

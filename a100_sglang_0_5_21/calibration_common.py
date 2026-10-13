@@ -89,6 +89,14 @@ def input_coverage(manifest):
     return failures
 
 
+def reference_model_config(model):
+    if model == 'qwen38bf16':
+        return KIT / 'inputs/model_configs/qwen38bf16.config.json'
+    if model == 'qwen36bf16':
+        return ROOT / 'model_configs/qwen36bf16.config.json'
+    raise ValueError(f'Unsupported calibration model: {model}')
+
+
 def run_specification(manifest_path, model_path, smoke):
     manifest_path, model_path = Path(manifest_path).resolve(), Path(model_path).resolve()
     manifest = json.loads(manifest_path.read_text())
@@ -116,8 +124,7 @@ def run_specification(manifest_path, model_path, smoke):
             'corpus_index_sha256': {c: hashlib.sha256((KIT / 'inputs' / ('corpus_' + c) / 'index.json').read_bytes()).hexdigest()
                                     for c in ('short', 'long')},
             'reference_fit_sha256': hashlib.sha256((KIT / 'fit/fit_amd_models.py').read_bytes()).hexdigest(),
-            'reference_model_config_sha256': hashlib.sha256(
-                (KIT / 'inputs/model_configs' / (manifest['model'] + '.config.json')).read_bytes()).hexdigest(),
+            'reference_model_config_sha256': hashlib.sha256(reference_model_config(manifest['model']).read_bytes()).hexdigest(),
             'smoke': smoke, 'tp': manifest['tp'], 'attention_backend': manifest['attention_backend'],
             'implementation_sha256': {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in sources}}
 

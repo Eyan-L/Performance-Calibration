@@ -1,0 +1,102 @@
+{
+  "point": {
+    "id": "dec_train_bs28_ctx24576",
+    "kind": "decoder",
+    "bs": 28,
+    "ctx": 24576,
+    "split": "train",
+    "corpus": "short",
+    "warmups": 3,
+    "iters": 9,
+    "steps": 30,
+    "kv_gb": 14.13,
+    "physical_kv_with_headroom_gb": 29.601
+  },
+  "manifest": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/manifest.json",
+  "requested_shapes": [
+    [
+      28,
+      24576
+    ]
+  ],
+  "model_path": "/scratch/users/ntu/n2602695/hf/hub/models--Qwen--Qwen3.6-35B-A3B/snapshots/995ad96eacd98c81ed38be0c5b274b04031597b0",
+  "runtime": {
+    "sglang_distribution_version": "0.5.21",
+    "sglang_source_version": "0.5.21",
+    "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+    "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+    "torch": "2.13.0+cu130",
+    "torch_cuda": "13.0",
+    "transformers": "5.12.1",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+    "cache_paths": {
+      "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+      "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+      "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+      "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+      "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+      "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+    },
+    "reference_source_on_import_path": false,
+    "gpu_execution_tested": false
+  },
+  "smoke": false,
+  "metadata": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+      "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+      "cache_paths": {
+        "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+        "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+        "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+        "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+        "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+        "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+      },
+      "reference_source_on_import_path": false,
+      "gpu_execution_tested": false
+    },
+    "tp": 4,
+    "point": {
+      "id": "dec_train_bs28_ctx24576",
+      "kind": "decoder",
+      "bs": 28,
+      "ctx": 24576,
+      "split": "train",
+      "corpus": "short",
+      "warmups": 3,
+      "iters": 9,
+      "steps": 30,
+      "kv_gb": 14.13,
+      "physical_kv_with_headroom_gb": 29.601
+    },
+    "run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+    "manifest_sha256": "d9998c36da5afcd0cb9d0d4fe0b5c825062fab5961cfb598329508a4f6f7481c",
+    "model_path": "/scratch/users/ntu/n2602695/hf/hub/models--Qwen--Qwen3.6-35B-A3B/snapshots/995ad96eacd98c81ed38be0c5b274b04031597b0",
+    "attention_backend": "flashinfer",
+    "smoke": false,
+    "rank_artifacts": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs28_ctx24576/attempt-61pxahr0",
+    "job": "25771918.pbs101",
+    "purpose": "measurement",
+    "measurement_policy": {
+      "primary_rank": 0,
+      "rank_aggregation": "rank 0 per iteration, then summarize",
+      "auxiliary_aggregation": "max across ranks for each iteration, then summarize",
+      "per_sample_tp_barrier": false,
+      "numerical_checks": "separate validation process; not in measurement loops",
+      "prefill_tp4": "extension of the reference TP=1 prefill benchmark"
+    },
+    "gpu_execution_tested": false,
+    "timing_definition": "model.forward CUDA events (prefill); fixed-context graph-backed ModelRunner.forward loop CUDA events (decode)",
+    "inference_source": "unmodified official SGLang 0.5.21"
+  },
+  "started_at": 1791848281.3179572
+}

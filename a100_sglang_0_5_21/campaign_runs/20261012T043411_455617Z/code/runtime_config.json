@@ -1,0 +1,10 @@
+{
+  "sglang_version": "0.5.21",
+  "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+  "image_source": "docker://lmsysorg/sglang:v0.5.21",
+  "image_source_digest": "sha256:2dbe4c7f53230b09aaa8fa41891c13c51d9d2e253f486a70822aaf08783fff75",
+  "image_sha256": "3fc0f0ee71a83c230dd9c412ef7e5b1d0249300a0f8b00ca6d48fdab8d60871e",
+  "sglang_source_root": "/sgl-workspace/sglang/python/sglang",
+  "native_benchmark_module": "sglang.benchmark.one_batch",
+  "reference_kit": "/scratch/users/ntu/n2602695/Performance/qwen38_calib_kit_r001"
+}

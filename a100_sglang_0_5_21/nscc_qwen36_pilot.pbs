@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#PBS -N qwen36-calib-pilot
+#PBS -P personal-n2602695
+#PBS -l select=1:ngpus=4:ncpus=32:mem=128gb
+#PBS -l walltime=04:00:00
+#PBS -q normal
+#PBS -j oe
+#PBS -r n
+set -euo pipefail
+module load python/3.10.9
+module load singularity/4.3.1
+unset PYTHONPATH PYTHONHOME CUDA_LAUNCH_BLOCKING
+: "${CALIB_CAMPAIGN_DIR:?Submit with the immutable Qwen3.6 campaign directory}"
+cd "$CALIB_CAMPAIGN_DIR/code"
+python3 -B campaign.py run "$CALIB_CAMPAIGN_DIR" --phase pilot

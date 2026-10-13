@@ -1,0 +1,279 @@
+{
+  "rank": 3,
+  "metadata": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+      "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+      "cache_paths": {
+        "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+        "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+        "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+        "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+        "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+        "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+      },
+      "reference_source_on_import_path": false,
+      "gpu_execution_tested": false
+    },
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "purpose": "measurement",
+    "gpu_memory_bytes": 42406903808,
+    "gpu_id": 3,
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "native_custom_all_reduce_disabled": true,
+    "communication": {
+      "requested_custom_all_reduce_disabled": true,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      }
+    }
+  },
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 16,
+      "request_length": 4096,
+      "samples_ms": [
+        282.8277893066406,
+        283.22406005859375,
+        283.6828308105469,
+        284.40472412109375,
+        283.6531066894531,
+        283.39508056640625,
+        283.3960876464844,
+        283.39508056640625,
+        283.2588806152344
+      ],
+      "input": {
+        "batch_size": 16,
+        "request_length": 4096,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143542_d22578",
+            "round_id": 9,
+            "split": "train",
+            "offset": 9656429,
+            "length": 19827,
+            "recorded_input_tokens": 19921,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_002",
+            "session_id": "20260728_114646_94fe8b",
+            "round_id": 5,
+            "split": "train",
+            "offset": 886026,
+            "length": 9628,
+            "recorded_input_tokens": 9702,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_015",
+            "session_id": "20260729_065930_1ddbfc",
+            "round_id": 2,
+            "split": "train",
+            "offset": 8117590,
+            "length": 4140,
+            "recorded_input_tokens": 4214,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_009",
+            "session_id": "20260728_112729_59d58b",
+            "round_id": 4,
+            "split": "train",
+            "offset": 5131345,
+            "length": 10397,
+            "recorded_input_tokens": 10471,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143328_a2d48c",
+            "round_id": 4,
+            "split": "train",
+            "offset": 9313885,
+            "length": 10834,
+            "recorded_input_tokens": 10908,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_013",
+            "session_id": "20260729_063459_8ec11b",
+            "round_id": 3,
+            "split": "train",
+            "offset": 6144145,
+            "length": 6035,
+            "recorded_input_tokens": 6084,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_013",
+            "session_id": "20260729_063546_ca8dba",
+            "round_id": 3,
+            "split": "train",
+            "offset": 6229299,
+            "length": 14711,
+            "recorded_input_tokens": 14805,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_009",
+            "session_id": "20260728_112729_92744a",
+            "round_id": 5,
+            "split": "train",
+            "offset": 5283763,
+            "length": 7594,
+            "recorded_input_tokens": 7668,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_007",
+            "session_id": "20260728_111906_cc9a36",
+            "round_id": 1,
+            "split": "train",
+            "offset": 3904536,
+            "length": 7349,
+            "recorded_input_tokens": 7443,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_013",
+            "session_id": "20260729_063459_4f8df1",
+            "round_id": 5,
+            "split": "train",
+            "offset": 6133151,
+            "length": 5087,
+            "recorded_input_tokens": 5087,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143326_84ed2e",
+            "round_id": 3,
+            "split": "train",
+            "offset": 8961572,
+            "length": 4581,
+            "recorded_input_tokens": 4655,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_012",
+            "session_id": "20260729_060000_4d4b8d",
+            "round_id": 3,
+            "split": "train",
+            "offset": 5966797,
+            "length": 4301,
+            "recorded_input_tokens": 4375,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_001",
+            "session_id": "20260728_105056_e473af",
+            "round_id": 3,
+            "split": "train",
+            "offset": 525465,
+            "length": 7279,
+            "recorded_input_tokens": 7353,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_019",
+            "session_id": "20260729_075306_ca0bfa",
+            "round_id": 15,
+            "split": "train",
+            "offset": 11318231,
+            "length": 27517,
+            "recorded_input_tokens": 27611,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_003",
+            "session_id": "20260728_115212_ad5414",
+            "round_id": 2,
+            "split": "train",
+            "offset": 1697750,
+            "length": 4209,
+            "recorded_input_tokens": 4283,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_013",
+            "session_id": "20260729_063608_a6d867",
+            "round_id": 6,
+            "split": "train",
+            "offset": 6476208,
+            "length": 12280,
+            "recorded_input_tokens": 12280,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "2bbd82c2bbe1e41771c614c538ff2add886ae04000a15f9c04a64a37472b3c5d",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "layout": {
+        "batch_size": 16,
+        "actual_sequence_lengths": [
+          4097,
+          4097,
+          4097,
+          4097,
+          4097,
+          4097,
+          4097,
+          4097,
+          4097,
+          4097,
+          4097,
+          4097,
+          4097,
+          4097,
+          4097,
+          4097
+        ],
+        "actual_input_token_count": 16
+      }
+    }
+  ],
+  "stage": "complete",
+  "started_at": 1791793786.370079,
+  "model_ready_at": 1791793829.098112,
+  "active_shape": [
+    16,
+    4096
+  ],
+  "ended_at": 1791793836.0524747
+}

@@ -1,0 +1,96 @@
+CMD bash /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/run_in_sif.sh --gpu /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/code/calibrate_point.py --manifest /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/manifest.json --point-id dec_train_bs24_ctx8192 --model-path /scratch/users/ntu/n2602695/hf/hub/models--Qwen--Qwen3.6-35B-A3B/snapshots/995ad96eacd98c81ed38be0c5b274b04031597b0 --out /scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/dec_train_bs24_ctx8192.json
+CUDA 13 forward compatibility enabled; host driver 570.124.06
+INFO:    Mounting image with FUSE.
+{"runtime_verified": {"sglang_distribution_version": "0.5.21", "sglang_source_version": "0.5.21", "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py", "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py", "torch": "2.13.0+cu130", "torch_cuda": "13.0", "transformers": "5.12.1", "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]", "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif", "cache_paths": {"XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg", "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton", "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch", "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer", "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm", "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"}, "reference_source_on_import_path": false, "gpu_execution_tested": false}}
+[2026-10-13 07:16:12] Fail to set RLIMIT_NOFILE: current limit exceeds maximum limit
+[2026-10-13 07:16:36 CALIB-TP0] Init parallel begin.
+[2026-10-13 07:16:36 CALIB-TP3] Init parallel begin.
+[2026-10-13 07:16:36 CALIB-TP1] Init parallel begin.
+[2026-10-13 07:16:36 CALIB-TP2] Init parallel begin.
+[2026-10-13 07:16:37 CALIB-TP0] sglang is using nccl==2.30.7
+[2026-10-13 07:16:37 CALIB-TP0] Init parallel ends. elapsed=1.21 s
+[2026-10-13 07:16:37 CALIB-TP3] Init parallel ends. elapsed=1.23 s
+[2026-10-13 07:16:37 CALIB-TP2] Init parallel ends. elapsed=0.76 s
+[2026-10-13 07:16:37 CALIB-TP1] Init parallel ends. elapsed=1.08 s
+[2026-10-13 07:16:37 CALIB-TP0] Memory baseline taken. mem usage=0.00 GB
+[2026-10-13 07:16:37 CALIB-TP2] Memory baseline taken. mem usage=0.00 GB
+[2026-10-13 07:16:37 CALIB-TP1] Memory baseline taken. mem usage=0.00 GB
+[2026-10-13 07:16:37 CALIB-TP3] Memory baseline taken. mem usage=0.00 GB
+[2026-10-13 07:16:43 CALIB-TP1] Load weight begin. avail mem=37.99 GB
+[2026-10-13 07:16:43 CALIB-TP2] Load weight begin. avail mem=38.06 GB
+[2026-10-13 07:16:43 CALIB-TP0] Load weight begin. avail mem=38.06 GB
+[2026-10-13 07:16:43 CALIB-TP3] Load weight begin. avail mem=37.99 GB
+[2026-10-13 07:16:43 CALIB-TP2] Multimodal attention backend not set. Use triton_attn.
+[2026-10-13 07:16:43 CALIB-TP0] Multimodal attention backend not set. Use triton_attn.
+[2026-10-13 07:16:43 CALIB-TP3] Multimodal attention backend not set. Use triton_attn.
+[2026-10-13 07:16:43 CALIB-TP2] Using triton_attn as multimodal attention backend.
+[2026-10-13 07:16:43 CALIB-TP0] Using triton_attn as multimodal attention backend.
+[2026-10-13 07:16:43 CALIB-TP3] Using triton_attn as multimodal attention backend.
+[2026-10-13 07:16:43 CALIB-TP1] Multimodal attention backend not set. Use triton_attn.
+[2026-10-13 07:16:43 CALIB-TP1] Using triton_attn as multimodal attention backend.
+[2026-10-13 07:16:43 CALIB-TP0] using attn output gate!
+[2026-10-13 07:16:43 CALIB-TP2] using attn output gate!
+[2026-10-13 07:16:43 CALIB-TP1] using attn output gate!
+[2026-10-13 07:16:43 CALIB-TP3] using attn output gate!
+Multi-thread loading shards:   0% Completed | 0/26 [00:00<?, ?it/s]Multi-thread loading shards:   4% Completed | 1/26 [00:05<02:16,  5.47s/it]Multi-thread loading shards:   8% Completed | 2/26 [00:08<01:32,  3.87s/it]Multi-thread loading shards:  12% Completed | 3/26 [00:13<01:42,  4.47s/it]Multi-thread loading shards:  15% Completed | 4/26 [00:21<02:08,  5.86s/it]Multi-thread loading shards:  19% Completed | 5/26 [00:25<01:50,  5.26s/it]Multi-thread loading shards:  23% Completed | 6/26 [00:35<02:15,  6.77s/it]Multi-thread loading shards:  27% Completed | 7/26 [00:36<01:33,  4.91s/it]Multi-thread loading shards:  31% Completed | 8/26 [00:40<01:25,  4.74s/it]Multi-thread loading shards:  35% Completed | 9/26 [00:41<01:00,  3.55s/it]Multi-thread loading shards:  38% Completed | 10/26 [00:46<01:00,  3.80s/it]Multi-thread loading shards:  42% Completed | 11/26 [00:49<00:55,  3.73s/it]Multi-thread loading shards:  46% Completed | 12/26 [00:53<00:53,  3.85s/it]Multi-thread loading shards:  50% Completed | 13/26 [00:56<00:45,  3.49s/it]Multi-thread loading shards:  54% Completed | 14/26 [00:59<00:42,  3.51s/it]Multi-thread loading shards:  58% Completed | 15/26 [01:01<00:30,  2.77s/it]Multi-thread loading shards:  62% Completed | 16/26 [01:02<00:24,  2.45s/it]Multi-thread loading shards:  65% Completed | 17/26 [01:03<00:17,  1.91s/it]Multi-thread loading shards:  69% Completed | 18/26 [01:04<00:12,  1.60s/it]Multi-thread loading shards:  73% Completed | 19/26 [01:04<00:09,  1.30s/it]Multi-thread loading shards:  77% Completed | 20/26 [01:05<00:07,  1.25s/it]Multi-thread loading shards:  81% Completed | 21/26 [01:06<00:05,  1.04s/it]Multi-thread loading shards:  85% Completed | 22/26 [01:07<00:04,  1.07s/it]Multi-thread loading shards:  88% Completed | 23/26 [01:08<00:03,  1.11s/it]Multi-thread loading shards:  92% Completed | 24/26 [01:10<00:02,  1.14s/it]Multi-thread loading shards:  96% Completed | 25/26 [01:10<00:01,  1.04s/it][2026-10-13 07:17:54 CALIB-TP1] Load weight end. elapsed=71.90 s, type=Qwen3_5MoeForConditionalGeneration, avail mem=21.50 GB, mem usage=16.48 GB.
+[2026-10-13 07:17:54 CALIB-TP2] Load weight end. elapsed=71.93 s, type=Qwen3_5MoeForConditionalGeneration, avail mem=21.57 GB, mem usage=16.48 GB.
+[2026-10-13 07:17:54 CALIB-TP3] Load weight end. elapsed=71.93 s, type=Qwen3_5MoeForConditionalGeneration, avail mem=21.50 GB, mem usage=16.48 GB.
+Multi-thread loading shards: 100% Completed | 26/26 [01:11<00:00,  1.13it/s]Multi-thread loading shards: 100% Completed | 26/26 [01:11<00:00,  2.75s/it]
+[2026-10-13 07:17:55 CALIB-TP0] Load weight end. elapsed=72.05 s, type=Qwen3_5MoeForConditionalGeneration, avail mem=21.57 GB, mem usage=16.48 GB.
+[2026-10-13 07:17:55 CALIB-TP0] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-10-13 07:17:55 CALIB-TP3] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-10-13 07:17:55 CALIB-TP2] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-10-13 07:17:55 CALIB-TP1] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-10-13 07:17:55 CALIB-TP3] Mamba Cache is allocated. max_mamba_cache_size: 24, conv_state size: 0.01GB, ssm_state size: 0.37GB 
+[2026-10-13 07:17:55 CALIB-TP1] Mamba Cache is allocated. max_mamba_cache_size: 24, conv_state size: 0.01GB, ssm_state size: 0.37GB 
+[2026-10-13 07:17:55 CALIB-TP0] Mamba Cache is allocated. max_mamba_cache_size: 24, conv_state size: 0.01GB, ssm_state size: 0.37GB 
+[2026-10-13 07:17:55 CALIB-TP2] Mamba Cache is allocated. max_mamba_cache_size: 24, conv_state size: 0.01GB, ssm_state size: 0.37GB 
+[2026-10-13 07:17:55 CALIB-TP2] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 229376, K size: 1.09 GB, V size: 1.09 GB
+[2026-10-13 07:17:55 CALIB-TP0] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 229376, K size: 1.09 GB, V size: 1.09 GB
+[2026-10-13 07:17:55 CALIB-TP1] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 229376, K size: 1.09 GB, V size: 1.09 GB
+[2026-10-13 07:17:55 CALIB-TP3] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 229376, K size: 1.09 GB, V size: 1.09 GB
+[2026-10-13 07:17:55 CALIB-TP2] Memory pool end. avail mem=18.90 GB
+[2026-10-13 07:17:55 CALIB-TP0] Memory pool end. avail mem=18.90 GB
+[2026-10-13 07:17:55 CALIB-TP1] Memory pool end. avail mem=18.83 GB
+[2026-10-13 07:17:55 CALIB-TP3] Memory pool end. avail mem=18.83 GB
+[2026-10-13 07:17:56 CALIB-TP0] Linear attention kernel backend: decode=triton, prefill=triton, verify=triton
+[2026-10-13 07:17:56 CALIB-TP1] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-13 07:17:56 CALIB-TP2] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-13 07:17:56 CALIB-TP3] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-13 07:17:56 CALIB-TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-13 07:17:56 CALIB-TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-13 07:17:56 CALIB-TP0] Disable prefill CUDA graph because cuda_graph_config resolved prefill.backend='disabled' (e.g. via --cuda-graph-backend-prefill=disabled or auto-disable rules).
+[2026-10-13 07:17:56 CALIB-TP1] Disable prefill CUDA graph because cuda_graph_config resolved prefill.backend='disabled' (e.g. via --cuda-graph-backend-prefill=disabled or auto-disable rules).
+[2026-10-13 07:17:56 CALIB-TP2] Disable prefill CUDA graph because cuda_graph_config resolved prefill.backend='disabled' (e.g. via --cuda-graph-backend-prefill=disabled or auto-disable rules).
+[2026-10-13 07:17:56 CALIB-TP3] Disable prefill CUDA graph because cuda_graph_config resolved prefill.backend='disabled' (e.g. via --cuda-graph-backend-prefill=disabled or auto-disable rules).
+[2026-10-13 07:17:56 CALIB-TP0] Capture target decode CUDA graph begin. backend=full, num_tokens_per_req=1, bs=[24], avail mem=18.45 GB
+[2026-10-13 07:17:56 CALIB-TP1] Capture target decode CUDA graph begin. backend=full, num_tokens_per_req=1, bs=[24], avail mem=18.38 GB
+[2026-10-13 07:17:56 CALIB-TP2] Capture target decode CUDA graph begin. backend=full, num_tokens_per_req=1, bs=[24], avail mem=18.45 GB
+[2026-10-13 07:17:56 CALIB-TP3] Capture target decode CUDA graph begin. backend=full, num_tokens_per_req=1, bs=[24], avail mem=18.38 GB
+  0%|          | 0/1 [00:00<?, ?it/s]Capturing batches (bs=24 avail_mem=18.40 GB):   0%|          | 0/1 [00:00<?, ?it/s][2026-10-13 07:18:01 CALIB-TP0] Using fused GDN decode QKVZ/BA unpack + indexed Conv1D.
+[2026-10-13 07:18:02 CALIB-TP0] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-13 07:18:02 CALIB-TP2] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-13 07:18:02 CALIB-TP3] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-13 07:18:02 CALIB-TP1] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-13 07:18:02 CALIB-TP0] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB_down.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-13 07:18:02 CALIB-TP2] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB_down.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-13 07:18:02 CALIB-TP3] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB_down.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-13 07:18:02 CALIB-TP1] Using default MoE kernel config. Performance might be sub-optimal! Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=128,device_name=NVIDIA_A100-SXM4-40GB_down.json, you can create them with https://github.com/sgl-project/sglang/tree/main/benchmark/kernels/fused_moe_triton
+[2026-10-13 07:18:03 CALIB-TP0] multimem all-gather disabled (no multicast for world_size=4)
+[2026-10-13 07:18:03 CALIB-TP3] multimem all-gather disabled (no multicast for world_size=4)
+[2026-10-13 07:18:03 CALIB-TP1] multimem all-gather disabled (no multicast for world_size=4)
+[2026-10-13 07:18:03 CALIB-TP2] multimem all-gather disabled (no multicast for world_size=4)
+Capturing batches (bs=24 avail_mem=18.40 GB): 100%|██████████| 1/1 [00:06<00:00,  6.49s/it]Capturing batches (bs=24 avail_mem=18.40 GB): 100%|██████████| 1/1 [00:06<00:00,  6.49s/it]
+[2026-10-13 07:18:03 CALIB-TP3] Capture target decode CUDA graph end. elapsed=7.35 s, mem usage=0.15 GB, avail mem=18.22 GB.
+[2026-10-13 07:18:03 CALIB-TP0] Capture target decode CUDA graph end. elapsed=7.36 s, mem usage=0.15 GB, avail mem=18.29 GB.
+[2026-10-13 07:18:03 CALIB-TP1] Capture target decode CUDA graph end. elapsed=7.37 s, mem usage=0.15 GB, avail mem=18.22 GB.
+[2026-10-13 07:18:03 CALIB-TP2] Capture target decode CUDA graph end. elapsed=7.37 s, mem usage=0.15 GB, avail mem=18.29 GB.
+/opt/sglang/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+[rank0]:[W1013 07:18:04.772427132 ProcessGroupNCCL.cpp:5276] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+[2026-10-13 07:18:05 CALIB-TP3] Reset HybridReqToTokenPool
+[2026-10-13 07:18:05 CALIB-TP1] Reset HybridReqToTokenPool
+[2026-10-13 07:18:05 CALIB-TP2] Reset HybridReqToTokenPool
+[2026-10-13 07:18:06 CALIB-TP0] Reset HybridReqToTokenPool
+max_total_num_tokens=229376
+{"completed": "dec_train_bs24_ctx8192", "result": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/dec_train_bs24_ctx8192.json"}

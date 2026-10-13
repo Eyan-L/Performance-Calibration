@@ -1,0 +1,11 @@
+{
+  "job": "25771918.pbs101",
+  "phase": "full",
+  "stage": "complete",
+  "completed": true,
+  "started_at": 1791841047.948887,
+  "run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+  "measurement_rc": 1,
+  "exit_code": 0,
+  "ended_at": 1791850432.4071596
+}

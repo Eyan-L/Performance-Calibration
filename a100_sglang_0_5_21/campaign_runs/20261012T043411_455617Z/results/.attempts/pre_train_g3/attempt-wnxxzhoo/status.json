@@ -1,0 +1,6 @@
+{
+  "completed": false,
+  "stage": "tp_workers",
+  "error": "RuntimeError: TP worker 66320 exited 1",
+  "ended_at": 1791794714.3526707
+}

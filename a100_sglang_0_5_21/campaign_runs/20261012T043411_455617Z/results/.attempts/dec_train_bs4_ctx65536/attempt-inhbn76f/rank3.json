@@ -1,0 +1,217 @@
+{
+  "rank": 3,
+  "metadata": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+      "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+      "cache_paths": {
+        "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+        "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+        "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+        "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+        "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+        "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+      },
+      "reference_source_on_import_path": false,
+      "gpu_execution_tested": false
+    },
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "purpose": "measurement",
+    "gpu_memory_bytes": 42406903808,
+    "gpu_id": 3,
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "native_custom_all_reduce_disabled": true,
+    "communication": {
+      "requested_custom_all_reduce_disabled": true,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      }
+    }
+  },
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 4,
+      "request_length": 65536,
+      "samples_ms": [
+        256.34100341796875,
+        256.6420593261719,
+        256.61236572265625,
+        256.5222473144531,
+        256.859130859375,
+        256.8355712890625,
+        256.9031677246094,
+        256.99224853515625,
+        256.9564208984375
+      ],
+      "input": {
+        "batch_size": 4,
+        "request_length": 65536,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_017",
+            "session_id": "concat0054",
+            "round_id": 0,
+            "split": "train",
+            "offset": 7596703,
+            "length": 142740,
+            "source_prompts": [
+              "20260728_143308_9ca426#1",
+              "20260728_143308_9ca426#2",
+              "20260728_143313_31465a#1",
+              "20260728_143313_31465a#2",
+              "20260728_143313_31465a#3",
+              "20260728_143313_31465a#4",
+              "20260728_143313_31465a#5",
+              "20260728_143313_4d756b#1",
+              "20260728_143313_4d756b#2",
+              "20260728_143313_4d756b#3",
+              "20260728_143313_4d756b#4",
+              "20260728_143313_4d756b#5"
+            ]
+          },
+          {
+            "task_id": "dr_006",
+            "session_id": "concat0021",
+            "round_id": 0,
+            "split": "train",
+            "offset": 2971157,
+            "length": 135177,
+            "source_prompts": [
+              "20260728_111356_ae73f1#2",
+              "20260728_111356_ae73f1#3",
+              "20260728_111356_ae73f1#4",
+              "20260728_111356_ae73f1#5",
+              "20260728_111438_5cbbd1#1",
+              "20260728_111438_5cbbd1#2",
+              "20260728_111438_5cbbd1#3",
+              "20260728_111438_5cbbd1#4",
+              "20260728_111438_5cbbd1#5",
+              "20260728_111438_5cbbd1#6",
+              "20260728_111438_5cbbd1#7"
+            ]
+          },
+          {
+            "task_id": "dr_015",
+            "session_id": "concat0049",
+            "round_id": 0,
+            "split": "train",
+            "offset": 6854596,
+            "length": 131444,
+            "source_prompts": [
+              "20260729_065756_880dcf#3",
+              "20260729_065756_880dcf#4",
+              "20260729_065756_880dcf#5",
+              "20260729_065756_880dcf#6",
+              "20260729_065756_880dcf#7",
+              "20260729_065756_880dcf#8",
+              "20260729_065756_880dcf#9",
+              "20260729_065756_952417#1",
+              "20260729_065756_952417#2",
+              "20260729_065756_952417#3",
+              "20260729_065756_952417#4",
+              "20260729_065756_952417#5",
+              "20260729_065756_952417#6",
+              "20260729_065756_952417#7",
+              "20260729_065756_952417#8",
+              "20260729_065756_b4b943#1",
+              "20260729_065756_b4b943#2",
+              "20260729_065756_b4b943#3",
+              "20260729_065756_b4b943#4",
+              "20260729_065756_b4b943#5",
+              "20260729_065756_b4b943#6",
+              "20260729_065756_b4b943#7",
+              "20260729_065756_b4b943#8",
+              "20260729_065756_b4b943#9",
+              "20260729_065855_3e1b8f#1",
+              "20260729_065855_3e1b8f#2",
+              "20260729_065855_3e1b8f#3"
+            ]
+          },
+          {
+            "task_id": "dr_002",
+            "session_id": "concat0005",
+            "round_id": 0,
+            "split": "train",
+            "offset": 689229,
+            "length": 131859,
+            "source_prompts": [
+              "20260728_114642_c678ce#1",
+              "20260728_114642_c678ce#2",
+              "20260728_114646_07f866#1",
+              "20260728_114646_07f866#2",
+              "20260728_114646_07f866#3",
+              "20260728_114646_07f866#4",
+              "20260728_114646_07f866#5",
+              "20260728_114646_07f866#6",
+              "20260728_114646_07f866#7",
+              "20260728_114646_2a42f8#1",
+              "20260728_114646_2a42f8#2",
+              "20260728_114646_2a42f8#3",
+              "20260728_114646_2a42f8#4",
+              "20260728_114646_2a42f8#5",
+              "20260728_114646_2a42f8#6",
+              "20260728_114646_2a42f8#7",
+              "20260728_114646_2f127b#1",
+              "20260728_114646_2f127b#2",
+              "20260728_114646_2f127b#3",
+              "20260728_114646_2f127b#4"
+            ]
+          }
+        ],
+        "token_sha256": "7b120ed37288cc6130a59b43d07ef2fffbc8ddd9ee02fbf6894aef28d4de52b4",
+        "corpus_token_sha256": "d738187105aeacbdedef591eaa537110f8880062fa35f8803b3b18dc53ef67c1"
+      },
+      "layout": {
+        "batch_size": 4,
+        "actual_sequence_lengths": [
+          65537,
+          65537,
+          65537,
+          65537
+        ],
+        "actual_input_token_count": 4
+      }
+    }
+  ],
+  "stage": "complete",
+  "started_at": 1791793384.1691072,
+  "model_ready_at": 1791793426.3835504,
+  "active_shape": [
+    4,
+    65536
+  ],
+  "ended_at": 1791793437.238257
+}

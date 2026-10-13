@@ -1,0 +1,1158 @@
+{
+  "passed": true,
+  "phase": "full",
+  "job_dir": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25771918.pbs101",
+  "run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+  "gpu_preflight": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25771918.pbs101/gpu_preflight.json",
+  "errors": [],
+  "validated_shapes": [
+    {
+      "id": "dec_train_bs1_ctx4096",
+      "batch": 1,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs1_ctx4096/attempt-9a822lyl",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "41d0e808e0127f2a39f38b3a8723fbbbca60d94a7e7b9e8c210a9f6e689f6965",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "4da4b0d6f57c0ca6f6874ea3240ae53f06e062eea851f42786b7480999475d1b"
+    },
+    {
+      "id": "dec_train_bs1_ctx8192",
+      "batch": 1,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs1_ctx8192/attempt-5w4y88b8",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "b8df06856a3f9bdf8579888318b9b748f5a49e30d6fa97b8500a5bcdc93b2fdc",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "bbc17f9979becd362204623d50fd5b4ebf0e51193a439c2b58bbe74ea30907b1"
+    },
+    {
+      "id": "dec_train_bs1_ctx12288",
+      "batch": 1,
+      "length": 12288,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs1_ctx12288/attempt-d7ufsjdt",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "affd7584e173a56501113b540457a6d60e7f43cdf7661375c0f0300f96970861",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "7ec2b363e294db4c442618371b035cdbbf4862503c1955c78e64c1a7b1ab5010"
+    },
+    {
+      "id": "dec_train_bs1_ctx16384",
+      "batch": 1,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs1_ctx16384/attempt-0793cpzt",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "2973d1e8bd23ee2809247e069331ab7342729388de9846fad2f6e38a85e20b2c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "9ade080e2de076ff3209a1f5363138f1bd15d8b9ba7e2a5bfa360eb18a6bf0ad"
+    },
+    {
+      "id": "dec_train_bs1_ctx24576",
+      "batch": 1,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs1_ctx24576/attempt-fgvh8kpx",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "105352dfeaca08e8f617309a539e12c39471b136ac94d12c4c314c476fa311c0",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "6dba7d4f1e410d6b8f9fe82afe90b1caa4f71f530a1155f6bb5365e7f5a6a6f8"
+    },
+    {
+      "id": "dec_train_bs1_ctx32768",
+      "batch": 1,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs1_ctx32768/attempt-nir75lq1",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "380a165074065ad833266a214d4704e2b05113d86a9a79811ed8a6fd5e8318b2",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "5a78eb69be88e400f122bad3130e3358f96ddc37d54ad5fc330fd221aa719a35"
+    },
+    {
+      "id": "dec_train_bs1_ctx65536",
+      "batch": 1,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs1_ctx65536/attempt-gemjqk4q",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "ae0609ae09ab5a849bb30027494655b14d23f5883bcbb91a06abd1b9c378bff3",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "ad161c3bbaaad887389441d8d610329dc94e1ca0459d6256963ce5dcceb6ea9c"
+    },
+    {
+      "id": "dec_train_bs1_ctx98304",
+      "batch": 1,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs1_ctx98304/attempt-38kowqj3",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "2a0d2e3777a546dd24aea057e5725b6e31e761a8921dab455ef8c540ec9f04f7",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "0fd3ad2f32ba196584523233be11f00fd7febcec6922399dde0096132521be22"
+    },
+    {
+      "id": "dec_train_bs2_ctx4096",
+      "batch": 2,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs2_ctx4096/attempt-l6w9ig1a",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "569be56a13f4cd22a7aecf88bbe99e64a8dd1e35c9701187e00b2300951e46ce",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "b074cc24add87d8eeaabb1e05d48ff2f245f0860031eaa942521f8bdd28209aa"
+    },
+    {
+      "id": "dec_train_bs2_ctx8192",
+      "batch": 2,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs2_ctx8192/attempt-cyi_s_2e",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "a776910eb39b8660375ba60cecb9581dd413ea15cac2e7cf0c2972ca71f3c57b",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "c9d325cfcc07646756670ae913509e5f0985a3ee243a8c38e03adb93676a02dc"
+    },
+    {
+      "id": "dec_train_bs2_ctx12288",
+      "batch": 2,
+      "length": 12288,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs2_ctx12288/attempt-vr5psch1",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "da4588f7ef9bb6dadaf9abb1efd485467719497c6abd415fad0c19d94eaf0455",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "86e44e6952ffd0d3725ba50e1c5ff48511d164ffc4df2ffb5898c5c9bba889a8"
+    },
+    {
+      "id": "dec_train_bs2_ctx16384",
+      "batch": 2,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs2_ctx16384/attempt-9vfa8w41",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "de6bf3fd73bd3b68e2249a7e9a30532f51a7932bd8a17596c756806ed5494811",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "4c7b4590067536760c8f1b6c9807d649a8e8e3ff76dbb015239211fd43686cb4"
+    },
+    {
+      "id": "dec_train_bs2_ctx24576",
+      "batch": 2,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs2_ctx24576/attempt-s17tcgc6",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "c9cdf1ce4b6e74c823342b33c62319d2bc14fe1c342121623c731690a5c90030",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "d7afa315e525050d3045b7d0a12d9cac91106afdd2ce62a2e6fd83caff504a76"
+    },
+    {
+      "id": "dec_train_bs2_ctx32768",
+      "batch": 2,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs2_ctx32768/attempt-7u5zs6j5",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "70e69e519292db45d5c883963fd3dea9f5a9b7c52c90a14f30fbdbec6ff00b7f",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "e10340499f17762d8e984ff98dde506ab3cd86b8f1c22fb89828ae70050f9a31"
+    },
+    {
+      "id": "dec_train_bs2_ctx65536",
+      "batch": 2,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs2_ctx65536/attempt-riyhvxoe",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "73e3b891f241e6af0c10f57c068a7c4a20c32300cc4e2106cfffb79f498c12cf",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "be9f91ab539df4a640629011dab44caf87213f4df22dc1ffab592b2b67bfce36"
+    },
+    {
+      "id": "dec_train_bs2_ctx98304",
+      "batch": 2,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs2_ctx98304/attempt-aace3wob",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "92b18bc81f571fc01a72dc452bd79809a4b89402aab9c31cfabc2f6d109a658d",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "7a77ad7e3dd713774fa539802f24aa296ff6057bd0286cf644b386da7d484447"
+    },
+    {
+      "id": "dec_train_bs4_ctx4096",
+      "batch": 4,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx4096/attempt-dcvbvxis",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "05d1bdf87305817a90028161af6732747a1798c9fc83de301b60492655f75391",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "3ea2a22278efe14488c76abb811a139d75e111dc490994581edf57d04b4cc338"
+    },
+    {
+      "id": "dec_train_bs4_ctx8192",
+      "batch": 4,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx8192/attempt-0a_u2_4x",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "a9893b7216e360086e4c097db3e22ec14d6a9131d0feb12eaa9d32f76eefd5ea",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "4db057e66bdebb643ab3e2475348c42bd7c6e188d76530044aaedec558bc51e8"
+    },
+    {
+      "id": "dec_train_bs4_ctx12288",
+      "batch": 4,
+      "length": 12288,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx12288/attempt-02m3lakm",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "a0e57fbba6053b6c38cac1b2fdd229135fac17bc59ce049107a2040a86d1692d",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "c960fe2e82f0637a34879aa7f629ed76245015f2176192002302cb9e2d30d74c"
+    },
+    {
+      "id": "dec_train_bs4_ctx16384",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx16384/attempt-taivnu87",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "bff440048b06d3e88f2aee3c906b2c7611da6578cf3e1ab944a63cf966ad1e80",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "6e4b65ec9e823675216259eb6c0df7182ff74d62fa15b825c65be54a25bfdc28"
+    },
+    {
+      "id": "dec_train_bs4_ctx24576",
+      "batch": 4,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx24576/attempt-kvlrohx0",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "3d32434e8bb23e6ae3dd34a748d3504b2f394c33ed775f67ab9b1cc763e819cf",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "7e1fffd5bba27ed4bdbc8840bb3904cdbd456c26ecb0d0a9f44ea3a089e6da30"
+    },
+    {
+      "id": "dec_train_bs4_ctx32768",
+      "batch": 4,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx32768/attempt-d_px417_",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "a4389ef2da82e81b705903be5f8fba2c802a15842412cab736a25d569e39040d",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "71a4e9511db3c0779f108e51641daf161b9ee51a26644c40796bc4e406e670a7"
+    },
+    {
+      "id": "dec_train_bs4_ctx65536",
+      "batch": 4,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx65536/attempt-inhbn76f",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "7b120ed37288cc6130a59b43d07ef2fffbc8ddd9ee02fbf6894aef28d4de52b4",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "501117dd2e921a2c3cd0657e1b9d1e83273759e083dee7aef954f92765e9b593"
+    },
+    {
+      "id": "dec_train_bs4_ctx98304",
+      "batch": 4,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs4_ctx98304/attempt-zxnvw0ss",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "1b34c35d336ecc69e067e9fee2e465fc96c64c640994fbbaeaa82d69fa97af59",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "c7f9ed1da5da91925ba65978c31a5f0158cd8e736a9569a2923bbe27d630f1d4"
+    },
+    {
+      "id": "dec_train_bs8_ctx4096",
+      "batch": 8,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs8_ctx4096/attempt-hxtz1xy5",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "d2bc0b648cf5b973a6dc2cb0f55a5e210e927e259f7e1536dbdb3355a93d0c8a",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "b9a5ba59a68ed289e19ccdbfec74033b680bbce4de18c083479aefb9b0a53955"
+    },
+    {
+      "id": "dec_train_bs8_ctx8192",
+      "batch": 8,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs8_ctx8192/attempt-so597zsz",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "c26401ca4edebc582689cb130bd404cdc3a9d307ab774774aa40a230a6cc844b",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "cc0dd1d6b320b07864371593b2d3c0e66e9390e3cd00f1ecff92a43787185beb"
+    },
+    {
+      "id": "dec_train_bs8_ctx12288",
+      "batch": 8,
+      "length": 12288,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs8_ctx12288/attempt-y5afdulk",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "f0cab23017327354072a8b4f8974c479db74baf25e8c7313faee71c15731a045",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "214330c33b5dd6253710bd1754c0b12694bf2e2b0710739c51768b98a1ba6ada"
+    },
+    {
+      "id": "dec_train_bs8_ctx16384",
+      "batch": 8,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs8_ctx16384/attempt-svfl8l4v",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "56434c1fc543d97555b19daeaeb212c0bcce69163dda2513bc2be25938ba867c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "7bc0d46f57665ca5e01b098139f4226002bdd50262fefec8b013600fc3a862d1"
+    },
+    {
+      "id": "dec_train_bs8_ctx24576",
+      "batch": 8,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs8_ctx24576/attempt-ii1q0att",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "a53fbf8d8bdc3398c9f3be4e069dff7b444c8ebe0635eafcfcf79dc847ab4fe2",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "7fbc4c53167ad9e951dc0f57595e76b80cb92d7ac9f0ae2bcadb43e9f016f6be"
+    },
+    {
+      "id": "dec_train_bs8_ctx32768",
+      "batch": 8,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs8_ctx32768/attempt-7yk0qvz5",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "80795d1dbaa5d069f9d9b1df5a2bde4af6626dbb24a8861182b8a184ffcb7739",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "20a78df96c620e31d913f04fca8b029b7ae2e83fa2476b6d686a46841b940476"
+    },
+    {
+      "id": "dec_train_bs8_ctx65536",
+      "batch": 8,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs8_ctx65536/attempt-64e_6kzz",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "68be410b8ac0c971d0a5f78a2b0744f0794f72e434a2eb8873aae295ec1e3c5c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "8d330bc05ee5dd8ff278b7db06471312ec64658706b3c14915a101b0f5348f59"
+    },
+    {
+      "id": "dec_train_bs8_ctx98304",
+      "batch": 8,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs8_ctx98304/attempt-djbhqxxo",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "f6a57868708248694e4180a5b7b1daef931cd44fad829f562aff4a99a41d0fc8",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "59c57d94dcdd1c687416a9611bdea67a0e1b32c38b88a8c9aa45ba85dbc370dd"
+    },
+    {
+      "id": "dec_train_bs12_ctx4096",
+      "batch": 12,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs12_ctx4096/attempt-mw7q9kkj",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "6a76ffb2d44533dc2ae239e7acb551a53e3a0445577993fc7fd31145522f221e",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "6f5688c3f2539843f2496615da8aea1b6c74dbf65487f7423f2470ba14cc1743"
+    },
+    {
+      "id": "dec_train_bs12_ctx8192",
+      "batch": 12,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs12_ctx8192/attempt-4k49i8qd",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "9cb77c15de1bb8c42d9f2a84cfb6ba2e6e73120d5e7e911f8aa27d4d2b6ab99e",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "5fea0bba67bef1b69ae139b7e335ce22094dbac7f8dcb95b5db53176604e074a"
+    },
+    {
+      "id": "dec_train_bs12_ctx12288",
+      "batch": 12,
+      "length": 12288,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs12_ctx12288/attempt-xv_gdxdj",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "486c4a5a390eba50a1f7dca1c93ccff567d1f55fa43acb4c64904f010995f795",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "ab0497934ce618717649229f8212397a5407e2588e90758c942015659cf97931"
+    },
+    {
+      "id": "dec_train_bs12_ctx16384",
+      "batch": 12,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs12_ctx16384/attempt-9qm0pwr1",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "671c21a602da5dfd326b3a658a26de5c90fd980a965dc5d3c81f1c4302429ca6",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "5a1fe2c72319e2607d35866f7266b7c387d684db847bbca9559c73b8ba5b468a"
+    },
+    {
+      "id": "dec_train_bs12_ctx24576",
+      "batch": 12,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs12_ctx24576/attempt-be8aj9bk",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "a5d47db2bfc0c42d3759b5eca8b5857e00ef107974facd4a3478690b7253beaf",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "c1ade4573db28e8e124be4d8f08013d3115b237236fb06dd5509c100aca00a51"
+    },
+    {
+      "id": "dec_train_bs12_ctx32768",
+      "batch": 12,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs12_ctx32768/attempt-49kpsgrj",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "04c645cbd4ab02908630027f73b0322bc935119f055d2cfbb5a19cdaaa30bb2a",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "ce4162429a1f0a435d4d9d05673dfc50b04e24ee5b29386ffaede9d013e8b09a"
+    },
+    {
+      "id": "dec_train_bs12_ctx65536",
+      "batch": 12,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs12_ctx65536/attempt-6ne1qgo_",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "da658cd36998888160f2ae7a01618033df1c379d7f3023dbe3520f63d290f668",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "8a8bf368b0a8ba5e8e0b32a70ff8e469b398f62f60b75805e886abd53426c429"
+    },
+    {
+      "id": "dec_train_bs12_ctx98304",
+      "batch": 12,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs12_ctx98304/attempt-wl1v7_2e",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "485bcf7eb76bc17ecb5c2ea185bc3fb12efe5dcf5f3cb00d4315a1826a3a530d",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "6b31e72ba75dc42c6eb5041d90fd04ef91327dd54be94705b503bfcf4452197a"
+    },
+    {
+      "id": "dec_train_bs16_ctx4096",
+      "batch": 16,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs16_ctx4096/attempt-xiv0pyb7",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "2bbd82c2bbe1e41771c614c538ff2add886ae04000a15f9c04a64a37472b3c5d",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "604cb15c0686c52df40f8b7d817ee28c67c641a092e3aea13270704d8b0b0789"
+    },
+    {
+      "id": "dec_train_bs16_ctx8192",
+      "batch": 16,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs16_ctx8192/attempt-6lp_w636",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "2950c6b3e95cb9b9645b0266cac4e08e4735d9eb9d1335cce5d29d951449228e",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "de7f512cb04f211844c5780d4ef09e5f964a4cca53c1d188a788f7ca5eb31e27"
+    },
+    {
+      "id": "dec_train_bs16_ctx12288",
+      "batch": 16,
+      "length": 12288,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs16_ctx12288/attempt-ur9e5vq2",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "4ca2f4bbc9957aae876088956f5ce6ad03fb3a48d8ed5a1fdf226dcac2051e2b",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "7e14e2101b59c443e8beacd6b94dbf89241762ab0a3dc08e8cdbba58920c0613"
+    },
+    {
+      "id": "dec_train_bs16_ctx16384",
+      "batch": 16,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs16_ctx16384/attempt-d73dhgoa",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "7b7dd22ca6e45757583f6dc5e57d2d65120d87d0eb4f1ab498feb9a486e6468c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "ba58f2ec0ee0bb6b2f0539babf611e283702229e985151db532a07dc42ba0996"
+    },
+    {
+      "id": "dec_train_bs16_ctx24576",
+      "batch": 16,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs16_ctx24576/attempt-4e_j4oxk",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "d707991502cdcbc502b15da022109bc1a35560b3cdff6058bb26c2918578eb00",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "c39e38460671532cbc51f2795483a7588e748724e00693e83417455ddf475da3"
+    },
+    {
+      "id": "dec_train_bs16_ctx32768",
+      "batch": 16,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs16_ctx32768/attempt-qhai0ykm",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "3c6ab238cf0a22e16729f4a696e2b5cffee4f58b2ce59ea06fe6e2443170f220",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "0c5d4d60edaf177028542ea40ae667260f7096e59f4287b56beb69b64f5877f5"
+    },
+    {
+      "id": "dec_train_bs16_ctx65536",
+      "batch": 16,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs16_ctx65536/attempt-jul95ynx",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "49016a875929a32be866481207e2cabee3c61b2374e82706e992e6cc4944a157",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "59b489e2ffc13dc2b9da41dae136ec45088161f54a14e17ba294728c28d4b3c4"
+    },
+    {
+      "id": "dec_train_bs16_ctx98304",
+      "batch": 16,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs16_ctx98304/attempt-fjzd3d64",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "f99e083f2fbd48c35c66c8e13d4132c1620ae0f59a079d453d885da4859a79d5",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "95d956406d56440de162840514c782566a3a93c4aaac36ca3fd956a66282cd72"
+    },
+    {
+      "id": "dec_train_bs20_ctx4096",
+      "batch": 20,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs20_ctx4096/attempt-ta06uven",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "2af6c49de8e8b621cf4c0044af45b3b4f0b1e6d82c668720fb84351994ce7a47",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "3dd60d817c76c50d9e189a509e5719006acdbd580c20799694ba601d6fcafea4"
+    },
+    {
+      "id": "dec_train_bs20_ctx8192",
+      "batch": 20,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs20_ctx8192/attempt-9gwjel7m",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "69d86032d3fe4dde02b842574835ec1b61ae8a57a974e5943328caa9676d1d75",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "fd984ec970e7f920b21691afdc76b8c2165a24ea930cbb67356b65dfce599d94"
+    },
+    {
+      "id": "dec_train_bs20_ctx12288",
+      "batch": 20,
+      "length": 12288,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs20_ctx12288/attempt-cut6ypqn",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "1fabbe2dde67872948d0fab7b7b569375efc4fa10647b3aa7355b64905c36a8e",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "7c4e9fe15bc2227a39df6b297cd6765139bd548efe02690563a448558aea850c"
+    },
+    {
+      "id": "dec_train_bs20_ctx16384",
+      "batch": 20,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs20_ctx16384/attempt-v7sxl2al",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "41fcea3bf6c3819e4caaf0fe44ca76a123e31c7a9ee4c501755ccdb2a2de5c9f",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "c784ef77fc1d363cdd2ae734bd5464d844d350b0dc88b6701fea203f5b77a1f7"
+    },
+    {
+      "id": "dec_train_bs20_ctx24576",
+      "batch": 20,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs20_ctx24576/attempt-cxnb6ujx",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "82f287d64276f7b70ccc5a401fb7059ef4e26383604f3ba82046021e98ae6d31",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "df4884395c7b461a6a9fb6339074879d24fa10b82bb65124f4801a5127d4579b"
+    },
+    {
+      "id": "dec_train_bs20_ctx32768",
+      "batch": 20,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs20_ctx32768/attempt-m3j38ujq",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "8c1a758ef390adb7a7329aa33fab62fb3a58a60670eee474325af8614329dba6",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "866b1eb5da2de6571a8cf0798777e3dd0052043f63a3565be0f5f45d4756e1c8"
+    },
+    {
+      "id": "dec_train_bs20_ctx65536",
+      "batch": 20,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs20_ctx65536/attempt-guhsjlfd",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "b0d97c8436feb24dff086c6a234005ea78e64d6f9f2e6876953411b8d587fd7b",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "9b18224581a48cfc76fa3f60109c3f3c6e55a0155935adcce7b28ece8a461fc2"
+    },
+    {
+      "id": "dec_train_bs24_ctx4096",
+      "batch": 24,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs24_ctx4096/attempt-vg5bccf3",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "792056caac2a1a85ef38219ddd6f1f97eeba51cabf3faac719d7ef348cd06bde",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "0ab0f0ec0d9920088a5318de9323ccfaa9d63baf9e95ab9c455cf6b4fd59af0e"
+    },
+    {
+      "id": "dec_train_bs24_ctx8192",
+      "batch": 24,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs24_ctx8192/attempt-t8pq_izc",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "259ee0679bb31e451376336ad79313f56de2e79b5b77eb411930eac9f6270daf",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "f19b067bd8fb0c9d0d47c8f854c05eea1c8072cfac8b913210b08adc35cc2dbd"
+    },
+    {
+      "id": "dec_train_bs24_ctx12288",
+      "batch": 24,
+      "length": 12288,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs24_ctx12288/attempt-2yryo6q9",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "5a6b70a9f9d275bdb0378c0ee66c9d805c9c82ed5c33fb5767192c8c19c73ad0",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "fc384e92c0ce1bebab9477e03677bae3b64fcecf7aca67c862f890bd18fe3751"
+    },
+    {
+      "id": "dec_train_bs24_ctx16384",
+      "batch": 24,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs24_ctx16384/attempt-emgf764t",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "a48cdc382a54ad99d333f29c45d8059e8749ff5185b49f41016c56675bde50ad",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "b867b8e8326e48bd85f6a7d5fbae8179ee225e1ce2be98bbbd39ed63f7bd8117"
+    },
+    {
+      "id": "dec_train_bs24_ctx24576",
+      "batch": 24,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs24_ctx24576/attempt-h_320bl3",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "9468d2fc2a43361b4a776b04f2cc351ffd54cc3cf523413bd5c99be6ff1e91d5",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "d06ac0e027b948c1318278224b51f7aad1ffd073d0a172f368543ab9c6a366a3"
+    },
+    {
+      "id": "dec_train_bs24_ctx32768",
+      "batch": 24,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs24_ctx32768/attempt-j2co2_gu",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "b24bcfe80c2a21bf337a3e8a3c394120bfab444e34a0ac23e18438123a8c33c4",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "6e233d6a6fdde21afec3a59317bc7758d98ccb02b0ee567d02fb12421f0b32a8"
+    },
+    {
+      "id": "dec_train_bs24_ctx65536",
+      "batch": 24,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs24_ctx65536/attempt-kpyns__5",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "de3b44f2385fa366da3e33bb7277fddb918faeccace223a21184a948746d959b",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "801af8707f40aaf67b3ba9637333fdcc71a7dbb91fd6962b2d00986d4beaa04e"
+    },
+    {
+      "id": "dec_train_bs28_ctx4096",
+      "batch": 28,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs28_ctx4096/attempt-btdmhv1o",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "f2c329f0efe369dd12c8af8c8bea6ba3df8637ea5780f645e05cc5b73bc99c66",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "5d297fa99e7479911a04317ab064b7900a11e5e06770c96f42b1877e97db35cd"
+    },
+    {
+      "id": "dec_train_bs28_ctx8192",
+      "batch": 28,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs28_ctx8192/attempt-fhigd12y",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "d9c2e50ce73286ff93a449886feddff6b4759c9037263d5a6e79430011b2eba8",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "32c02451003caa40ee45e7434b37bfbacd9c6a52e98b69db4a013dbd70fb9614"
+    },
+    {
+      "id": "dec_train_bs28_ctx12288",
+      "batch": 28,
+      "length": 12288,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs28_ctx12288/attempt-m8drq6g4",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "026a6b9873478025f1cff5e1a597b1ed1cffd84eaf376fc0482c65aeeefd6b42",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "a8176f93c874cd46170fac0fb3750b67bace4509314ef5307b1b9f5c516b39dc"
+    },
+    {
+      "id": "dec_train_bs28_ctx16384",
+      "batch": 28,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs28_ctx16384/attempt-sx1wjxxp",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "9d2fe8b5d7d78068dc11e41d5bf59b129a4788f5c7233037c325889bd2037aff",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "0a6fdb448c3421eac81347fd26c4d9ec154b681561b032d546445c5bac384be0"
+    },
+    {
+      "id": "dec_train_bs28_ctx24576",
+      "batch": 28,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs28_ctx24576/attempt-61pxahr0",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "a6ce1fd3699cd6725d5741ffbd256d16357546b17529112dc4f9138e3979a3a3",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "7816bbcf4bb8e93df38ef4b57ae21c428f688e91d2fa5ab2797625bf88da1a16"
+    },
+    {
+      "id": "dec_train_bs28_ctx32768",
+      "batch": 28,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_train_bs28_ctx32768/attempt-5_1vshti",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "baf621500a13a8c8a6de2ef4d755ba11a635dce8822a6ff272c1c28720ff7bfc",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "70bf43b54bd12dd2ef9549951900e9c623dfda7e5397f1f0cacd386a74b7aced"
+    },
+    {
+      "id": "dec_holdout_bs1_ctx8192",
+      "batch": 1,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs1_ctx8192/attempt-0xzttvj3",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "b9690e13e52bcd9956015f302de2113a1cb61b8f849b465d3feae824b5039e34",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "ebcb532ee70b92c4855b3de94ef96ed0a9737268763d2c397e756fbf881f2bc3"
+    },
+    {
+      "id": "dec_holdout_bs4_ctx16384",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs4_ctx16384/attempt-r8r6jsc9",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "0567da3b0397091d240f2eea11076016554ae9832a24ceb2912905b7564ea0bd",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "3d1b147dd05f165ba43870a2e7f581647bf5ec378a3464dd73546be14650c09e"
+    },
+    {
+      "id": "dec_holdout_bs8_ctx24576",
+      "batch": 8,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs8_ctx24576/attempt-8n4rs5qn",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "46f674ad61310d827ebc6a23338c3c995cdfdbf0fcf13b9de77e54f589f73d5c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "402a6932a121a4de617ea34277cdac0a8b2f6f13a521785df4507e17d9f12b2c"
+    },
+    {
+      "id": "dec_holdout_bs12_ctx8192",
+      "batch": 12,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs12_ctx8192/attempt-ucxqajso",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "053cdfddfe5f5f80a26ecfc14d7bcf50decfac44a63cf8cbee3bc91fc03c15f8",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "6a23344e46a9732d8b94a82bf3ad056c980669ae023c0318d2f85872ab26da5b"
+    },
+    {
+      "id": "dec_holdout_bs16_ctx16384",
+      "batch": 16,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs16_ctx16384/attempt-9jc26mvk",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "72e6bf51045b56953fd533528d8f87a0c5fd16d73d5268a8841995323fe6a67c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "d08e58b46668eb2b702e9b97f611bb8e3f9e1747c65af7ba67301857859ec406"
+    },
+    {
+      "id": "dec_holdout_bs20_ctx24576",
+      "batch": 20,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs20_ctx24576/attempt-t9krdsp_",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "d557a54fd24a1a4c8d8201edd1a0ae5025e131b35e01d907c5d9e0116903cdc7",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "b65d561a285ceb860cf1c0376222610233a44a40add3648a0dbd7f9c67b4cb33"
+    },
+    {
+      "id": "dec_holdout_bs24_ctx12288",
+      "batch": 24,
+      "length": 12288,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs24_ctx12288/attempt-4tdp2t2k",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "01e94f88e7632c6cc9bf76b9f5cee45ed8cf11f49b24df3f670478d145c9dfc2",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "4bee2cee4026385882b2b6f77569917efcce86628510eecbf46774a236c7cd3f"
+    },
+    {
+      "id": "dec_holdout_bs28_ctx8192",
+      "batch": 28,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs28_ctx8192/attempt-llt8e8bc",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "668570cd03138d61f20d4e5f1452f5b377462bea3c340d3cc4b870f361b72c87",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "874bd4e652ffefb8b3f5327d60db353e2b5e5c5683b761b55acd6033b8b543e9"
+    },
+    {
+      "id": "dec_holdout_bs2_ctx32768",
+      "batch": 2,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs2_ctx32768/attempt-06a98xj5",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "5f778fffdf5ac300ff4032a8c491d56ea360833cce366fe5fe02bf3967f3716d",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "38844366363acd9bfd743f75e9f2642bf6cefc91fc8fdb3e7b967269cdc50d08"
+    },
+    {
+      "id": "dec_holdout_bs8_ctx65536",
+      "batch": 8,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs8_ctx65536/attempt-v8pc43fs",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "96b6396108dcd3b477c5304d87ce32fb23883a48fd1051e5264230289d47078a",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "1b86dfdfc4f4dfe77a784734b8087450d082cb22f899800fc41113972d655b92"
+    },
+    {
+      "id": "dec_holdout_bs16_ctx98304",
+      "batch": 16,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_holdout_bs16_ctx98304/attempt-igda4o50",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "4d6c7473135c18ecb91cf8c7181c610b41c19f0aa808de4f6b7d13c465908eb0",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "49da23628226fe5cb4ff7738a63d8c3966207e539241e959b18734dc3f518a0a"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g0/attempt-1y_017aa",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "41d0e808e0127f2a39f38b3a8723fbbbca60d94a7e7b9e8c210a9f6e689f6965",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "d3e97fbc3f8d65e81bee16bc0c36cb633bfa1ab350098ea9ef858c8ed9b18387"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g0/attempt-1y_017aa",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "b8df06856a3f9bdf8579888318b9b748f5a49e30d6fa97b8500a5bcdc93b2fdc",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "81c40f71666c2326e9293782fa2731cf629562e30fd259dcf52999da3a792a28"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g0/attempt-1y_017aa",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "2973d1e8bd23ee2809247e069331ab7342729388de9846fad2f6e38a85e20b2c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "fd8eabb16b937575cd01974a4b673cb3a24e896dc19f0a9aa4d1246c839ce2b5"
+    },
+    {
+      "id": "pre_train_g0",
+      "batch": 1,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g0/attempt-1y_017aa",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "8bd58d2289c1d786725808dee6691714d0ec9ea38e4d922dd6b7dde3620ca258",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "4d2a3b7b526459a7dbbb84af16a0b26c51dea5dd5a9bcd50f1f9e4e2e8f9e737"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g1/attempt-tubzc6p9",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "05d1bdf87305817a90028161af6732747a1798c9fc83de301b60492655f75391",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "cc130072484bd885b855bdea5d96c730b96a77d9fa67885d60f24c539d74d420"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g1/attempt-tubzc6p9",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "a9893b7216e360086e4c097db3e22ec14d6a9131d0feb12eaa9d32f76eefd5ea",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "e5dfbaa5b0b74ad00d6203db8ac9d7682537389d13b2dbb9cd18e09cf44e8a77"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g1/attempt-tubzc6p9",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "bff440048b06d3e88f2aee3c906b2c7611da6578cf3e1ab944a63cf966ad1e80",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "62cc3250d0ea53c2dcbff96da209b5fb2457084265d5f90cc88cf657202b1c37"
+    },
+    {
+      "id": "pre_train_g1",
+      "batch": 4,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g1/attempt-tubzc6p9",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "0e7c203fb3f8c1dc4d1c76668060ce04d352625688e2e1571e63f994c0fc4491",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "260318ac1cd49f5aa2ce5250c869ef094f9d7f367a54fdb7918b9026361d0293"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 4096,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g2/attempt-rcewimvw",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "d2bc0b648cf5b973a6dc2cb0f55a5e210e927e259f7e1536dbdb3355a93d0c8a",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "df61f26c10865fce80299bae41f55d1c8d4a635e1791ccf0145abbd426e8c4e6"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g2/attempt-rcewimvw",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "c26401ca4edebc582689cb130bd404cdc3a9d307ab774774aa40a230a6cc844b",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "90fa7a58628761e18614274bb3c74de0f9d21801f0a1fd82bc9d68846fda9b65"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g2/attempt-rcewimvw",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "56434c1fc543d97555b19daeaeb212c0bcce69163dda2513bc2be25938ba867c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "2d7c29eb3ee57a71e4f29a59f0a3db847c7576f5000d88d3e0366c854cea0d1c"
+    },
+    {
+      "id": "pre_train_g2",
+      "batch": 8,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g2/attempt-gysd6by8",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "d1cd60c903e9b05d92837b1aa1b78be9b85c9412561bcb6d05b369f51c180cc1",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "9d1cdd2e5c2625b8fd06ae939d1c55a9d2820557a63e601fde6a5b60a003aa94"
+    },
+    {
+      "id": "pre_train_g3",
+      "batch": 1,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g3/attempt-wnxxzhoo",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "ae0609ae09ab5a849bb30027494655b14d23f5883bcbb91a06abd1b9c378bff3",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "909cc750425357431757498d458a0d0c00bab4d5439510375bc7863e587eaaee"
+    },
+    {
+      "id": "pre_train_g3",
+      "batch": 4,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g3/attempt-n91rw6wt",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "7b120ed37288cc6130a59b43d07ef2fffbc8ddd9ee02fbf6894aef28d4de52b4",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "24f22d97da53e2e875d4104ffa970c373f4e16da810a2959ad0cd29efc6dd297"
+    },
+    {
+      "id": "pre_train_g4",
+      "batch": 1,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g4/attempt-9yr4m437",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "2a0d2e3777a546dd24aea057e5725b6e31e761a8921dab455ef8c540ec9f04f7",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "33ebdf300507d3fe0868ca92ac99c0abaf901168b49d63d1e5352779d5f67a3b"
+    },
+    {
+      "id": "pre_train_g4",
+      "batch": 2,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_train_g4/attempt-_7smj9la",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "92b18bc81f571fc01a72dc452bd79809a4b89402aab9c31cfabc2f6d109a658d",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "a594545c05a156b03e766d85cac076432043bc7b1517b97d376625ff1e5763c2"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 1,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g0/attempt-ehkbwl76",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "b9690e13e52bcd9956015f302de2113a1cb61b8f849b465d3feae824b5039e34",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "62ec024803376c623fe7895893e77db6fabc972932c2b9cddce92b7b9ff07dfb"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 1,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g0/attempt-ehkbwl76",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "45e2934a8773cedc77ba69be38a16a50abcef224cb96dc1587557dd026a9f289",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "193fc82a7305b0428956e869b5b6959905a7f865132f0812c221ab5835a6b676"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 8,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g0/attempt-ehkbwl76",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "7c43b2808ed37930100ebd5951f93727a70a35389c97422508f4ee703d1233c0",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "71c02d9ac9884d2ac86717347766331154c0100edd4e7fe2e3bd724add592f14"
+    },
+    {
+      "id": "pre_holdout_g0",
+      "batch": 8,
+      "length": 32768,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g0/attempt-ehkbwl76",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "254705fa94c29d7ebab8ca7ef4ff3e0a4829da3f0eae544138e2f5409319bb08",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "c52591761954ccb82c364ebdd51569b765d6064971d010aa156899c6d823d275"
+    },
+    {
+      "id": "pre_holdout_g1",
+      "batch": 1,
+      "length": 65536,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g1/attempt-ndrt7zgl",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "4e04acba0fc59f9872c8a43b8d549d6424803f0fcf30fb249a329acd6119300b",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "7c15ea8e272c6c94d90b67b9835a94c1fe7ec4ea1dc3d338c9c50abd00e730bd"
+    },
+    {
+      "id": "pre_holdout_g2",
+      "batch": 1,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g2/attempt-j4b9r98g",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "b5e622e338a95bf990ed4003200d3f485f4bc801f23ad54734ccd60f6e260d9b",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "db58c1c68cc6550ba675f0273a7198d89dfe65ef1ee81b85b80cb307d7f471fb"
+    },
+    {
+      "id": "pre_holdout_g2",
+      "batch": 2,
+      "length": 98304,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g2/attempt-_swo4jid",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "3be6c3ca1d56ce2f632f670bea8ebaaf3a98d0aa4e06a49f5100a7108c99ab36",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "5ee77f5960da81a758dd5c94213ca4a1fbf03064d2273b4a54efa294b645128b"
+    },
+    {
+      "id": "dec_repeat_bs4_ctx8192",
+      "batch": 4,
+      "length": 8192,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_repeat_bs4_ctx8192/attempt-y5q4uz2d",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "a9893b7216e360086e4c097db3e22ec14d6a9131d0feb12eaa9d32f76eefd5ea",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "0f7e0005d3cae8ad41f8b00ccd00f6a2a6404516eae0de691f413c9d19a17f55"
+    },
+    {
+      "id": "dec_repeat_bs16_ctx16384",
+      "batch": 16,
+      "length": 16384,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_repeat_bs16_ctx16384/attempt-76p0xqi_",
+      "job": "25767328.pbs101",
+      "input_token_sha256": "7b7dd22ca6e45757583f6dc5e57d2d65120d87d0eb4f1ab498feb9a486e6468c",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "c2e3e2286473fe158d20e340d54664a89b9d59362625e078e6fd673103266b93"
+    },
+    {
+      "id": "dec_repeat_bs24_ctx24576",
+      "batch": 24,
+      "length": 24576,
+      "source": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/dec_repeat_bs24_ctx24576/attempt-2gldy95b",
+      "job": "25771918.pbs101",
+      "input_token_sha256": "9468d2fc2a43361b4a776b04f2cc351ffd54cc3cf523413bd5c99be6ff1e91d5",
+      "measurement_run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+      "source_result_sha256": "fa9ddc6bf08f3ab9aba48fe243a33c41ced8a115f854fd8193d118ed45e24ef8"
+    }
+  ],
+  "unsupported_shapes": [
+    {
+      "id": "pre_holdout_g1",
+      "batch": 4,
+      "length": 65536,
+      "oom_evidence": [
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g1/attempt-ndrt7zgl/rank3.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 3 has a total capacity of 39.49 GiB of which 1.65 GiB is free. Including non-PyTorch memory, this process has 37.83 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g1/attempt-ndrt7zgl/rank2.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 2 has a total capacity of 39.49 GiB of which 1.86 GiB is free. Including non-PyTorch memory, this process has 37.62 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g1/attempt-ndrt7zgl/rank0.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 39.49 GiB of which 1.86 GiB is free. Including non-PyTorch memory, this process has 37.62 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        },
+        {
+          "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/results/.attempts/pre_holdout_g1/attempt-ndrt7zgl/rank1.json",
+          "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 1 has a total capacity of 39.49 GiB of which 1.65 GiB is free. Including non-PyTorch memory, this process has 37.83 GiB memory in use. Of the allocated memory 26.49 GiB is allocated by PyTorch, and 8.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+        }
+      ]
+    }
+  ],
+  "communication_profiles": [
+    {
+      "requested_custom_all_reduce_disabled": true,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      }
+    }
+  ],
+  "fit_accuracy_is_not_an_acceptance_filter": true,
+  "independent_forward_validation": [
+    {
+      "id": "dec_train_bs4_ctx8192",
+      "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25771918.pbs101/forward_validation/dec_train_bs4_ctx8192.json",
+      "sha256": "216e67ab375ad262f49c845be656bdde18ddde3b2dbb51f53247fd25a3ddf5cd",
+      "validated_shapes": 1
+    },
+    {
+      "id": "pre_train_g0",
+      "path": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25771918.pbs101/forward_validation/pre_train_g0.json",
+      "sha256": "1ff771205694a3e1db5ff3023e52755a269275107ffd28a7076a51c0fb4cc46f",
+      "validated_shapes": 4
+    }
+  ],
+  "repeat_stability": [
+    {
+      "bs": 16,
+      "ctx": 16384,
+      "first": 10.799479166666666,
+      "repeat": 10.787498982747396,
+      "diff_percent": -0.11093297865926738
+    },
+    {
+      "bs": 24,
+      "ctx": 24576,
+      "first": 14.16093037923177,
+      "repeat": 14.157175699869791,
+      "diff_percent": -0.026514355070098306
+    },
+    {
+      "bs": 4,
+      "ctx": 8192,
+      "first": 6.815470886230469,
+      "repeat": 6.80075937906901,
+      "diff_percent": -0.21585459621258032
+    }
+  ],
+  "pilot_shapes_reused": 32,
+  "measurement_coverage_complete": false,
+  "selected_shapes": 106,
+  "remaining_registered_groups": []
+}

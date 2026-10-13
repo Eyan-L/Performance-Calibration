@@ -1,0 +1,11 @@
+{
+  "completed": true,
+  "selected": [
+    "dec_train_bs4_ctx8192",
+    "pre_train_g0"
+  ],
+  "remaining": [],
+  "failed_attempts": 0,
+  "run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+  "job": "25767328.pbs101"
+}

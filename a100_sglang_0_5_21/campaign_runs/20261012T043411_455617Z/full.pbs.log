@@ -1,0 +1,6 @@
+{"stage": "gpu_preflight", "rc": 0, "log": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25771918.pbs101/gpu_preflight.log"}
+{"stage": "validate_dec_train_bs4_ctx8192", "rc": 0, "log": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25771918.pbs101/validate_dec_train_bs4_ctx8192.log"}
+{"stage": "validate_pre_train_g0", "rc": 0, "log": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25771918.pbs101/validate_pre_train_g0.log"}
+{"stage": "measurement", "rc": 1, "log": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25771918.pbs101/measurement.log"}
+{"stage": "collection", "rc": 0, "log": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25771918.pbs101/collection.log"}
+{"stage": "fitting", "rc": 0, "log": "/scratch/users/ntu/n2602695/Performance/a100_sglang_0_5_21/campaign_runs/20261012T043411_455617Z/jobs/25771918.pbs101/fitting.log"}

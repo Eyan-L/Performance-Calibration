@@ -1,0 +1,147 @@
+{
+  "rank": 1,
+  "metadata": {
+    "runtime": {
+      "sglang_distribution_version": "0.5.21",
+      "sglang_source_version": "0.5.21",
+      "sglang_import_path": "/sgl-workspace/sglang/python/sglang/__init__.py",
+      "native_benchmark_path": "/sgl-workspace/sglang/python/sglang/benchmark/one_batch.py",
+      "torch": "2.13.0+cu130",
+      "torch_cuda": "13.0",
+      "transformers": "5.12.1",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "image": "/scratch/users/ntu/n2602695/sif/sglang_v0.5.21_cuda13.sif",
+      "cache_paths": {
+        "XDG_CACHE_HOME": "/tmp/sglang_0521_calibration_37165/xdg",
+        "TRITON_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/triton",
+        "TORCH_EXTENSIONS_DIR": "/tmp/sglang_0521_calibration_37165/torch",
+        "FLASHINFER_WORKSPACE_BASE": "/tmp/sglang_0521_calibration_37165/flashinfer",
+        "TVM_FFI_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/tvm",
+        "TORCHINDUCTOR_CACHE_DIR": "/tmp/sglang_0521_calibration_37165/inductor"
+      },
+      "reference_source_on_import_path": false,
+      "gpu_execution_tested": false
+    },
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "purpose": "measurement",
+    "gpu_memory_bytes": 42406903808,
+    "gpu_id": 1,
+    "weight_dtype": "torch.bfloat16",
+    "kv_cache_dtype": "torch.bfloat16",
+    "native_custom_all_reduce_disabled": true,
+    "communication": {
+      "requested_custom_all_reduce_disabled": true,
+      "available_communicators": {
+        "ca_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pynccl_comm": {
+          "present": true,
+          "disabled": true
+        },
+        "torch_symm_mem_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pymscclpp_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "pcie_ipc_comm": {
+          "present": false,
+          "disabled": null
+        },
+        "qr_comm": {
+          "present": false,
+          "disabled": null
+        }
+      }
+    }
+  },
+  "completed": true,
+  "points": [
+    {
+      "batch_size": 4,
+      "request_length": 12288,
+      "samples_ms": [
+        208.21810913085938,
+        208.28057861328125,
+        208.94924926757812,
+        208.53453063964844,
+        208.70758056640625,
+        208.98406982421875,
+        209.0792999267578,
+        208.8089599609375,
+        209.44178771972656
+      ],
+      "input": {
+        "batch_size": 4,
+        "request_length": 12288,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_006",
+            "session_id": "20260728_111438_5cbbd1",
+            "round_id": 10,
+            "split": "train",
+            "offset": 3448092,
+            "length": 26865,
+            "recorded_input_tokens": 26959,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_002",
+            "session_id": "20260728_114732_e8ed91",
+            "round_id": 14,
+            "split": "train",
+            "offset": 1242941,
+            "length": 34266,
+            "recorded_input_tokens": 34360,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_013",
+            "session_id": "20260729_063546_ca8dba",
+            "round_id": 7,
+            "split": "train",
+            "offset": 6295290,
+            "length": 22450,
+            "recorded_input_tokens": 22544,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143313_c7a767",
+            "round_id": 16,
+            "split": "train",
+            "offset": 8630355,
+            "length": 14461,
+            "recorded_input_tokens": 14461,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "a0e57fbba6053b6c38cac1b2fdd229135fac17bc59ce049107a2040a86d1692d",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "layout": {
+        "batch_size": 4,
+        "actual_sequence_lengths": [
+          12289,
+          12289,
+          12289,
+          12289
+        ],
+        "actual_input_token_count": 4
+      }
+    }
+  ],
+  "stage": "complete",
+  "started_at": 1791843140.837039,
+  "model_ready_at": 1791843185.3108978,
+  "active_shape": [
+    4,
+    12288
+  ],
+  "ended_at": 1791843190.550036
+}

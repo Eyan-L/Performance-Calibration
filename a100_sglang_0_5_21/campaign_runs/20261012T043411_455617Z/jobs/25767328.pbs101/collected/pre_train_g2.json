@@ -1,0 +1,645 @@
+{
+  "completed": false,
+  "points": [
+    {
+      "batch_size": 8,
+      "request_length": 4096,
+      "status": "ok",
+      "prompt_tokens": 32768,
+      "forward_ms_median": 522.498046875,
+      "forward_ms_mean": 522.0800537109375,
+      "forward_ms_p90": 522.9791381835937,
+      "iterations": 5,
+      "samples_ms": [
+        522.498046875,
+        520.7316284179688,
+        521.275390625,
+        523.1052856445312,
+        522.7899169921875
+      ],
+      "rank_samples_ms": [
+        [
+          522.498046875,
+          520.7316284179688,
+          521.275390625,
+          523.1052856445312,
+          522.7899169921875
+        ],
+        [
+          522.250244140625,
+          520.1787109375,
+          521.0572509765625,
+          522.9957275390625,
+          522.6834106445312
+        ],
+        [
+          522.4642333984375,
+          520.1858520507812,
+          521.1371459960938,
+          523.0223388671875,
+          522.8011474609375
+        ],
+        [
+          522.0321044921875,
+          520.7388305664062,
+          521.2610473632812,
+          523.1114501953125,
+          522.7807006835938
+        ]
+      ],
+      "input": {
+        "batch_size": 8,
+        "request_length": 4096,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_005",
+            "session_id": "20260728_100932_ab1acd",
+            "round_id": 4,
+            "split": "train",
+            "offset": 2741957,
+            "length": 6755,
+            "recorded_input_tokens": 6829,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_013",
+            "session_id": "20260729_063455_dd80d6",
+            "round_id": 1,
+            "split": "train",
+            "offset": 6055971,
+            "length": 5240,
+            "recorded_input_tokens": 3969,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_005",
+            "session_id": "20260728_101017_41980a",
+            "round_id": 4,
+            "split": "train",
+            "offset": 2894696,
+            "length": 19111,
+            "recorded_input_tokens": 19205,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143341_f3ef3b",
+            "round_id": 6,
+            "split": "train",
+            "offset": 9526524,
+            "length": 6551,
+            "recorded_input_tokens": 6625,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_009",
+            "session_id": "20260728_112729_92744a",
+            "round_id": 5,
+            "split": "train",
+            "offset": 5283763,
+            "length": 7594,
+            "recorded_input_tokens": 7668,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_007",
+            "session_id": "20260728_111819_8dc00a",
+            "round_id": 5,
+            "split": "train",
+            "offset": 3878044,
+            "length": 12984,
+            "recorded_input_tokens": 13058,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143341_f3ef3b",
+            "round_id": 5,
+            "split": "train",
+            "offset": 9520325,
+            "length": 6199,
+            "recorded_input_tokens": 6273,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_013",
+            "session_id": "20260729_063459_4155da",
+            "round_id": 6,
+            "split": "train",
+            "offset": 6091024,
+            "length": 6014,
+            "recorded_input_tokens": 6014,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "d2bc0b648cf5b973a6dc2cb0f55a5e210e927e259f7e1536dbdb3355a93d0c8a",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "rank_layouts": [
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ],
+          "actual_input_token_count": 32768
+        },
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ],
+          "actual_input_token_count": 32768
+        },
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ],
+          "actual_input_token_count": 32768
+        },
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ],
+          "actual_input_token_count": 32768
+        }
+      ],
+      "rank_diagnostics": {
+        "max_samples_ms": [
+          522.498046875,
+          520.7388305664062,
+          521.275390625,
+          523.1114501953125,
+          522.8011474609375
+        ],
+        "max_median_ms": 522.498046875,
+        "per_rank_medians_ms": [
+          522.498046875,
+          522.250244140625,
+          522.4642333984375,
+          522.0321044921875
+        ]
+      }
+    },
+    {
+      "batch_size": 8,
+      "request_length": 8192,
+      "status": "ok",
+      "prompt_tokens": 65536,
+      "forward_ms_median": 1058.45556640625,
+      "forward_ms_mean": 1060.09375,
+      "forward_ms_p90": 1063.7080810546875,
+      "iterations": 5,
+      "samples_ms": [
+        1058.0152587890625,
+        1058.1513671875,
+        1058.45556640625,
+        1058.999267578125,
+        1066.8472900390625
+      ],
+      "rank_samples_ms": [
+        [
+          1058.0152587890625,
+          1058.1513671875,
+          1058.45556640625,
+          1058.999267578125,
+          1066.8472900390625
+        ],
+        [
+          1057.7459716796875,
+          1058.18115234375,
+          1058.6439208984375,
+          1058.999267578125,
+          1066.9527587890625
+        ],
+        [
+          1057.875,
+          1058.3255615234375,
+          1058.693115234375,
+          1059.04736328125,
+          1067.0018310546875
+        ],
+        [
+          1057.817626953125,
+          1058.3408203125,
+          1058.68701171875,
+          1058.957275390625,
+          1066.977294921875
+        ]
+      ],
+      "input": {
+        "batch_size": 8,
+        "request_length": 8192,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_006",
+            "session_id": "20260728_111438_5cbbd1",
+            "round_id": 10,
+            "split": "train",
+            "offset": 3448092,
+            "length": 26865,
+            "recorded_input_tokens": 26959,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_006",
+            "session_id": "20260728_111356_102268",
+            "round_id": 7,
+            "split": "train",
+            "offset": 3205182,
+            "length": 9072,
+            "recorded_input_tokens": 9072,
+            "has_tools": false
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143313_4d756b",
+            "round_id": 3,
+            "split": "train",
+            "offset": 8348929,
+            "length": 15034,
+            "recorded_input_tokens": 30448,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143313_c7a767",
+            "round_id": 16,
+            "split": "train",
+            "offset": 8630355,
+            "length": 14461,
+            "recorded_input_tokens": 14461,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143326_83c1c9",
+            "round_id": 9,
+            "split": "train",
+            "offset": 8921846,
+            "length": 31640,
+            "recorded_input_tokens": 31640,
+            "has_tools": false
+          },
+          {
+            "task_id": "dr_019",
+            "session_id": "20260729_075306_ca0bfa",
+            "round_id": 10,
+            "split": "train",
+            "offset": 11192448,
+            "length": 22495,
+            "recorded_input_tokens": 22589,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_006",
+            "session_id": "20260728_111356_102268",
+            "round_id": 6,
+            "split": "train",
+            "offset": 3194872,
+            "length": 10310,
+            "recorded_input_tokens": 10384,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_015",
+            "session_id": "20260729_065756_952417",
+            "round_id": 7,
+            "split": "train",
+            "offset": 7519349,
+            "length": 10845,
+            "recorded_input_tokens": 10845,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "c26401ca4edebc582689cb130bd404cdc3a9d307ab774774aa40a230a6cc844b",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "rank_layouts": [
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192
+          ],
+          "actual_input_token_count": 65536
+        },
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192
+          ],
+          "actual_input_token_count": 65536
+        },
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192
+          ],
+          "actual_input_token_count": 65536
+        },
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192,
+            8192
+          ],
+          "actual_input_token_count": 65536
+        }
+      ],
+      "rank_diagnostics": {
+        "max_samples_ms": [
+          1058.0152587890625,
+          1058.3408203125,
+          1058.693115234375,
+          1059.04736328125,
+          1067.0018310546875
+        ],
+        "max_median_ms": 1058.693115234375,
+        "per_rank_medians_ms": [
+          1058.45556640625,
+          1058.6439208984375,
+          1058.693115234375,
+          1058.68701171875
+        ]
+      }
+    },
+    {
+      "batch_size": 8,
+      "request_length": 16384,
+      "status": "ok",
+      "prompt_tokens": 131072,
+      "forward_ms_median": 2248.017822265625,
+      "forward_ms_mean": 2248.121923828125,
+      "forward_ms_p90": 2250.6062988281246,
+      "iterations": 5,
+      "samples_ms": [
+        2251.864990234375,
+        2248.017822265625,
+        2246.51171875,
+        2245.496826171875,
+        2248.71826171875
+      ],
+      "rank_samples_ms": [
+        [
+          2251.864990234375,
+          2248.017822265625,
+          2246.51171875,
+          2245.496826171875,
+          2248.71826171875
+        ],
+        [
+          2251.872314453125,
+          2248.257568359375,
+          2246.92529296875,
+          2245.70068359375,
+          2248.846435546875
+        ],
+        [
+          2251.683837890625,
+          2248.10693359375,
+          2246.749267578125,
+          2245.519287109375,
+          2248.605712890625
+        ],
+        [
+          2246.18798828125,
+          2247.995361328125,
+          2246.767578125,
+          2245.53369140625,
+          2248.64453125
+        ]
+      ],
+      "input": {
+        "batch_size": 8,
+        "request_length": 16384,
+        "split": "train",
+        "selected_entries": [
+          {
+            "task_id": "dr_009",
+            "session_id": "20260728_112819_a45829",
+            "round_id": 4,
+            "split": "train",
+            "offset": 5394437,
+            "length": 23699,
+            "recorded_input_tokens": 23793,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_017",
+            "session_id": "20260728_143542_d22578",
+            "round_id": 13,
+            "split": "train",
+            "offset": 9739807,
+            "length": 22446,
+            "recorded_input_tokens": 22540,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_019",
+            "session_id": "20260729_075306_ca0bfa",
+            "round_id": 9,
+            "split": "train",
+            "offset": 11174480,
+            "length": 17968,
+            "recorded_input_tokens": 18062,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_013",
+            "session_id": "20260729_063546_ca8dba",
+            "round_id": 7,
+            "split": "train",
+            "offset": 6295290,
+            "length": 22450,
+            "recorded_input_tokens": 22544,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_015",
+            "session_id": "20260729_065930_1ddbfc",
+            "round_id": 8,
+            "split": "train",
+            "offset": 8186330,
+            "length": 21710,
+            "recorded_input_tokens": 21710,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_006",
+            "session_id": "20260728_111438_5cbbd1",
+            "round_id": 11,
+            "split": "train",
+            "offset": 3474957,
+            "length": 29779,
+            "recorded_input_tokens": 29873,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_019",
+            "session_id": "20260729_075306_ca0bfa",
+            "round_id": 20,
+            "split": "train",
+            "offset": 11457968,
+            "length": 29306,
+            "recorded_input_tokens": 29400,
+            "has_tools": true
+          },
+          {
+            "task_id": "dr_019",
+            "session_id": "20260729_075306_ca0bfa",
+            "round_id": 14,
+            "split": "train",
+            "offset": 11290933,
+            "length": 27298,
+            "recorded_input_tokens": 27392,
+            "has_tools": true
+          }
+        ],
+        "token_sha256": "56434c1fc543d97555b19daeaeb212c0bcce69163dda2513bc2be25938ba867c",
+        "corpus_token_sha256": "ca2c16e91e64ed3c9e6b3f166468072b553a7ebf12646df4fde209add4204500"
+      },
+      "rank_layouts": [
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "actual_input_token_count": 131072
+        },
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "actual_input_token_count": 131072
+        },
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "actual_input_token_count": 131072
+        },
+        {
+          "batch_size": 8,
+          "actual_sequence_lengths": [
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "actual_input_token_count": 131072
+        }
+      ],
+      "rank_diagnostics": {
+        "max_samples_ms": [
+          2251.872314453125,
+          2248.257568359375,
+          2246.92529296875,
+          2245.70068359375,
+          2248.846435546875
+        ],
+        "max_median_ms": 2248.257568359375,
+        "per_rank_medians_ms": [
+          2248.017822265625,
+          2248.257568359375,
+          2248.10693359375,
+          2246.767578125
+        ]
+      }
+    },
+    {
+      "batch_size": 8,
+      "request_length": 32768,
+      "status": "missing",
+      "error": "No complete matching samples across all TP ranks"
+    }
+  ],
+  "metadata": {
+    "run_signature": "02d0c0eeaa4e90b2a029cb477e3666c505fcccf8fb689deb7194dc1b037d7995",
+    "partial_recovery": true
+  }
+}
